@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1522089022 source:d:\inne\programowanie obiektowe c++\m.zelent\odc 3\program\event.cpp
+	<iostream>
+	"event.h"
+
+1522089211 d:\inne\programowanie obiektowe c++\m.zelent\odc 3\program\event.h
+	<iostream>
+

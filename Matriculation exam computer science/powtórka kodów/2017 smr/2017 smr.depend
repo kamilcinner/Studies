@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1557570958 source:d:\nauka\matura\inf\powtórka kodów\2017 smr\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<stdlib.h>
+	<bits/stdc++.h>
+

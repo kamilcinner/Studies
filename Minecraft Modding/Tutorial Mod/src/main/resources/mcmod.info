@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tm",
+  "name": "Tutorial Mod",
+  "description": "A modding tutorial mod.",
+  "version": "1.0",
+  "mcversion": "1.12.1",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Erteez"],
+  "credits": "Pawel + Kornelia = <3",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

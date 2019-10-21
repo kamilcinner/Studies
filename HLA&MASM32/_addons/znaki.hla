@@ -1,0 +1,33 @@
+program znaki;
+#include("stdlib.hhf");
+
+    procedure drukznakow(N:int32; c:char);
+    begin drukznakow;
+
+        push(ecx);
+        mov(N, ecx);
+        repeat
+            stdout.put(c);
+            dec(ecx);
+        until(ecx = 0);
+        pop(ecx);
+
+    end drukznakow;
+
+static
+    N:  int32;
+    c:  char;
+
+begin znaki;
+
+    stdout.put("Wprowadz znak, ktory chcesz wydrukowac: ");
+    stdin.get(c);
+    stdout.put("Wprowadz liczbe, ktora okresli ilosc znakow: ");
+    stdin.get(N);
+    drukznakow(N, c);
+    stdout.newln();
+    stdout.newln();
+    stdout.put("Po wywolaniu procedury drukznakow(15, '#'): ");
+    drukznakow(15, '#');
+
+end znaki;

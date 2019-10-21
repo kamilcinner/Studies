@@ -1,0 +1,5 @@
+﻿  main.cpp
+d:\nauka\matura\inf\2016\zad 6.1\main.cpp(21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+d:\nauka\matura\inf\2016\zad 6.1\main.cpp(50): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+d:\nauka\matura\inf\2016\zad 6.1\main.cpp(79): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  program.vcxproj -> D:\Nauka\matura\inf\2016\zad 6.1\Debug\program.exe

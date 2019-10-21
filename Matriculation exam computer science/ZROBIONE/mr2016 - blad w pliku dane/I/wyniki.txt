@@ -1,0 +1,39 @@
+zad 1.1
+    21+1, 10+1, NIE
+    48+1, 75+1, TAK
+zad 1.2
+    int sumaDz(int n) {
+        int s = 1;
+        for (int i = 2; i*i <= n; i++) {
+            if (n % i == 0) {
+                s += i;
+                if (n / i != i) {
+                    s += n / i;
+                }
+            }
+        }
+        return s;
+    }
+    int a = 75;
+	int sA = sumaDz(a);
+	int b = sA - 1;
+	int sB = sumaDz(b);
+	if (sB == a + 1) {
+		cout << b;
+	}
+	else cout << "NIE";
+zad 2.1
+    A = [3,2,1,5,6,4]
+zad 2.2
+    A = [8,1,2,3,4,5,9]
+zad 2.3
+    A = [9,8,7,...]
+    w = 10
+zad 3.1
+    P: 3
+zad 3.2
+    P: 2, 3
+zad 3.3
+    P: 2, 4
+zad 3.4
+    P: 1, 2

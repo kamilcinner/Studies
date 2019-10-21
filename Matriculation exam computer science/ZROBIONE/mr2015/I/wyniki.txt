@@ -1,0 +1,11 @@
+zad 1 - kartka
+zad 2.1
+    P: 2, 3
+zad 2.2
+    P: 2
+zad 2.3
+    1, 4
+zad 2.4
+    1
+zad 2.5
+    2, 3

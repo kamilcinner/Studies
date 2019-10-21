@@ -1,0 +1,20 @@
+program male_na_duze2;
+#include("stdlib.hhf");
+
+static
+    c:  char;
+
+begin male_na_duze2;
+
+    stdout.put("Wprowadz litere: ");
+    stdin.get(c);
+
+    if (c >= 'a') then
+        if (c <= 'z') then
+            and($5f, c);
+        endif;
+    endif;
+
+    stdout.put("Wprowadzona litera po konwersji do wielkiej litery to: '", c, "'", nl);
+
+end male_na_duze2;

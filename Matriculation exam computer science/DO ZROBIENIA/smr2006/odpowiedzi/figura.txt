@@ -1,0 +1,28 @@
+Podpunkt a)
+Pole figury z dok³adnoscia do 0.01 wynosi 19.75.
+
+Dla obliczenia przybli¿onego pola figury zastosowana zosta³a metoda trapezów. Figura zosta³a podzielona na pionowe „paski” o szerokoœci krok odpowiednio dla funkcji dolnej i górnej. 
+W ten sposób pole ka¿dego paska odpowiadaj¹cego przedzia³owi X-ów [poz, poz+krok] przybli¿amy polem trapezu o wierzcho³kach (poz,0), (poz+krok, 0), (poz, g(poz)), (poz+krok, g(poz+krok)), które w kolejnych krokach iteracji sumujemy. Analogicznie postêpujemy dla funkcji f(x), a nastepnie dodajemy oba pola.
+
+Program byl uruchamiany dla nastepujacych wartosci zmiennej krok:
+krok = 1
+pole = 19.8000000000
+krok = 0.1
+pole = 19.7505000000
+krok = 0.01
+pole = 19.7500050000
+krok = 0.001
+pole = 19.7500000500
+krok = 0.0001
+pole = 19.7500000005
+
+
+
+Podpunkt b)
+C=130
+
+Wspolrzedne prostokata to:
+(30,9)
+(30,-17)
+(130,9)
+(130,-17)

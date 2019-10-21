@@ -1,0 +1,2 @@
+najkrotsze haslo: EHJA  dlugosc: 4
+najdluzsze haslo: DCBAJAHHJIGABCDCCDCBAGIJHHAJ  dlugosc: 28

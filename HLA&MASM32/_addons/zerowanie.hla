@@ -1,0 +1,27 @@
+program zerowanie;
+#include("stdlib.hhf");
+
+    procedure zerujaca;
+    begin zerujaca;
+
+        mov(0, eax);
+        mov(256, ecx);
+        repeat
+
+            mov(eax, [ebx]);
+            add(4, ebx);
+            dec(ecx);
+
+        until(ecx = 0);
+
+    end zerujaca;
+
+static
+    tablica:    dword[256];
+
+begin zerowanie;
+
+    lea(ebx, tablica);
+    call zerujaca;
+
+end zerowanie;

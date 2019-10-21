@@ -1,0 +1,31 @@
+program negacja;
+#include("stdlib.hhf");
+
+static
+    dodatnia:   int8;
+    ujemna:     int8;
+
+begin negacja;
+
+    stdout.put("Podaj liczbe z zakresu od -128 do 127: ");
+    stdin.get(dodatnia);
+
+    stdout.put(nl, "Szesnastkowo: ");
+    stdout.putb(dodatnia);
+
+    mov(dodatnia, al);
+    not(al);
+    stdout.put(nl, "Po inwersji bitow: ", al);
+    add(1, al);
+    stdout.put(nl, "Po dodaniu jednosci: ", al);
+    mov(al, ujemna);
+    stdout.put(nl, "Wynik dziesietnie: ", ujemna, nl);
+
+    stdout.put(nl, "Ta sama operacja z wykorzystaniem instrukcji 'neg':", nl);
+    mov(dodatnia, al);
+    neg(al);
+    mov(al, ujemna);
+    stdout.put("Wynik szesnastkowo: ", al, nl);
+    stdout.put("Wynik dziesietnie: ", ujemna, nl);
+
+end negacja;

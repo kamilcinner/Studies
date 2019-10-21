@@ -1,0 +1,96 @@
+program kalkulator;
+#include("stdlib.hhf");
+
+static
+	a:	int32;
+	b:	int32;
+
+begin kalkulator;
+
+	stdout.put("Wybierz rodzaj dzialania:", nl);
+	stdout.put("1.Dodawanie: a + b", nl);
+	stdout.put("2.Odejmowanie: a - b", nl);
+	stdout.put("3.Mnozenie: a * b", nl);
+	stdout.put("4.Dzielenie: a / b", nl);
+	stdout.put("5.Potegowanie: a^b", nl);
+	stdout.put("Wybor: ");
+	
+	stdin.getc();
+	
+	stdout.put(nl, "Podaj liczbe calkowita a: ");
+	stdin.get(a);
+	stdout.put("Podaj liczbe calkowita b: ");
+	stdin.get(b);
+	
+	if (al = '1') then
+	//dodawanie
+		mov(a, eax);
+		
+		add(b, eax);
+		
+		stdout.put(nl, "Wynik = ");
+		stdout.puti32(eax);
+		stdout.newln();
+		
+	elseif(al = '2') then
+	//odejmowanie
+		mov(a, eax);
+		
+		sub(b, eax);
+		
+		stdout.put(nl, "Wynik = ");
+		stdout.puti32(eax);
+		stdout.newln();
+		
+	elseif(al = '3') then
+	//mnozenie
+		mov(a, eax);
+		mov(b, edx);
+		
+		imul(edx, eax);
+		
+		stdout.put(nl, "Wynik = ");
+		stdout.puti64(edx:eax);
+		stdout.newln();
+		
+	elseif(al = '4' && b != 0) then
+	//dzielenie
+		mov(a, eax);
+		cdq();
+		mov(b, ebx);
+		
+		idiv(ebx, edx:eax);
+		
+		stdout.put(nl, "Wynik = ");
+		stdout.puti32(eax);
+		stdout.put(nl, "Reszta: ");
+		stdout.puti32(edx);
+		stdout.newln();
+		
+	elseif(al = '5' && b >= 0) then
+	//potegowanie
+		mov(a, eax);
+		mov(a, ebx);
+		
+		mov(b, ecx);
+		
+		while(ecx > 1) do
+			imul(ebx, eax);
+			sub(1, ecx);
+		endwhile;
+		
+		stdout.put(nl, "Wynik = ");
+		
+		if (b = 1) then stdout.puti32(eax);
+		elseif (b = 0) then stdout.put('1');
+		else stdout.puti64(edx:eax);
+		endif;
+		
+		stdout.newln();
+		
+	else
+	//blad
+		stdout.put("Podano niewlasciwe dane!", nl);
+	endif;
+	
+end kalkulator;

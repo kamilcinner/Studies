@@ -1,0 +1,15 @@
+program demo_eoln;
+#include("stdlib.hhf");
+
+begin demo_eoln;
+
+    stdout.put("Wprowadz krotki wiersz tekstu: ");
+    stdin.flushInput();
+
+    repeat
+        stdin.getc();
+        stdout.putc(al);
+        stdout.put("=", al, nl);
+    until (stdin.eoln());
+
+end demo_eoln;

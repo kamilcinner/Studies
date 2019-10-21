@@ -1,0 +1,16 @@
+program hex_get_put;
+#include("stdlib.hhf");
+	
+static
+	liczba:	int32;
+	
+begin hex_get_put;
+
+	stdout.put("Wprowadz liczbe w zapisie szesnastkowym: ");
+	stdin.getd(); //doubleword
+	mov(eax, liczba);
+	stdout.put("Wprowadzona wartosc: ");
+	stdout.putd(liczba);
+	stdout.newln();
+	
+end hex_get_put;

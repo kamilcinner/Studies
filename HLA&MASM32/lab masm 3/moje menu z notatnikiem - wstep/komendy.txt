@@ -1,0 +1,3 @@
+\masm32\bin\ml -Fl -coff -c mojemenuNota.asm
+\masm32\bin\rc mojemenuNota.rc
+\masm32\bin\link /SUBSYSTEM:WINDOWS mojemenuNota.obj mojemenuNota.res

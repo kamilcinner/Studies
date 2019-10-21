@@ -1,0 +1,87 @@
+1.1
+    P,P,F
+1.2
+    int n = 0;
+    do {
+        tab_cyfr[n] = k % 10;
+        k /= 10;
+        n++;
+    } while (k != 0);
+    cout << n;
+1.3
+    for(int i = 0; i < n; i++)
+        k -= potega(tab_cyfr[i], n);
+    if (k == 0) cout << "PRAWDA";
+    else cout << "FALSZ";
+2.1
+    PFP
+2.2
+    FFP
+2.3
+    PFPF
+2.4
+    PFFF
+3.1
+    01 10 11 10 01 00 00 00
+    KAJAK
+3.2
+    string s = "ABBAACCCAAABCCXYZCBBBAA";
+	vector<char> znaki;
+	bool istnieje;
+	for (unsigned int i = 0; i < s.length(); i++) {
+		istnieje = false;
+		for (unsigned int j = 0; j < znaki.size(); j++)
+			if (s[i] == znaki[j]) {
+				istnieje = true;
+				break;
+			}
+		if (!istnieje)
+			znaki.push_back(s[i]);
+	}
+	cout << znaki.size();
+3.3
+    class Bajt {
+      public: string bit = "";
+    };
+    class Para {
+      public:
+	    char znak;
+	    string kod = "";
+    };
+
+    const int bity = 2; // liczba bitow dla kodu znaku
+	const int n = 2; // liczba bajtow
+	const int r = 3; // liczba roznych zankow w tekscie
+	Bajt bajtTS[n];
+	Para paraZK[r];
+
+	// ustawiamy pod 3.1 KAJAK
+	bajtTS[0].bit = "01101110";
+	bajtTS[1].bit = "01000000";
+	paraZK[0].znak = 'K'; paraZK[0].kod = "01";
+	paraZK[1].znak = 'A'; paraZK[1].kod = "10";
+	paraZK[2].znak = 'J'; paraZK[2].kod = "11";
+	// ---
+
+	string bitTS = "";
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < 8; j++) {
+			bitTS += bajtTS[i].bit[j];
+		}
+	}
+
+	string temp;
+	string tekst = "";
+	for (int i = 0; i < n * 8; i += bity) {
+		temp = "";
+		for (int j = 0; j < bity; j++) {
+			temp += bitTS[i + j];
+		}
+		for (int k = 0; k < r; k++) {
+			if (temp == paraZK[k].kod) {
+				tekst += paraZK[k].znak;
+				break;
+			}
+		}
+	}
+	cout << tekst;

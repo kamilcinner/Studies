@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1522103395 source:d:\inne\programowanie obiektowe c++\m.zelent\odc 4\program\przyjaciele.cpp
+	<iostream>
+	"przyjaciele.h"
+
+1522103452 d:\inne\programowanie obiektowe c++\m.zelent\odc 4\program\przyjaciele.h
+	<iostream>
+

@@ -1,0 +1,6 @@
+#define IDM_TEST 1
+
+FirstMenu MENU
+{
+    MENUITEM "&Test", IDM_TEST
+}

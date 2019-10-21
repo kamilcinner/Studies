@@ -1,0 +1,16 @@
+program operacjeart;
+#include("stdlib.hhf");
+static
+	jedenbajt: int8 := -20;
+begin operacjeart;
+	stdout.put("Nasza stala = ", jedenbajt, nl);
+	
+	mov(0, AL);
+	sub(jedenbajt, AL);
+	mov(AL, jedenbajt);
+	
+	stdout.put("Zanegowana stala = ", jedenbajt, nl);
+	
+	add(32, jedenbajt);
+	stdout.put("Nasza stala po dodaniu liczby 32 = ", jedenbajt, nl);
+end operacjeart;

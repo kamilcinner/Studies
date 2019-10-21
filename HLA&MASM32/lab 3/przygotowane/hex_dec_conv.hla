@@ -1,0 +1,14 @@
+program hex_dec_conv;
+#include("stdlib.hhf");
+
+static
+	liczba:	int32;	
+	
+begin hex_dec_conv;
+
+	stdout.put("Wprowadz liczbe w zapisie szesnastkowym: ");
+	stdin.get(ebp);
+	mov(ebp, liczba);
+	stdout.put(ebp, " w zapisie dziesietnym: ", liczba, nl);
+	
+end hex_dec_conv;

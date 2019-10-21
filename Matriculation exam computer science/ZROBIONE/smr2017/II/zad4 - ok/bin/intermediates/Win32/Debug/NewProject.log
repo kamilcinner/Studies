@@ -1,0 +1,9 @@
+﻿  Main.cpp
+d:\nauka\matura\inf\do zrobienia\smr2017\ii\zad4\newproject\src\main.cpp(22): warning C4018: '<': signed/unsigned mismatch
+d:\nauka\matura\inf\do zrobienia\smr2017\ii\zad4\newproject\src\main.cpp(25): warning C4018: '>': signed/unsigned mismatch
+d:\nauka\matura\inf\do zrobienia\smr2017\ii\zad4\newproject\src\main.cpp(38): warning C4018: '<': signed/unsigned mismatch
+d:\nauka\matura\inf\do zrobienia\smr2017\ii\zad4\newproject\src\main.cpp(41): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\nauka\matura\inf\do zrobienia\smr2017\ii\zad4\newproject\src\main.cpp(47): warning C4018: '<': signed/unsigned mismatch
+d:\nauka\matura\inf\do zrobienia\smr2017\ii\zad4\newproject\src\main.cpp(59): warning C4018: '<': signed/unsigned mismatch
+d:\nauka\matura\inf\do zrobienia\smr2017\ii\zad4\newproject\src\main.cpp(60): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  NewProject.vcxproj -> D:\Nauka\matura\inf\DO ZROBIENIA\smr2017\II\zad4\bin\Win32\Debug\NewProject.exe

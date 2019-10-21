@@ -1,0 +1,3 @@
+﻿  Main.cpp
+d:\nauka\matura\inf\do zrobienia\smr2009\ii\zad4\newproject\src\main.cpp(105): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  NewProject.vcxproj -> D:\Nauka\matura\inf\DO ZROBIENIA\smr2009\II\zad4\bin\Win32\Debug\NewProject.exe

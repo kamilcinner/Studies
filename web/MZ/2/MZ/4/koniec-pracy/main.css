@@ -1,0 +1,139 @@
+body
+{
+	background-image: url("img/dark.jpg");
+	background-repeat: repeat;
+	background-position: center bottom;
+	font-family: Arial;
+}
+
+#container
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	width: 900px;
+	text-align: center;
+}
+
+.kurs
+{
+	display: inline-block;
+	width: 400px;
+	background-color: white;
+	margin: 0 20px;
+	border: 1px solid brown;
+	opacity: 1;
+}
+
+.kurs p
+{
+	font-size: 12px;
+	text-align: justify;
+	line-height: 140%;
+	margin: 20px;
+}
+
+h1
+{
+	font-size: 22px;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+h2
+{
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+ul.lista
+{
+	text-align: left;
+	list-style-image: url("img/hand.jpg");
+	list-style-position: outside;
+}
+
+ul.lista > li
+{
+	margin-left: 10px;
+}
+
+/* link nieodwiedzony */
+
+a.link1:link
+{
+	color: green;
+	text-decoration: underline;
+}
+
+/* link odwiedzony */
+
+a.link1:visited
+{
+	color: green;
+	text-decoration: underline;
+}
+
+/* link po najechaniu kursorem */
+
+a.link1:hover
+{
+	color: blue;
+	text-decoration: underline;
+}
+
+/* link aktywny */
+
+a.link1:active
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* link nieodwiedzony */
+
+a.pomidor:link
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* link odwiedzony */
+
+a.pomidor:visited
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* link po najechaniu kursorem */
+
+a.pomidor:hover
+{
+	color: blue;
+	text-decoration: underline;
+}
+
+/* link aktywny */
+
+a.pomidor:active
+{
+	color: red;
+	text-decoration: underline;
+}
+
+.test
+{
+	width: 30px;
+	height: 30px;
+	background-color: yellow;
+	left: 80px;
+	top: 40px;
+	
+	position: fixed;
+}

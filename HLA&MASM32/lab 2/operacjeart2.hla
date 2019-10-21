@@ -1,0 +1,30 @@
+program operacjeart2;
+#include("stdlib.hhf");
+static
+	jedenbajt: int8 := -7;
+	dwabajty: int16 := -277;
+	trzybajty: int32 := -66000;
+begin operacjeart2;
+	stdout.put("Zmienna 1-bajtowa = ", jedenbajt, nl);
+	stdout.put("Zmienna 2-bajtowa = ", dwabajty, nl);
+	stdout.put("Zmienna 3-bajtowa = ", trzybajty, nl);
+	
+	mov(0, AL);
+	sub(jedenbajt, AL);
+	mov(AL, jedenbajt);
+	
+	mov(0, AX);
+	sub(dwabajty, AX);
+	mov(AX, dwabajty);
+	
+	mov(0, EAX);
+	sub(trzybajty, EAX);
+	mov(EAX, trzybajty);
+	
+	stdout.put("Zanegowana zmienna 1-bajtowa = ", jedenbajt, nl);
+	stdout.put("Zanegowana zmienna 2-bajtowa = ", dwabajty, nl);
+	stdout.put("Zanegowana zmienna 3-bajtowa = ", trzybajty, nl);
+	
+	add(666, trzybajty);
+	stdout.put("Zmienna 3-bajtowa po dodaniu liczby 666 = ", trzybajty, nl);
+end operacjeart2;

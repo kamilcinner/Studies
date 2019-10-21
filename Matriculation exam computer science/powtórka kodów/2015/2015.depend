@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1557433227 source:d:\nauka\matura\inf\powtórka kodów\2015\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+

@@ -1,0 +1,6 @@
+program pierwszy;
+#include("stdlib.hhf");
+
+begin pierwszy;
+	stdout.put("To jest nasz pierwszy program", nl);
+end pierwszy;

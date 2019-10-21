@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1522075961 source:d:\inne\programowanie obiektowe c++\odc 2\program\pytanie.cpp
+	<iostream>
+	"pytanie.h"
+	<fstream>
+	<cstdlib>
+
+1522075351 d:\inne\programowanie obiektowe c++\odc 2\program\pytanie.h
+	<iostream>
+
+1522076093 source:d:\inne\programowanie obiektowe c++\odc 2\program\main.cpp
+	<iostream>
+	"pytanie.h"
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Wykres</class>
+ <widget class="QWidget" name="Wykres">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1250</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Wykres</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGraphicsView" name="grafika"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="drawNewGraphButton">
+       <property name="text">
+        <string>[ Rysuj nowy wykres ]</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clearFieldButton">
+       <property name="text">
+        <string>[ Wyczyść obszar ]</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="toPointButton">
+       <property name="text">
+        <string>[ Zmień na wykres punktowy ]</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="toLineButton">
+       <property name="text">
+        <string>[ Zmień na wykres liniowy ]</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="decreaseButton">
+       <property name="text">
+        <string>[ Pomniejszenie ( - ) ]</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="enlargeButton">
+       <property name="text">
+        <string>[ Powiększenie ( + ) ]</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

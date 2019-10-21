@@ -1,0 +1,25 @@
+program wiersze;
+#include("stdlib.hhf");
+
+    procedure spacje;
+    begin spacje;
+
+        push(ecx);
+        mov(40, ecx);
+        repeat
+            stdout.put(' ');
+            dec(ecx);
+        until(ecx = 0);
+        pop(ecx);
+    end spacje;
+
+begin wiersze;
+
+    mov(20, ecx);
+    repeat
+        spacje();
+        stdout.put('*', nl);
+        dec(ecx);
+    until(ecx = 0);
+
+end wiersze;

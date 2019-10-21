@@ -1,0 +1,17 @@
+#define IDM_TEST					1
+#define IDM_ELEMENT1		2
+#define IDM_ELEMENT2		3
+#define IDM_ELEMENT3		4
+#define IDM_KONIEC				5
+
+MojePierwszeMenu MENU
+{
+	POPUP"&Lista" {
+		MENUITEM"&Element1",IDM_ELEMENT1
+		MENUITEM"Ele&ment2",IDM_ELEMENT2
+		MENUITEM"Eleme&nt3",IDM_ELEMENT3
+		MENUITEM SEPARATOR
+		MENUITEM"&Koniec",IDM_KONIEC
+	}
+    MENUITEM "&Test", IDM_TEST
+}

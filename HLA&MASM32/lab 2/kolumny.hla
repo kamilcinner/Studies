@@ -1,0 +1,30 @@
+program szerokosc;
+#include("stdlib.hhf");
+
+var
+	zmienna: int32;
+	licznik_kol: int8;
+
+begin szerokosc;
+
+	mov(40, zmienna);
+	mov(0, licznik_kol);
+	
+	while(zmienna > 0) do
+	
+		if(licznik_kol = 5) then
+		
+			stdout.newln();
+			mov(0, licznik_kol);
+		
+		endif;
+	
+		stdout.put(zmienna:5);
+		sub(1, zmienna);
+		add(1, licznik_kol);
+		
+	endwhile;
+	
+	stdout.newln();
+	
+end szerokosc;
