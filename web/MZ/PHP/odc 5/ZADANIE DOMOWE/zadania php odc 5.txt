@@ -1,0 +1,9 @@
+save.php
+czy podany (poprawny skladniow) email nie znajduje sie juz w naszej bazie
+
+admin.php
+w przyoadku nieudanej proby logowania do panelu formularz powinien zapamietac wprowadzony login (hasla nie)
+
+DLA NIEUSTRASZONYCH
+dodac captcha
+dodac delete.php umozliwiajacy wypisanie sie z newslettera po podaniu prawidlowego adresu znajdujacego sie w bazie
