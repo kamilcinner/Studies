@@ -1,3 +1,4 @@
 sudo apt-get install --no-install-recommends gnome-panel
 gnome-desktop-item-edit --create-new ~/Desktop
 sudo cp ~/Desktop/XXX.desktop /usr/share/applications/
+synclient TouchpadOff=0
