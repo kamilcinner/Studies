@@ -1,4 +1,16 @@
 sudo apt-get install --no-install-recommends gnome-panel
 gnome-desktop-item-edit --create-new ~/Desktop
 sudo cp ~/Desktop/XXX.desktop /usr/share/applications/
+
 synclient TouchpadOff=0
+
+go run /home/kamil/gocode/src/github.com/kamilcinner/firstapp/Main.go
+
+go build /home/kamil/gocode/src/github.com/kamilcinner/firstapp
+/home/kamil/gocode/firstapp
+
+go install /home/kamil/gocode/src/github.com/kamilcinner/firstapp
+/home/kamil/gocode/bin/firstapp
+
+sudo tar cvf first-snapshot.tar /timeshift/snapshots
+sudo apt-get install python3-distutils
