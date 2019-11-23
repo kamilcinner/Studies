@@ -9,21 +9,22 @@ def main():
     print("Your mode is: " + str(mode(numbers)))
 
 def mode(numbers):
-    counterDB = {}
+    counterDB = dict()
     for i in range(0, len(numbers)):
         k = numbers[i]
         if k in counterDB:
             counterDB[k] += 1
         else:
             counterDB[k] = 1
+
     max = 0
     maxNumber = "null"
-    for i in range(0, len(numbers)):
-        k = numbers[i]
-        n = counterDB[k]
+
+    for (k, n) in counterDB.items():
         if n > max:
             max = n
             maxNumber = k
+
     return maxNumber
 
 if __name__ == "__main__":

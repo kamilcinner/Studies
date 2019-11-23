@@ -1,14 +1,16 @@
 # exponentiation
 
 def main():
-    print(exp(9,103))
+    print(effexp(9,103))
 
-# exponent must be greater than 0
-def exp(base, exponent = 1):
+# exponent must be greater or equal 0
+def effexp(base, exponent = 1):
     if exponent == 1:
         return base
+    if exponent == 0:
+        return 1
 
-    result = exp(base, int(exponent / 2))
+    result = effexp(base, exponent // 2)
     result *= result
 
     if exponent % 2 == 1:

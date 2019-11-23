@@ -5,7 +5,7 @@ def main():
 
 def isPalindrome(word = ""):
     n = len(word)
-    for i in range(0, int(n / 2)):
+    for i in range(0, n // 2):
         if word[i] != word[n - 1 - i]:
             return False
     return True
