@@ -43,7 +43,7 @@ class Fraction:
         return f
 
 
-def euclidean(a, b):
+def euclidean(a, b): # we can use builtin gcd() function
     if b != 0:
         return euclidean(b, a % b)
     return a

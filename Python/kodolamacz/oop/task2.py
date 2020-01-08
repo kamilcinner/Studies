@@ -5,13 +5,20 @@ class Complex:
     def __init__(self, re, im):
         self.re = re
         self.im = im
+
     def abs(self):
         return math.sqrt(pow(self.re, 2) + pow(self.im, 2))
+
     def printComplex(self):
-        print(str(self.re) + " + " + str(self.im) + "i")
+        if self.im < 0:
+            print(str(self.re) + str(self.im) + "i")
+        else:
+            print(str(self.re) + " + " + str(self.im) + "i")
+
     @staticmethod
     def add(c1, c2):
         return Complex(c1.re + c2.re, c1.im + c2.im)
+
     @staticmethod
     def mul(c1, c2):
         return Complex(c1.re * c2.re - c1.im * c2.im, c1.re * c2.im + c2.re * c1.im)
