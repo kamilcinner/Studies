@@ -1,0 +1,2 @@
+/home/kamil/dev/Studies/Python/kodolamacz/exceptions-and-file-operations/task2.py
+16
