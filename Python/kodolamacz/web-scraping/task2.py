@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
+
 def main():
     response = requests.get("https://stooq.pl/q/?s=cdr")
 

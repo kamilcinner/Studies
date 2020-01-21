@@ -11,7 +11,8 @@ def main():
     result = soup.find_all("a", href=True)
 
     for r in result:
-        print(r)
+        #print(r)
+        print(f"{r.get('href')} - {r.string}")
 
 
 if __name__ == "__main__":
