@@ -1,14 +1,6 @@
 import pygame
 import random
 
-# creating the data structure for pieces
-# setting up global vars
-# functions
-# - create_grid
-# - draw_grid
-# - draw_window
-# - rotating shape in main
-# - setting up the main
 
 """
 10 x 20 square grid
@@ -270,6 +262,8 @@ def draw_window(surface, grid, score=0, last_score=0):
 
     sx = top_left_x + play_width + 50
     sy = top_left_y + play_height / 2 - 100
+
+    surface.blit(label, (sx + 20, sy + 160))
 
     # Last score
     label = font.render('High Score: ' + str(last_score), 1, (255, 255, 255))
