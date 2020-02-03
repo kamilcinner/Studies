@@ -25,7 +25,7 @@ SECRET_KEY = 'grr7!-x4le8io1!#-1wf+9p5$8tmw2)q6uc(c!c!@i^f9-@80e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.122'] # iPad
 
 
 # Application definition
