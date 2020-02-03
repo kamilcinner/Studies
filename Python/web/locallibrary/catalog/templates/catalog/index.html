@@ -13,6 +13,8 @@
   <li><strong>Genres contain "fan" in name:</strong> {{ num_fan_contain }}</li>
   <li><strong>Books contain "Wiedźmin" in title:</strong> {{ num_wiedzmin_contain }}</li>
   </ul>
+
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
 {% endblock %}
 
 {% block title %}
