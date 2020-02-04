@@ -2,7 +2,7 @@ import datetime
 
 from django.views.generic import CreateView, UpdateView, DeleteView
 
-from catalog.forms import RenewBookForm, RenewBookModelForm
+from catalog.forms import RenewBookModelForm
 from catalog.models import Author, Book, BookInstance, Genre
 
 from django.contrib.auth.decorators import permission_required
@@ -61,7 +61,7 @@ class BookDetailView(generic.DetailView):
 
 class AuthorListView(generic.ListView):
     model = Author
-    paginate_by = 2
+    paginate_by = 10
 
 
 class AuthorDetailView(generic.DetailView):
@@ -89,9 +89,11 @@ class LoanedBooksListView(PermissionRequiredMixin, generic.ListView):
         return BookInstance.objects.filter(status__exact='o')
 
 
+# raise_exception=True will throw 403 instead of 302
 @permission_required('catalog.can_mark_returned')
 def renew_book_librarian(request, pk):
     book_instance = get_object_or_404(BookInstance, pk=pk)
+
 
     # If this is a POST request then process the Form data
     if request.method == 'POST':
@@ -102,7 +104,7 @@ def renew_book_librarian(request, pk):
         # Check if the form is valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['due_date']
+            book_instance.due_back = form.cleaned_data['due_back']
             book_instance.save()
             # redirect to a new URL:
             return HttpResponseRedirect(reverse('catalog:all-borrowed') )
@@ -124,7 +126,7 @@ class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
     permission_required = ('catalog.can_mark_returned',)
     fields = '__all__'
-    initial = {'date_of_death': '04/02/2020'}
+    initial = {'date_of_death': datetime.date(2020, 2, 4)}
 
 class AuthorUpdate(PermissionRequiredMixin, UpdateView):
     model = Author

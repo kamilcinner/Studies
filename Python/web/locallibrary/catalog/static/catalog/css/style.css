@@ -12,3 +12,8 @@
 ul {
     list-style: lower-greek;
 }
+
+body {
+    background: black url("../images/img.jpg") repeat;
+    background-size: 150px;
+}
