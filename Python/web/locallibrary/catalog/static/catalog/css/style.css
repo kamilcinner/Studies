@@ -5,3 +5,10 @@
     width: 10pc;
 }
 
+.col-sm-10 {
+    padding-left: 50px;
+}
+
+ul {
+    list-style: lower-greek;
+}

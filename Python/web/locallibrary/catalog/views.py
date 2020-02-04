@@ -1,13 +1,15 @@
 import datetime
 
-from catalog.forms import RenewBookForm
+from django.views.generic import CreateView, UpdateView, DeleteView
+
+from catalog.forms import RenewBookForm, RenewBookModelForm
 from catalog.models import Author, Book, BookInstance, Genre
 
 from django.contrib.auth.decorators import permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 
@@ -59,7 +61,7 @@ class BookDetailView(generic.DetailView):
 
 class AuthorListView(generic.ListView):
     model = Author
-    paginate_by = 1
+    paginate_by = 2
 
 
 class AuthorDetailView(generic.DetailView):
@@ -95,21 +97,20 @@ def renew_book_librarian(request, pk):
     if request.method == 'POST':
 
         # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        form = RenewBookModelForm(request.POST)
 
         # Check if the form is valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['renewal_date']
+            book_instance.due_back = form.cleaned_data['due_date']
             book_instance.save()
-
             # redirect to a new URL:
             return HttpResponseRedirect(reverse('catalog:all-borrowed') )
 
     # If this is a GET (or any other method) create the default form.
     else:
         proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+        form = RenewBookModelForm(initial={'due_back': proposed_renewal_date})
 
     context = {
         'form': form,
@@ -117,3 +118,39 @@ def renew_book_librarian(request, pk):
     }
 
     return render(request, 'catalog/book_renew_librarian.html', context)
+
+
+class AuthorCreate(PermissionRequiredMixin, CreateView):
+    model = Author
+    permission_required = ('catalog.can_mark_returned',)
+    fields = '__all__'
+    initial = {'date_of_death': '04/02/2020'}
+
+class AuthorUpdate(PermissionRequiredMixin, UpdateView):
+    model = Author
+    permission_required = ('catalog.can_mark_returned',)
+    fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+
+class AuthorDelete(PermissionRequiredMixin, DeleteView):
+    model = Author
+    permission_required = ('catalog.can_mark_returned',)
+    success_url = reverse_lazy('authors')
+
+
+class BookCreate(PermissionRequiredMixin, CreateView):
+    model = Book
+    permission_required = ('catalog.can_mark_returned',)
+    fields = '__all__'
+
+
+class BookUpdate(PermissionRequiredMixin, UpdateView):
+    model = Book
+    permission_required = ('catalog.can_mark_returned',)
+    fields = '__all__'
+
+
+class BookDelete(PermissionRequiredMixin, DeleteView):
+    """But if we delete a book, what will happen with all the book instances :/"""
+    model = Book
+    permission_required = ('catalog.can_mark_returned',)
+    success_url = reverse_lazy('books')

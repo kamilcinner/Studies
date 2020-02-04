@@ -9,6 +9,11 @@
   <p><strong>Language:</strong> {{ book.language }}</p>
   <p><strong>Genre:</strong> {{ book.genre.all|join:", " }}</p>
 
+  {% if perms.catalog.can_mark_returned %}
+    <p><a href="{% url 'catalog:book_update' book.pk %}">Update Book</a></p>
+    <p><a href="{% url 'catalog:book_delete' book.pk %}">Delete Book</a></p>
+  {% endif %}
+
   <div style="margin-left:20px;margin-top:20px">
     <h4>Copies</h4>
 
