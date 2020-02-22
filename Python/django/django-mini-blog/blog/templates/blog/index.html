@@ -1,0 +1,18 @@
+{%  extends 'blog/base_generic.html' %}
+
+{% block title %}<title>Blog - Jesteś piękny Smoku HOME</title>{% endblock %}
+
+{% block content %}
+  <h1>Blog Home Page</h1>
+  <p>Welcome to Blog - Jesteś piękny Smoku, a website developed by <em>Kamil Cinner</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The Blog has the following record counts:</p>
+  <ul>
+    <li><strong>Posts:</strong> {{ num_posts }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Comments:</strong> {{ num_comments }}</li>
+    <li><strong>Users:</strong> {{ num_users }}</li>
+  </ul>
+
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+{% endblock %}

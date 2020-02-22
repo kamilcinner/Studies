@@ -1,0 +1,57 @@
+#fibers { min-height: 1082px; }
+.fiber
+{
+	display: inline-block;
+	width: 320px;
+	height: 380px;
+	text-align: center;
+	border: 2px solid #ddc9da;
+	margin: 20px;
+    transition: border 0.5s;
+}
+.fiber:hover
+{
+	border: 2px solid #440336;
+	transition: border 0.5s;
+}
+.fiber img
+{
+	object-fit: cover;
+	width: 320px;
+    height: 300px;
+    opacity: 0.9;
+}
+.fiber:hover  img { opacity: 1; }
+.fiber figure { margin: 0px; }
+.fiber figcaption
+{
+	margin-top: 10px;
+    font-size: 30px;
+    letter-spacing: 1px;
+	color: #440336;
+}
+
+#show_more
+{
+	vertical-align: top;
+	display: none;
+	width: 1412px;
+	height: 190px;
+	text-align: center;
+	border: 2px solid #ddc9da;
+	margin: 20px;
+	color: #ddc9da;
+	transition: border 0.5s, color 0.5s;
+}
+#show_more:hover
+{
+	border: 2px solid #440336;
+	transition: border 0.5s, color 0.5s;
+	color: #440336;
+	cursor: pointer;
+}
+#show_more > p
+{
+	margin-top: 50px;
+	font-size: 60px;
+}
