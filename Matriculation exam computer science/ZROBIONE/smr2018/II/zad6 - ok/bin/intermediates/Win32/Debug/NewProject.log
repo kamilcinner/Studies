@@ -1,6 +1,0 @@
-﻿  Main.cpp
-d:\nauka\matura\inf\do zrobienia\smr2018\zad6\newproject\src\main.cpp(32): warning C4018: '<': signed/unsigned mismatch
-d:\nauka\matura\inf\do zrobienia\smr2018\zad6\newproject\src\main.cpp(34): warning C4018: '<': signed/unsigned mismatch
-d:\nauka\matura\inf\do zrobienia\smr2018\zad6\newproject\src\main.cpp(51): warning C4018: '<': signed/unsigned mismatch
-d:\nauka\matura\inf\do zrobienia\smr2018\zad6\newproject\src\main.cpp(53): warning C4018: '<': signed/unsigned mismatch
-  NewProject.vcxproj -> D:\Nauka\matura\inf\DO ZROBIENIA\smr2018\zad6\bin\Win32\Debug\NewProject.exe

@@ -1,4 +1,0 @@
-﻿  Main.cpp
-d:\nauka\matura\inf\do zrobienia\smr2011\ii\zad6\newproject\src\main.cpp(41): warning C4244: '+=': conversion from 'double' to 'unsigned __int64', possible loss of data
-d:\nauka\matura\inf\do zrobienia\smr2011\ii\zad6\newproject\src\main.cpp(60): warning C4244: '+=': conversion from 'double' to 'unsigned __int64', possible loss of data
-  NewProject.vcxproj -> D:\Nauka\matura\inf\DO ZROBIENIA\smr2011\II\zad6\bin\Win32\Debug\NewProject.exe

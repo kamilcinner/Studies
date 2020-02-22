@@ -62,14 +62,14 @@ public class Level {
 		Pipe.create();
 		for (int i = 0;i < 5 * 2;i += 2) {
 			pipes[i] = new Pipe(OFFSET + index * 3.0f, random.nextFloat() * 4.0f);
-			pipes[i + 1] = new Pipe(pipes[i].getX(), pipes[i].getY() - 11.5f);
+			pipes[i + 1] = new Pipe(pipes[i].getX(), pipes[i].getY() - 12.5f);
 			index += 2;
 		}
 	}
 	
 	private void updatePipes() {
 		pipes[index % 10] = new Pipe(OFFSET + index * 3.0f, random.nextFloat() * 4.0f);
-		pipes[(index + 1) % 10 ] = new Pipe(pipes[index % 10].getX(), pipes[index % 10].getY() - 11.5f);
+		pipes[(index + 1) % 10 ] = new Pipe(pipes[index % 10].getX(), pipes[index % 10].getY() - 12.5f);
 		index += 2;
 	}
 	

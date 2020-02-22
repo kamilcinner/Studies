@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1557417534 source:d:\nauka\matura\inf\powtórka kodów\2018\main.cpp
-	<iostream>
-	<fstream>
-	<vector>
-	<string>
-	<cmath>
-

@@ -1,5 +1,0 @@
-najwieksza liczba akcji: 64
-liczba transakcji kupna: 31
-500 dzien:
-liczba akcji: 36
-kwota: 974.21

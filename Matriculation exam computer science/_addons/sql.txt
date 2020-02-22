@@ -1,9 +1,0 @@
-left(tytul_obrazu, 1) - zwraca pierwsza litere tytulu obrazu
-sum(iif (Bramki_zdobyte>Bramki_stracone, 1, 0))
-SELECT DISTINCT - omija powtarzajace sie rekordy (pilnowac sie z tym przy NOT IN i czasem czy nie zwroci nam jakas kwerenda dwoch takich samych rekordow)
-Data_urodzenia < DateValue("01.07.1973") - data przed 01.07.1973, uwala te¿ godzinê i zostawia sam¹ datê rok-miesi¹c-dzieñ
-group by ... having count(*)>=10 - przyk³ad
-int(Awarie.Czas_awarii) AS dzien - uwala godzinê i zostawia sam¹ datê rok-miesi¹c-dzieñ
-WHERE Studenci.pesel like "*[0,2,4,6,8][0-9]"
-round()
-and (Data_wyp like"*.0[6-9].2011" or Data_wyp like"*.1[0-2].2011")
