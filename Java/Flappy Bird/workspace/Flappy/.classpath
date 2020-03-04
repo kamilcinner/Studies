@@ -6,9 +6,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/kamil/dev/Studies/Java/Flappy Bird/lwjgl/jar/lwjgl.jar" sourcepath="/home/kamil/dev/Studies/Java/Flappy Bird/lwjgl/src.zip">
+	<classpathentry exported="true" kind="lib" path="/home/kamil/dev/github.com/kamilcinner/Studies/Java/flappy-bird-eclipse/lwjgl/jar/lwjgl.jar" sourcepath="/home/kamil/dev/github.com/kamilcinner/Studies/Java/flappy-bird-eclipse/lwjgl/src.zip">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/home/kamil/dev/Studies/Java/Flappy Bird/lwjgl/native"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/home/kamil/dev/github.com/kamilcinner/Studies/Java/flappy-bird-eclipse/lwjgl/native"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
