@@ -101,7 +101,7 @@ public class Main implements Runnable {
 			frames++;
 			if (System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
-				System.out.println(updates + " ups, " + frames + " fps");
+				//System.out.println(updates + " ups, " + frames + " fps"); // TODO: uncomment this
 				updates = 0;
 				frames = 0;
 			}
@@ -119,6 +119,7 @@ public class Main implements Runnable {
 		glfwPollEvents();
 		level.update();
 		if (level.isGameOver()) {
+			System.out.println("Game Over :/");
 			level = new Level();
 		}
 	}

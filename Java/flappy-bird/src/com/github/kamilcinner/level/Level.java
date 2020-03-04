@@ -80,6 +80,10 @@ public class Level {
 			if (-xScroll > 250 && -xScroll % 120 == 0) {
 				updatePipes();
 			}
+			if (xScroll % 120 == 0) {
+				score++;
+				System.out.println("Score = " + score);
+			}
 		}
 		
 		bird.update();
@@ -150,7 +154,7 @@ public class Level {
 		if (by1 < -6.0f || by0 > 6.0f)
 			return true;
 		
-		System.out.println("map: " + map);
+		//System.out.println("map: " + map); // TODO: uncomment this
 		
 		return false;
 	}
