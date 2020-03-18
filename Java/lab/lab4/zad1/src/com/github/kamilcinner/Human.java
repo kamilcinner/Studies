@@ -31,9 +31,9 @@ public abstract class Human {
 
     public String areYouWoman() {
         switch (gender) {
-            case 'm': return "No"; // m - male
-            case 'f': return "Yes"; // f - female
-            default: return "Unknown";
+            case 'm': return "no"; // m - male
+            case 'f': return "yes"; // f - female
+            default: return "unknown";
         }
     }
 

@@ -19,7 +19,7 @@ public class Employer extends Human {
 
     public boolean hireAnEmployee(Employee e) {
         if (preferences.equals(e.profession)) {
-            e.hire();
+            e.hire(companyName, employeeSalary);
             return true;
         } else return false;
     }
@@ -27,5 +27,9 @@ public class Employer extends Human {
     @Override
     public String whereDoesTheIncomeComeFrom() {
         return null;
+    }
+
+    public String getPreferences() {
+        return preferences;
     }
 }

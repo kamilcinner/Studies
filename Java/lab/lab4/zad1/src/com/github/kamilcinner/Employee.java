@@ -10,10 +10,12 @@ public class Employee extends Human {
         income = 0.0;
     }
 
-    public Employee(String firstname, String lastname, int age, char gender, String profession, String workplace) {
+    public Employee(String firstname, String lastname, int age, char gender, String profession, String workplace, double income) {
         super(firstname, lastname, age, gender);
+        super.hire();
         this.profession = profession;
         this.workplace = workplace;
+        this.income = income;
     }
 
     public void hire(String workplace, double income) {
