@@ -16,7 +16,7 @@ public class Main {
         print("Circumference:");
         print(t.getCircumference());
         print("Type:");
-        print(Triangle.getType(t.getA(), t.getB(), t.getC()));
+        print(Triangle.getType(t.getA(), t.getB(), t.getC())+"\n");
     }
 
     public static void main(String[] args) {

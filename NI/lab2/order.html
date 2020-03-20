@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zamów Pizze</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="banner"><h1>Kreator pizzy</h1></div>
+    <div id="content">
+      <form action="mailto:k.cinner@student.uw.edu.pl" method="post">
+        <fieldset >
+          <legend>Rozmiar</legend>
+          Mała <input type="radio" name="size" value="s"><br>
+          Średnia <input type="radio" name="size" value="m"><br>
+          Duża <input type="radio" name="size" value="b">
+        </fieldset>
+        <fieldset>
+          <legend>Dodatki</legend>
+          <input type="checkbox" name="salami" value="salami"> Salami<br>
+          <input type="checkbox" name="ham" value="ham"> Szynka<br>
+          <input type="checkbox" name="shrimp" value="shrimp"> Krewetki<br>
+          <input type="checkbox" name="onion" value="onion"> Cebula<br>
+          <input type="checkbox" name="mushrooms" value="mushrooms"> Pieczarki<br>
+          <input type="checkbox" name="olives" value="olives"> Oliwki<br>
+        </fieldset>
+        <fieldset>
+          <legend>Sosy</legend>
+          Wybierz sos
+          <select size="4" name="sauce" multiple="multiple">
+            <option value="t">Czosnkowy</option>
+            <option value="m">Pomidorowy łagodny</option>
+            <option value="f">Pomidorowy bazylia</option>
+            <option value="s">Pomidorowy piekielny</option>
+            <option value="i">Pomidorowy Minecraft</option>
+          </select><br>
+          Inne uwagi<br>
+          <textarea cols="70" rows="5" name="comments"></textarea>
+        </fieldset>
+        <br>
+        <input type="reset" value="Wyczyść wprowadzone dane">
+        <input type="submit" value="Wyślij zamówienie">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

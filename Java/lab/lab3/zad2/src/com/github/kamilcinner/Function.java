@@ -9,5 +9,5 @@ abstract class Function {
         this.b = b;
     }
 
-    public abstract double computeY(Point p);
+    protected abstract double computeY(Point p);
 }

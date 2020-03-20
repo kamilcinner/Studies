@@ -1,0 +1,136 @@
+body {
+    background-color: #8080ff;
+    color: #000040;
+}
+
+h1, h2, #footer {
+    background-color: #000040;
+    color: #8080ff;
+    text-align: center;
+}
+
+/*#menu {*/
+/*    background-color: white;*/
+/*    float: left;*/
+/*    width: 16%;*/
+/*    padding: 1%;*/
+/*}*/
+
+/*#menu {*/
+/*float:left;*/
+/*width:100%;*/
+/*margin:0;*/
+/*padding:0;*/
+/*background:#ffffff;*/
+/*border-bottom:2px solid #0000a0;*/
+/*}*/
+/*#menu li {*/
+/*float:left;*/
+/*margin:0;*/
+/*padding:0;*/
+/*list-style:none;*/
+/*padding-right:3px;*/
+/*font-family:"Lucida Grande", sans-serif;*/
+/*font-size:85%;*/
+/*}*/
+/*#menu a {*/
+/*float:left;*/
+/*display:block;*/
+/*margin:0;*/
+/*padding:4px 8px;*/
+/*color:#ffffd7;*/
+/*text-decoration:none;*/
+/*border: 1px solid #0000c6;*/
+/*border-bottom:none;*/
+/*background:#0000a0;*/
+/*}*/
+/*#menu a:hover {*/
+/*background:#0000d5;*/
+/*color:#ffffff;*/
+/*text-decoration:none;*/
+/*}*/
+
+#nav {
+    text-align: left;
+    overflow: hidden;
+    font-family: calibri, tahoma, serif;
+}
+ul#nav li {
+    border: 1px solid #d5d5d5;
+    list-style-type: none;
+    float: left;
+    background: #98bed8;
+    margin-left: 3px;
+}
+ul#nav li:hover {
+    border: 1px solid #d5d5d5;
+    list-style-type: none;
+    float: left;
+    background: #f0f0f0;
+    margin-left: 3px;
+}
+ul#nav li a {
+    display : block;
+    padding : 4pt;
+    text-decoration : none;
+}
+ul#nav li li a {
+    width: 160px;
+}
+ul#nav li li:hover {
+    background: white;
+}
+ul#nav li ul {
+    overflow: hidden;
+    display: none;
+}
+ul#nav li:hover ul {
+    position: absolute;
+    background: #aaa;
+    padding: 0;
+    display: block;
+    width: 177px;
+}
+
+#content {
+    background-color: aqua;
+    float: left;
+    width: 75%;
+    padding: 1%;
+}
+
+#stripe {
+    float: right;
+    width: 20%;
+    padding: 1%;
+}
+
+#footer {
+    clear: both;
+    width: 100%;
+    padding: 5px 0 5px 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    background-color: #000040;
+    color: #dbffff;
+    padding: 5px;
+    margin: 5px;
+    font-size: 90%;
+}
+
+.box a {
+    color: #ffffb0;
+}

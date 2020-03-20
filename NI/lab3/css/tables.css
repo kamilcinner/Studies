@@ -1,0 +1,37 @@
+/*table, th, td {*/
+/*  padding: 4px;*/
+/*  border: 1px solid black;*/
+/*  border-collapse: collapse;*/
+/*}*/
+
+table {
+    background-color: yellow;
+    text-align: center;
+    width: 94%;
+    margin: 2%;
+    border: 1pt dotted navy;
+}
+
+table > caption {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+table > thead, table > tfoot {
+    background-color: #000040;
+    color: white;
+    font-size: 110%;
+    padding: 5pt;
+}
+
+th, td {
+    border: 1pt solid navy;
+}
+
+tfoot a {
+    color: white;
+}
+
+.even {
+    background-color: white;
+}

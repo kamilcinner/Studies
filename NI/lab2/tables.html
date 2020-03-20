@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabele</title>
+
+  <link rel="stylesheet" href="css/tables.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="banner"><h1>Szybki kurs HTML</h1></div>
+    <div id="menu">
+      <a href="index.html">Podstawowe znaczniki</a>
+      <a href="tables.html">Tworzenie tabel</a>
+      <a href="forms.html">Budowa formularzy</a>
+    </div>
+    <div id="content">
+      <table>
+        <caption>Wyniki sesji</caption>
+        <thead>
+          <tr>
+            <th>Przedmiot</th>
+            <th>Ocena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Matematyka</td>
+            <td>5.0</td>
+          </tr>
+          <tr>
+            <td>Fizyka</td>
+            <td>5.0</td>
+          </tr>
+          <tr>
+            <td>Informatyka</td>
+            <td>5.0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Średnia</td>
+            <td>5.0</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <table>
+        <caption>Programming languages</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Język programowania</th>
+            <th colspan="2">Pozycja</th>
+          </tr>
+          <tr>
+            <th>Luty 2020</th>
+            <th>2015</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Java</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr class="even">
+            <td>C</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>3</td>
+            <td>7</td>
+          </tr>
+          <tr class="even">
+            <td>C++</td>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+            <td>5</td>
+            <td>7</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">
+              Na podstawie:<br>
+              <a href="#">bla bla bla</a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div id="footer">&copy;KC</div>
+  </div>
+</body>
+</html>

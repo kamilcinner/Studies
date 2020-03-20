@@ -1,7 +1,8 @@
 package com.github.kamilcinner;
 
-class InvalidTriangle extends Exception {
+import java.util.Arrays;
 
+class InvalidTriangle extends Exception {
 }
 
 class Triangle {
@@ -9,12 +10,18 @@ class Triangle {
     private double a, b, c;
     
     Triangle(double a, double b, double c) throws InvalidTriangle {
-        if (a+b<c || a+c<b || b+c<a) {
+        double[] sides = new double[3];
+        sides[0] = a;
+        sides[1] = b;
+        sides[2] = c;
+        Arrays.sort(sides);
+
+        if (sides[0] + sides[1] < sides[2]) {
             throw new InvalidTriangle();
         } else {
-            this.a = a;
-            this.b = b;
-            this.c = c;
+            this.a = sides[0];
+            this.b = sides[1];
+            this.c = sides[2];
         }
     }
     
@@ -40,8 +47,13 @@ class Triangle {
     }
 
     static String getType(double a, double b, double c) {
-        if ((a*a + b*b == c*c) || (a*a + c*c == b*b) || (b*b + c*c == a*a)) return "rectangular";
-        else if ((a*a + b*b < c*c) || (a*a + c*c < b*b) || (b*b + c*c < a*a)) return "obtuse";
-        else return "acute"; // if ((a*a + b*b < c*c) && (a*a + c*c < b*b) && (b*b + c*c < a*a))
+        double[] sides = new double[3];
+        sides[0] = a;
+        sides[1] = b;
+        sides[2] = c;
+        Arrays.sort(sides);
+        if (Math.pow(sides[0], 2) + Math.pow(sides[1], 2) == Math.pow(sides[2], 2)) return "rectangular";
+        else if (Math.pow(sides[0], 2) + Math.pow(sides[1], 2) < Math.pow(sides[2], 2)) return "obtuse";
+        else return "acute";
     }
 }

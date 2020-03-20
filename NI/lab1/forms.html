@@ -15,33 +15,60 @@
       <a href="forms.html">Budowa formularzy</a>
     </div>
     <div id="content">
+      <h2>Podstawowe znaczniki HTML to:</h2>
+      <ul>
+        <li>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</li>
+        <li>&lt;input&gt; - znacznik umożliwiający wstawienie różnych pól (pole tekstowe, przycisku typu radio, przycisk typu checkbox) w zależności od wartości jego atrybutu type</li>
+        <li>&lt;select&gt; - pole formularza typu lista rozwijana</li>
+        <li>&lt;textarea&gt; - pole formularza typu obszar tekstowy</li>
+        <li>&lt;button&gt; - pole formularza typu przycisk</li>
+      </ul>
       <h2>Przykładowy formularz</h2>
       <form action="mailto:k.cinner@student.uw.edu.pl" method="post">
-        <!-- Przykładowe typy znacznika input -->
-        Podaj login: <input type="text" name="login"><br>
-        Podaj hasło: <input type="password" name="pass"><br>
-        Wybierz ulubione języki programowania: <br>
-        <input type="checkbox" name="C" value="C"> Język C++
-        <input type="checkbox" name="Java" value="Java"> Język Java
-        <input type="checkbox" name="PHP" value="PHP"> Język PHP<br>
-        Wybierz przeglądarkę, z której korzystasz najczęściej:<br>
-        <input type="radio" name="przegladarka" value="Ff"> Firefox<br>
-        <input type="radio" name="przegladarka" value="Ch"> Chrome<br>
-        <input type="radio" name="przegladarka" value="Sf"> Safari<br>
+        <table>
+          <tr>
+            <td>Nazwisko:</td>
+            <td><input type="text" name="lastname"></td>
+          </tr>
+          <tr>
+            <td>Wiek:</td>
+            <td><input type="number" name="age"></td>
+          </tr>
+          <tr>
+            <td>Państwo:</td>
+            <td>
+              <select name="country">
+                <option value="pl">Polska</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Adres email:</td>
+            <td><input type="email" name="email"></td>
+          </tr>
+        </table>
+        <h3>Zamawiam tutorial z języka:</h3>
+        <input type="checkbox" name="C" value="C"> C/C++
+        <input type="checkbox" name="Java" value="Java"> Java
+        <input type="checkbox" name="PHP" value="PHP"> PHP<br>
+        <h3>Sposób zapłaty:</h3>
+        <input type="radio" name="payment" value="ec"> eurocard
+        <input type="radio" name="payment" value="vs"> visa
+        <input type="radio" name="payment" value="pb"> przelew bankowy<br>
         <input type="submit" value="Wyślij">
         <input type="reset" value="Wyczyść">
 
 <!--        Inne znaczniki pól formularza-->
-        <br>Wskaż hobby i uzasadnij dlaczego to lubisz:<br>
-        <select size="3" name="hobby" multiple="multiple">
-          <option value="t">Turystyka</option>
-          <option value="m">Muzyka</option>
-          <option value="f">Film</option>
-          <option value="s">Sport</option>
-          <option value="i">Inne</option>
-        </select><br>
-        <textarea cols="10" rows="3" name="opinia">Po prostu lubię.</textarea><br>
-        <button name="Kliknij" value="Klikniety">Kliknij tutaj</button>
+<!--        <br>Wskaż hobby i uzasadnij dlaczego to lubisz:<br>-->
+<!--        <select size="3" name="hobby" multiple="multiple">-->
+<!--          <option value="t">Turystyka</option>-->
+<!--          <option value="m">Muzyka</option>-->
+<!--          <option value="f">Film</option>-->
+<!--          <option value="s">Sport</option>-->
+<!--          <option value="i">Inne</option>-->
+<!--        </select><br>-->
+<!--        <textarea cols="10" rows="3" name="opinia">Po prostu lubię.</textarea><br>-->
+<!--        <button name="Kliknij" value="Klikniety">Kliknij tutaj</button>-->
       </form>
     </div>
     <div id="footer">&copy;KC</div>
