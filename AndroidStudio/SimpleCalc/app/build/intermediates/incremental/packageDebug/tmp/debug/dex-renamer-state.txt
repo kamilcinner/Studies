@@ -1,0 +1,4 @@
+#Sun Mar 22 18:14:46 CET 2020
+base.0=/home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

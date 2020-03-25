@@ -1,0 +1,96 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0b32407255a9952ef4495d6ea36b22ea/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/4ef8b65f95cc5dede1c582a3ae557540/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e27728cdd97903e02c6a15f09377d5aa/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/27dab215a9def2a81e1de6a8beb8c1f7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/01910158e15342ba0e3f4c82e8566131/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9d06a79d9c52873e8760ec410a90cd55/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/2cafef1913b0069791fb93445d925c7c/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/0fe45c034806cfe24aaf888c556898fa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4ffc984489bd7c01f7a029677b51c157/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a72d7967694846bc8a0a0506445971bc/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c947371e100cf5640772bdba620487b8/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+	package
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:18:5-45
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:1-34:12
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:17:11-69
+application
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:20:5-32:19
+	android:supportsRtl
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:24:9-35
+	android:label
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:23:9-41
+	android:icon
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:22:9-43
+	android:allowBackup
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:21:9-35
+	android:theme
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:25:9-40
+activity#com.example.android.SimpleCalc.MainActivity
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:26:9-31:20
+	android:name
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:26:19-77
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml:29:27-74
+uses-sdk
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0b32407255a9952ef4495d6ea36b22ea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0b32407255a9952ef4495d6ea36b22ea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/4ef8b65f95cc5dede1c582a3ae557540/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/4ef8b65f95cc5dede1c582a3ae557540/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e27728cdd97903e02c6a15f09377d5aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e27728cdd97903e02c6a15f09377d5aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/27dab215a9def2a81e1de6a8beb8c1f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/27dab215a9def2a81e1de6a8beb8c1f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/01910158e15342ba0e3f4c82e8566131/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/01910158e15342ba0e3f4c82e8566131/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9d06a79d9c52873e8760ec410a90cd55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/9d06a79d9c52873e8760ec410a90cd55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/2cafef1913b0069791fb93445d925c7c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/2cafef1913b0069791fb93445d925c7c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/0fe45c034806cfe24aaf888c556898fa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/0fe45c034806cfe24aaf888c556898fa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4ffc984489bd7c01f7a029677b51c157/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4ffc984489bd7c01f7a029677b51c157/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a72d7967694846bc8a0a0506445971bc/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a72d7967694846bc8a0a0506445971bc/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c947371e100cf5640772bdba620487b8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c947371e100cf5640772bdba620487b8/AndroidManifest.xml:20:5-44
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/SimpleCalc/app/src/main/AndroidManifest.xml

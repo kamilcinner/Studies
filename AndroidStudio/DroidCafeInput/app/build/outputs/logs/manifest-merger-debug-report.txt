@@ -1,0 +1,179 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b49bcc4a8a4edfba5f6096135c5e7cf1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/kamil/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/40018303e4d734eaa75c3db2eda78222/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/86d84f3c902cbc151f033f1c84cba150/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/99e71c67869f2cc342c3443d95847f5d/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/a5350b96079a66721ce8e83b708affec/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b89820c8f411d8561434df2985a14b01/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0470d9eecd1fc59738d9568c9e0506d6/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7389b13b1655dccdb2e08c6a2fdf89c7/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/693200a7aaa41ac078a966be4d4e4c7d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c55b506464f246ebaa3e41e5de0acead/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/76be6135e128c40ce5783c184b3aaa35/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0154a7b416b213f53992bfc513f133d2/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:3:5-49
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:1-25:12
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:5:5-23:19
+MERGED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b49bcc4a8a4edfba5f6096135c5e7cf1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b49bcc4a8a4edfba5f6096135c5e7cf1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/kamil/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/40018303e4d734eaa75c3db2eda78222/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/kamil/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/40018303e4d734eaa75c3db2eda78222/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/86d84f3c902cbc151f033f1c84cba150/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/86d84f3c902cbc151f033f1c84cba150/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/99e71c67869f2cc342c3443d95847f5d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/99e71c67869f2cc342c3443d95847f5d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/a5350b96079a66721ce8e83b708affec/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/a5350b96079a66721ce8e83b708affec/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b89820c8f411d8561434df2985a14b01/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b89820c8f411d8561434df2985a14b01/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0470d9eecd1fc59738d9568c9e0506d6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0470d9eecd1fc59738d9568c9e0506d6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7389b13b1655dccdb2e08c6a2fdf89c7/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7389b13b1655dccdb2e08c6a2fdf89c7/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/693200a7aaa41ac078a966be4d4e4c7d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/693200a7aaa41ac078a966be4d4e4c7d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c55b506464f246ebaa3e41e5de0acead/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c55b506464f246ebaa3e41e5de0acead/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/76be6135e128c40ce5783c184b3aaa35/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/76be6135e128c40ce5783c184b3aaa35/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0154a7b416b213f53992bfc513f133d2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0154a7b416b213f53992bfc513f133d2/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.android.droidcafeinput.MainActivity
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:12:9-21:20
+	android:label
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:14:13-45
+	android:theme
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:15:13-56
+	android:name
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:13:13-75
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:19:27-74
+activity#com.example.android.droidcafeinput.OrderActivity
+ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:22:9-51
+	android:name
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml:22:19-48
+uses-sdk
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b49bcc4a8a4edfba5f6096135c5e7cf1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b49bcc4a8a4edfba5f6096135c5e7cf1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/kamil/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/40018303e4d734eaa75c3db2eda78222/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/kamil/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/40018303e4d734eaa75c3db2eda78222/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/86d84f3c902cbc151f033f1c84cba150/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/86d84f3c902cbc151f033f1c84cba150/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/99e71c67869f2cc342c3443d95847f5d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/99e71c67869f2cc342c3443d95847f5d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/a5350b96079a66721ce8e83b708affec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/a5350b96079a66721ce8e83b708affec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b89820c8f411d8561434df2985a14b01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b89820c8f411d8561434df2985a14b01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0470d9eecd1fc59738d9568c9e0506d6/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0470d9eecd1fc59738d9568c9e0506d6/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7389b13b1655dccdb2e08c6a2fdf89c7/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7389b13b1655dccdb2e08c6a2fdf89c7/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/693200a7aaa41ac078a966be4d4e4c7d/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/693200a7aaa41ac078a966be4d4e4c7d/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c55b506464f246ebaa3e41e5de0acead/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c55b506464f246ebaa3e41e5de0acead/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/76be6135e128c40ce5783c184b3aaa35/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/76be6135e128c40ce5783c184b3aaa35/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0154a7b416b213f53992bfc513f133d2/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0154a7b416b213f53992bfc513f133d2/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+		ADDED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+		INJECTED from /home/kamil/dev/github.com/kamilcinner/Studies/AndroidStudio/DroidCafeInput/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b49bcc4a8a4edfba5f6096135c5e7cf1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b49bcc4a8a4edfba5f6096135c5e7cf1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/86d84f3c902cbc151f033f1c84cba150/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/86d84f3c902cbc151f033f1c84cba150/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/99e71c67869f2cc342c3443d95847f5d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/99e71c67869f2cc342c3443d95847f5d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/a5350b96079a66721ce8e83b708affec/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/a5350b96079a66721ce8e83b708affec/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b89820c8f411d8561434df2985a14b01/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b89820c8f411d8561434df2985a14b01/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0470d9eecd1fc59738d9568c9e0506d6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/0470d9eecd1fc59738d9568c9e0506d6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7389b13b1655dccdb2e08c6a2fdf89c7/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7389b13b1655dccdb2e08c6a2fdf89c7/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/693200a7aaa41ac078a966be4d4e4c7d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/693200a7aaa41ac078a966be4d4e4c7d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c55b506464f246ebaa3e41e5de0acead/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c55b506464f246ebaa3e41e5de0acead/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/76be6135e128c40ce5783c184b3aaa35/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/76be6135e128c40ce5783c184b3aaa35/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0154a7b416b213f53992bfc513f133d2/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0154a7b416b213f53992bfc513f133d2/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/12ddd9a04de4cc2199040ebf97574705/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/kamil/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fe88e2f2ada23bd66415ae68f012d50d/AndroidManifest.xml:26:13-58
