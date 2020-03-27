@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Donacja</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>body{background-color: gray; color: white;}</style>
+</head>
+<body>
+  <h1>Formularz dotacji</h1>
+  <form action="#" method="post">
+    <fieldset>
+      <p>
+        <label for="id_beneficjent">Beneficjent:</label>
+        <input list="beneficjent" required name="beneficjent" id="id_beneficjent">
+        <datalist id="beneficjent">
+          <option value="Microsoft"></option>
+          <option value="Google"></option>
+          <option value="Scheduler"></option>
+          <option value="JetBrains"></option>
+        </datalist>
+      </p>
+      <p>
+        <label for="id_donation_amount">Wartość dotacji:</label>
+        <input type="number" min="10" step="2" id="id_donation_amount"
+                required placeholder="Minimum 10" title="Proszę podać wartość > 10">
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Dane karty płatniczej</legend>
+      <p>
+        Karta:
+        <input type="radio" name="kto" value="uczen" id="id_visa">
+        <label for="id_visa">Visa</label>
+        <input type="radio" name="kto" value="student" id="id_master_card">
+        <label for="id_master_card">Master Card</label>
+      </p>
+      <p>
+        <label for="id_card_number">Numer:</label>
+        <input type="text" name="card_number" id="id_card_number" required pattern="([0-9]{13})|([0-9]{16})">
+      </p>
+      <p>
+        <label for="id_cvv">Kod CVV:</label>
+        <input type="text" name="cvv" id="id_cvv" required pattern="[0-9]{3,4}"
+               title="Podaj kod CVV złożony z 3 lub 4 cyfr podanych na odwrocie karty.">
+      </p>
+    </fieldset>
+    <p>
+      <label for="id_giver">Darczyńca</label>
+      <input type="text" name="giver" id="id_giver" required pattern="^([A-ZŁŚ][a-ząśćńęóżź]{1,25}) +([A-ZŁŚ][a-ząśćńęóżź]{1,25})">
+    </p>
+    <input type="submit" value="Rejestruj">
+    <input type="reset" value="Wyczyść">
+  </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    padding: 0;
+}
+#banner { background-color: coral; /*width: 100%;*/}
+#main { display: flex;}
+#left-stripe { flex: 30%; }
+#stripe {padding: 20px 0; background-color: cornsilk;}
+#menu { background-color: cadetblue; padding: 20px 0;}
+#content { flex: 70%; background-color: blueviolet; padding: 30px 0;}
+#footer { background-color: darkolivegreen; }

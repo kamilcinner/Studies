@@ -21,19 +21,25 @@ public class Main {
         // ad.2
 	    Employee e1 = new Employee();
 	    Employee e2 = new Employee("Kamil", "Cinner", 21, 'm', "programmer", "Google", 15000);
-	    Employee.printEmployeeData(e1); print("");
-	    Employee.printEmployeeData(e2); print("");
+	    Employee e3 = new Employee("Kornelia", "Brown", 21, 'f', "human resources", "Sii", 5499);
+//	    Employee.printEmployeeData(e1); print("");
+//	    Employee.printEmployeeData(e2); print("");
+//	    Employee.printEmployeeData(e3); print("");
         // ad.3
-        Collection<Employee> c = new ArrayList<>();
+        ArrayList<Employee> c = new ArrayList<>();
         c.add(e1);
         c.add(e2);
+	    c.add(e3);
 	    c.add(new Employee("Adam", "Kątek", 23, 'm', "programmer", "Microsoft", 23000));
-	    c.add(new Employee("Magda", "Brown", 21, 'f', "human resources", "Sii", 5499));
 	    c.add(new Employee("Lilith", "Bonner", 20, 'f', "pharmacist", "Adamed", 7000));
-	    for (Employee e : c) {
-	        print(e + " ");
+//	    for (Object e : ((Collection<Employee>) c).toArray()) {
+//	        print(e.toString());
+//        }
+        for (Employee e : c) {
+            Employee.printEmployeeData(e);
+            print("");
         }
-        print("");
+//        print("");
         // ad.4
 	    Employer assecoEmployer = new Employer("Jerzy", "Grębosz", 32, 'm', "Asseco", "programmer", 27000);
 	    // ad.5
@@ -41,7 +47,7 @@ public class Main {
             if (assecoEmployer.hireAnEmployee(e)) {
                 print("Successfully hired "+e.whatsYourName()+" ("+e.profession+")"+" as "+assecoEmployer.getPreferences());
                 Employee.printEmployeeData(e); print("");
-            } else print("Cannot hire "+e.whatsYourName()+" ("+e.profession+")"+" as "+assecoEmployer.getPreferences());
+            } else print("Cannot hire "+e.whatsYourName()+" ("+e.profession+")"+" as "+assecoEmployer.getPreferences()+"\n");
         }
     }
 }

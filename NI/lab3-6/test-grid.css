@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+}
+
+#banner { grid-area: banner; background-color: coral; }
+#stripe { grid-area: stripe; background-color: cornsilk; }
+#menu { grid-area: menu; background-color: cadetblue; }
+#content { grid-area: content; background-color: blueviolet; padding: 100px 0; }
+#footer { grid-area: footer; background-color: darkolivegreen; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'banner banner banner'
+        'stripe menu menu'
+        'stripe content content'
+        'footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
