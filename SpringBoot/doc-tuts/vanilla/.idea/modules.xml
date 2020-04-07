@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pairs-vanilla.iml" filepath="$PROJECT_DIR$/pairs-vanilla.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resource/vanilla-resource.iml" filepath="$PROJECT_DIR$/resource/vanilla-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/vanilla-ui.iml" filepath="$PROJECT_DIR$/ui/vanilla-ui.iml" />
+    </modules>
+  </component>
+</project>

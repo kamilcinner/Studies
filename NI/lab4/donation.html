@@ -15,7 +15,7 @@
         <input list="beneficjent" required name="beneficjent" id="id_beneficjent">
         <datalist id="beneficjent">
           <option value="Microsoft"></option>
-          <option value="Google"></option>
+          <option value="Google"></option>chromium-browser
           <option value="Scheduler"></option>
           <option value="JetBrains"></option>
         </datalist>
@@ -23,7 +23,7 @@
       <p>
         <label for="id_donation_amount">Wartość dotacji:</label>
         <input type="number" min="10" step="2" id="id_donation_amount"
-                required placeholder="Minimum 10" title="Proszę podać wartość > 10">
+               required placeholder="Minimum 10" title="Proszę podać wartość > 10">
       </p>
     </fieldset>
     <fieldset>
@@ -37,7 +37,8 @@
       </p>
       <p>
         <label for="id_card_number">Numer:</label>
-        <input type="text" name="card_number" id="id_card_number" required pattern="([0-9]{13})|([0-9]{16})">
+        <input type="text" name="card_number" id="id_card_number" required
+               pattern="([0-9]{13})|([0-9]{16})">
       </p>
       <p>
         <label for="id_cvv">Kod CVV:</label>
@@ -47,7 +48,9 @@
     </fieldset>
     <p>
       <label for="id_giver">Darczyńca</label>
-      <input type="text" name="giver" id="id_giver" required pattern="^([A-ZŁŚ][a-ząśćńęóżź]{1,25}) +([A-ZŁŚ][a-ząśćńęóżź]{1,25})">
+      <input type="text" name="giver" id="id_giver" required
+             pattern="^([A-ZŁŚ][a-ząśćńęóżź]{1,25}) +([A-ZŁŚ][a-ząśćńęóżź]{1,25})"
+             placeholder="Imię Nazwisko">
     </p>
     <input type="submit" value="Rejestruj">
     <input type="reset" value="Wyczyść">

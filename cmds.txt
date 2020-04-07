@@ -1,0 +1,146 @@
+Themes: https://drasite.com/flat-remix-gtk
+
+sudo add-apt-repository ppa:daniruiz/flat-remix
+sudo apt update
+sudo apt install flat-remix-gtk <- themes
+sudo apt install flat-remix <- icons
+
+
+Touchpad gestures configuration
+
+sudo apt install xserver-xorg-input-synaptics-hwe-18.04
+sudo apt install apt-show-versions
+apt-show-versions | grep input-synaptics
+test -d /etc/X11/xorg.conf.d || sudo mkdir /etc/X11/xorg.conf.d
+sudo vim /etc/X11/xorg.conf.d/50-synaptics.conf
+<<<
+# /etc/X11/xorg.conf.d/50-synaptics.conf  (MagicMint) M0427
+# Additional options may be added in the form of
+#   Option "OptionName" "value"
+# See man synaptics (4) for details
+
+Section "InputClass"
+ Identifier "touchpad ignore duplicates"
+ # Ignore events from old driver
+ MatchIsTouchpad "on"
+ MatchOS "Linux"
+ MatchDevicePath "/dev/input/mouse*"
+ Option "Ignore" "on"
+EndSection
+
+Section "InputClass"
+ Identifier "touchpad catchall"
+ # Device
+ Driver "synaptics"
+ MatchIsTouchpad "on"
+ MatchDevicePath "/dev/input/event*"
+
+ # Palm detection
+ Option "PalmDetect" "on"
+ Option "PalmMinWidth" "4"
+ Option "PalmMinZ" "1"
+
+ # Dragging & tapping
+ Option "LockedDrags" "on"
+ Option "FastTaps" "on"
+ Option "AccelFactor" "0.1028806" #2x
+ Option "MinSpeed" "1"
+ Option "MaxSpeed" "1.75"
+EndSection
+
+Section "InputClass"
+ Identifier "Default clickpad buttons"
+ # Lacking mouse buttons
+ MatchDriver "synaptics"
+ Option "LTCornerButton" "8"
+ Option "LBCornerButton" "9"
+
+ # Left-handed pad w/ middle button on the left side
+ #Option "SoftButtonAreas" "1630 0 1737 0 0 1629 1737 0"
+
+ # Right-handed pad w/ middle button on the right side
+ Option "SoftButtonAreas" "0 1629 1737 0 1630 0 1737 0"
+EndSection
+
+Section "InputClass"
+ Identifier "Multi-finger taps"
+ MatchDriver "synaptics"
+
+ # The following worked in Nadia only via synclient
+ Option "TapButton1" "1"
+ Option "TapButton2" "3"
+ Option "TapButton3" "2"
+EndSection
+
+# End of configuration file
+<<<
+sudo apt-get install xautomation xbindkeys
+vim ~/.xbindkeysrc
+<<<
+# ~/.xbindkeysr  (MagicMint) H0129
+# Bind the 8th mouse button to close the current window
+"xte 'keydown Alt_L' 'key F4' 'keyup Alt_L'"
+  b:8
+"gnome-terminal"
+  b:9
+# End of xbindkeys configuration
+<<<
+sudo gpasswd -a $USER input
+logout and login
+sudo apt-get install libinput-tools
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo make install (or sudo ./libinput-gestures-setup install)
+libinput-gestures-setup autostart
+libinput-gestures-setup start
+libinput-gestures-setup stop
+~/.config/libinput-gestures.conf
+<<<
+gesture swipe up 4 xdotool key ctrl+alt+Up
+gesture swipe down 4 xdotool key ctrl+alt+Down
+gesture swipe left 4 xdotool key ctrl+alt+Left
+gesture swipe right 4 xdotool key ctrl+alt+Right
+
+gesture swipe up 3 xdotool key super+Up
+gesture swipe down 3 xdotool key super+Down
+gesture swipe left 3 xdotool key super+Left
+gesture swipe right 3 xdotool key super+Right
+
+gesture pinch in 3 xdotool key shift+ctrl+super+Down
+gesture pinch out 3 xdotool key shift+ctrl+super+Up
+<<<
+
+
+Number of starter workplaces
+
+gsettings get org.cinnamon.desktop.wm.preferences num-workspaces
+gsettings set org.cinnamon.desktop.wm.preferences num-workspaces 12
+
+
+Swap file size
+
+swapon
+sudo swapoff -a
+sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
+sudo chmod 0600 /swapfile
+sudo mkswap /swapfile
+sudo swapon -a
+
+
+Angular
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+sudo nvm install node <- latest (not LTS)
+npm install -g @angular/cli
+
+
+Maven
+
+sudo apt install maven
+
+
+
+
+
+
+

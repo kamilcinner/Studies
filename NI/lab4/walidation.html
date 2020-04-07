@@ -11,13 +11,17 @@
   <form action="#" method="get">
     <p>
       Imię*:<br />
-      <input type="text" name="imie" required pattern="^([A-ZŁŚ][a-ząśćńęóżź]{1,25})$"><br />
+      <input type="text" name="imie" required
+             pattern="^([A-ZŁŚ][a-ząśćńęóżź]{1,25})$"><br />
       Nazwisko*:<br />
-      <input type="text" name="nazwisko" required pattern="^([A-ZŁŚ][a-ząśćńęóżź]{1,25})$"><br />
+      <input type="text" name="nazwisko" required
+             pattern="^([A-ZŁŚ][a-ząśćńęóżź]{1,25})$"><br />
       Email*:<br />
-      <input type="email" name="email" placeholder="bury@zenek.org" pattern="^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$"><br />
-      Telefon*:
-      <input type="tel" name="tel" required placeholder="999998997" pattern="[0-9]{9}"><br />
+      <input type="email" name="email" placeholder="bury@zenek.org"
+             pattern="^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$"><br />
+      Telefon*:<br />
+      <input type="tel" name="tel" required placeholder="999998997"
+             pattern="[0-9]{9}"><br />
       Data urodzenia:<br />
       <input type="date" name="data"><br />
       Hasło*:<br />

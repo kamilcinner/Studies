@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Kalkulator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>body{background-color: gray; color: white;}</style>
+</head>
+<body>
+<form oninput="sum.value=parseInt(number.value)+parseInt(vat.value)*parseInt(number.value)/100" >
+  <h1>Kalkulator faktur</h1>
+  <p>
+    <label for="number">Wartość netto: </label>
+    <input type="number" id="number" value="0"> PLN
+  </p>
+  <p>
+    <label for="vat">Stawka VAT: </label>
+    <input type="number" id="vat" value="23"> %
+  </p>
+  <p>
+    <strong>Wartość brutto: </strong>
+    <output name="sum" for="number vat"></output> PLN
+  </p>
+</form>
+</body>
