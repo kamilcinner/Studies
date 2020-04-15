@@ -74,7 +74,7 @@ EndSection
 
 # End of configuration file
 <<<
-sudo apt-get install xautomation xbindkeys
+sudo apt install xautomation xbindkeys
 vim ~/.xbindkeysrc
 <<<
 # ~/.xbindkeysr  (MagicMint) H0129
@@ -86,15 +86,16 @@ vim ~/.xbindkeysrc
 # End of xbindkeys configuration
 <<<
 sudo gpasswd -a $USER input
-logout and login
-sudo apt-get install libinput-tools
+---logout and login---
+sudo apt install libinput-tools
+sudo apt install xdotool
 git clone https://github.com/bulletmark/libinput-gestures.git
 cd libinput-gestures
 sudo make install (or sudo ./libinput-gestures-setup install)
 libinput-gestures-setup autostart
 libinput-gestures-setup start
 libinput-gestures-setup stop
-~/.config/libinput-gestures.conf
+vim ~/.config/libinput-gestures.conf
 <<<
 gesture swipe up 4 xdotool key ctrl+alt+Up
 gesture swipe down 4 xdotool key ctrl+alt+Down
@@ -139,8 +140,13 @@ Maven
 sudo apt install maven
 
 
+More themes
+sudo apt install sassc optipng inkscape
 
 
+Additional GIT configuration
+
+git config credential.helper 'cache --timeout=3600'
 
 
 
