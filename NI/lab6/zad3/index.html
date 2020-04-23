@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funny lab 2</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <fieldset>
+    <legend>Calculator</legend>
+    <div style="float: left; max-width: 30%;">
+      <h1>Enter numbers:</h1>
+      <p><label for="a">A:</label></p>
+      <input id="a">
+
+      <p><label for="b">B:</label></p>
+      <input id="b">
+
+      <p><button onclick="calculate()">Calculate</button></p>
+    </div>
+
+    <div style="float: right; max-width: 40%;">
+      <h1>Choose operation:</h1>
+
+      <p>
+        <input id="+" type="radio" name="operation" value="+">
+        <label for="+">+</label>
+      </p>
+
+      <p>
+        <input id="-" type="radio" name="operation" value="-">
+        <label for="-">-</label>
+      </p>
+
+      <p>
+        <input id="*" type="radio" name="operation" value="*">
+        <label for="*">*</label>
+      </p>
+
+      <p>
+        <input id="/" type="radio" name="operation" value="/">
+        <label for="/">/</label>
+      </p>
+
+      <p>
+        <label for="result">Result:</label>
+        <input id="result" disabled>
+      </p>
+    </div>
+  </fieldset>
+</body>
+</html>

@@ -3,29 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Dostęp do pól formularza</title>
-  Laboratorium – Elementy JavaScript
-  Beata Pańczyk
-  <script type="text/javascript">
-      function oblicz() {
-          //Słówko var - oznacza zmienną; typ tej zmiennej
-          //będzie zależał od jej wartości;
-          //Pobierz element o id=l1 do zmiennej l1:
-          var l1=document.getElementById('l1');
-          //pobierz wartość (łańcuch tekstowy) wpisaną w polu formularza o id='l1':
-          l1=l1.value;
-          //Przekonwertuj (jeśli się uda) l1 do wartości typu int:
-          l1=parseInt(l1);
-          //Jeśli udała się próba konwersji to l1 zawiera wartość całkowitą
-          //Analogicznie realizujemy pobranie wartości z drugiego pola tekstowego,
-          //ale tym razem wszystko w jednej instrukcji:
-          var l2=parseInt(document.getElementById('l2').value);
-          //Teraz już możemy obliczyć sumę i ustawić wartość pola tekstowego
-          //o id='suma':
-          var s=document.getElementById('suma');
-          s.value=l1+l2;
-      }
-  </script>
+  <title>Funny lab</title>
+  <script src="script.js"></script>
 </head>
 <body> <div><h3>Dodawanie</h3>
   <!-- Elementy formularza (pola tekstowe i przycisk) zostały umieszczone

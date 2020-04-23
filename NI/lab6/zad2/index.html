@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funny lab 2</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div>
+    <h1>Loan</h1>
+    <p>
+      <label for="amount">Amount:</label>
+      <input id="amount">
+    </p>
+    <p>
+      <label for="installments-count">Number of installments:</label>
+      <input id="installments-count">
+    </p>
+    <p>
+      <label for="percent">Percent:</label>
+      <input id="percent">
+    </p>
+    <p>
+      <label for="monthly-installment">Monthly installment:</label>
+      <input id="monthly-installment" disabled value="0">
+    </p>
+    <p>
+      <label for="amount-with-interest">Amount with interest:</label>
+      <input id="amount-with-interest" disabled value="0">
+    </p>
+    <p>
+      <button onclick="calculate()">Calculate the fixed installment</button>
+    </p>
+  </div>
+</body>
+</html>
