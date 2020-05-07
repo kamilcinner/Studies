@@ -120,12 +120,7 @@ gsettings set org.cinnamon.desktop.wm.preferences num-workspaces 12
 
 Swap file size
 
-swapon
-sudo swapoff -a
-sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
-sudo chmod 0600 /swapfile
-sudo mkswap /swapfile
-sudo swapon -a
+swapon && sudo swapoff -a && sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 && sudo chmod 0600 /swapfile && sudo mkswap /swapfile && sudo swapon -a
 
 
 Angular
