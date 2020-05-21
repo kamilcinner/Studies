@@ -18,8 +18,7 @@ $('#calculateButton').click(function () {
     const percent = parseFloat($('#percent').val())
 
     // Check if input is NaN or Infinite.
-    if (isNaN(amount) || isNaN(installmentsCount) || isNaN(percent) ||
-        !isFinite(amount) || !isFinite(installmentsCount) || !isFinite(percent)) {
+    if (!isFinite(amount) || !isFinite(installmentsCount) || !isFinite(percent)) {
         alert('Invalid data provided!')
     } else {
 
@@ -31,14 +30,17 @@ $('#calculateButton').click(function () {
         const amountWithInterest = $('#amount-with-interest')
 
         // Calculations.
-        const interestRatePerMonth = percent / 12.0
+        const interestRatePerMonth = percent / 1200.0
 
         const numerator = amount * interestRatePerMonth
         const denominator = 1.0 - (1.0 / Math.pow((1.0 + interestRatePerMonth), installmentsCount))
 
         const result = numerator / denominator
-        
-        monthlyInstallment.val(Math.ceil((result / installmentsCount + Number.EPSILON) * 100) / 100)
-        amountWithInterest.val(Math.ceil((result + Number.EPSILON) * 100) / 100)
+
+        // monthlyInstallment.value = result / installmentsCount
+        // amountWithInterest.value = result
+
+        monthlyInstallment.val(Math.ceil((result + Number.EPSILON) * 100) / 100)
+        amountWithInterest.val(Math.ceil((result * installmentsCount + Number.EPSILON) * 100) / 100)
     }
 })
