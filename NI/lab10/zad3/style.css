@@ -1,0 +1,9 @@
+.product {
+    margin: 20px;
+    padding: 10px;
+    background-color: blanchedalmond;
+}
+.product p {
+    padding: 0;
+    margin: 1px;
+}

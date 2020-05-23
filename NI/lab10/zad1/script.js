@@ -40,8 +40,9 @@ function showAll() {
     // Create hook to display data.
     const dataDisplay = document.getElementById('data-display')
 
+    // Initialize variable for storing data-display div content.
     let colorParagraphs = ''
-
+    // Add colors.
     for (const color of colorList) {
         colorParagraphs +=
             '<p style="background-color: #' + color.rgbValue + '">' +
@@ -49,6 +50,7 @@ function showAll() {
             '</p>'
     }
 
+    // Save proper div content.
     dataDisplay.innerHTML = colorParagraphs
 }
 
