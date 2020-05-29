@@ -53,7 +53,7 @@ function saveOne() {
     showAll()
 }
 
-function editOne(clickedProduct) {
+function editOne(clickedProductName) {
     // Get hooks.
     const name = document.getElementById('name')
     const price = document.getElementById('price')
@@ -62,7 +62,7 @@ function editOne(clickedProduct) {
 
     const productList = JSON.parse(localStorage.getItem('product-list'))
     for (const product of productList) {
-        if (product.name === clickedProduct.getAttribute('class')) {
+        if (product.name === clickedProductName) {
             const index = productList.indexOf(product)
 
             if (index !== -1) {
@@ -78,10 +78,10 @@ function editOne(clickedProduct) {
     }
 }
 
-function deleteOne(clickedProduct) {
+function deleteOne(clickedProductName) {
     const productList = JSON.parse(localStorage.getItem('product-list'))
     for (const product of productList) {
-        if (product.name === clickedProduct.getAttribute('class')) {
+        if (product.name === clickedProductName) {
             const index = productList.indexOf(product)
 
             if (index !== -1) {
@@ -122,8 +122,8 @@ function showAll() {
                 '<p>Price: '+product.price+'</p>' +
                 '<p>Color: '+product.color+'</p>' +
                 '<p>Number of items: '+product.amount+'</p>' +
-                '<button class="'+product.name+'" onclick="editOne(this)">Edit</button>' +
-                '<button class="'+product.name+'" onclick="deleteOne(this)">Delete</button>' +
+                `<button onclick="editOne(\'${product.name}\')">Edit</button>` +
+                `<button onclick="deleteOne(\'${product.name}\')">Delete</button>` +
             '</div>'
 }
 
@@ -138,10 +138,9 @@ function clearAll() {
     document.getElementById('data-display').innerHTML = ''
 }
 
-function addListenersAndColors() {
+document.addEventListener('DOMContentLoaded', () => {
+    // Add buttons click listeners.
     document.getElementById('save-one').addEventListener('click', saveOne)
     document.getElementById('show-all').addEventListener('click', showAll)
     document.getElementById('delete-all').addEventListener('click', clearAll)
-}
-
-document.addEventListener('DOMContentLoaded', addListenersAndColors)
+})

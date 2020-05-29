@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const login = document.getElementById('login').value
         const password = document.getElementById('password').value
 
+        document.getElementById('info').innerHTML = ''
+
         // Check if login already exist in local storage.
         if (localStorage.getItem(login)) {
             // User already exist.
