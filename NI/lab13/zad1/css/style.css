@@ -1,0 +1,40 @@
+body {
+    background:lightyellow
+}
+h1,h2, footer, button {
+    padding:0.2em;
+    text-align:center;
+}
+nav{
+    float:left;
+    width:100%;
+}
+button,footer {
+    background:#45525a;
+    color:#ffe9ba;
+    border-radius:10px;
+}
+nav button {
+    float:left;
+    display:block;
+    width:25%;
+    font-size:110%;
+}
+section { clear:both;}
+footer { clear:both; }
+@media screen and (max-width: 720px) {
+    nav button {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        font-size:120%;
+    }
+}
+@media screen and (max-width: 560px) {
+    nav button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2% 0;
+        font-size:140%;
+    }
+}
