@@ -7,13 +7,16 @@ function gallery($rows, $cols) {
         return;
     }
 
-    for ($i = 1; $i <= 10; $i++) {
+    for ($i = 1; $i <= $max; $i++) {
         $name = "obraz$i";
         print("<img src='z2/obrazki/$name.JPG' alt='$name' />");
-        if ($i / $cols === 0) {
+        if ($i % $cols === 0) {
             print("<br>");
         }
     }
+    print("<br>");
 }
 
 gallery(3, 3);
+gallery(4, 2);
+gallery(2, 4);
