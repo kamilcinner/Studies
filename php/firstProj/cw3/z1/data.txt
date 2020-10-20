@@ -1,0 +1,7 @@
+Nazwisko: fsd
+Wiek: 12
+Państwo: pl
+Adres email: 312313@232.dsd
+Technologie: CPP Java C# XML 
+Sposób zapłaty: pb
+
