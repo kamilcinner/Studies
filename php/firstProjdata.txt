@@ -1,0 +1,7 @@
+Nazwisko: dad
+Wiek was empty.
+Państwo: pl
+Adres email was empty.
+Technologie was empty.
+Sposób zapłaty was empty.
+

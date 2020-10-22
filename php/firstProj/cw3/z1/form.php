@@ -1,4 +1,5 @@
 <?php
+include_once 'utils.php';
 printForm();
 
 if (isset($_REQUEST["submit"])) {
@@ -26,85 +27,6 @@ if (isset($_REQUEST["submit"])) {
             break;
         }
     }
-}
-
-
-
-
-
-function add() {
-    $data = '';
-    $namesWithTranslations = [
-        ['lastname', 'Nazwisko'],
-        ['age', 'Wiek'],
-        ['country', 'Państwo'],
-        ['email', 'Adres email'],
-        ['tech', 'Technologie'],
-        ['payment', 'Sposób zapłaty']
-    ];
-    foreach ($namesWithTranslations as $item) {
-        $data .= pushFormInput($item[0], $item[1], $data);
-    }
-    $data .= "\n";
-    $file = fopen('data.txt', 'a');
-    fwrite($file, $data);
-    fclose($file);
-}
-
-function show() {
-    $data = file('data.txt');
-    echo '<h2>Form data:</h2>';
-    foreach ($data as $row) {
-        echo "$row<br>";
-    }
-}
-
-function showOrder($lang) {
-    $langOrders = '';
-    $orders = getOrders();
-    foreach ($orders as $order) {
-        if (strpos($order, $lang)) {
-            $langOrders .= $order;
-        }
-    }
-    echo $langOrders;
-}
-
-function pushFormInput($name, $translation) {
-    $newData = '';
-    if (isset($_REQUEST[$name]) && ($_REQUEST[$name] !== "")) {
-        $value = $_REQUEST[$name];
-        if (is_array($value)) {
-            $newData .= "$translation: ";
-            foreach ($value as $item) {
-                $newData .= "$item ";
-            }
-            $newData .= "\n";
-        }
-        else {
-            $value = htmlspecialchars(trim($_REQUEST[$name]));
-            $newData .= "$translation: $value\n";
-        }
-    }
-    else $newData .= "$translation was empty.\n";
-    return $newData;
-}
-
-function getOrders() {
-    $data = file('data.txt');
-    $orders = [];
-    $currentOrder = '';
-    foreach ($data as $row) {
-        echo $currentOrder;
-        if ($row === '') {
-            echo $currentOrder;
-            push_array($orders, $currentOrder);
-            $currentOrder = '';
-            continue;
-        }
-        $currentOrder .= "$row<br>";
-    }
-    return $orders;
 }
 
 function printForm() {?>
@@ -161,7 +83,7 @@ function printForm() {?>
             </table>
             <h3>Zamawiam tutorial z języka:</h3>
             <?php
-            $tech = ["C", "CPP", "Java", "C#", "Html", "CSS", "XML", "PHP", "JavaScript"];
+            $tech = ["C", "C++", "Java", "C#", "Html", "CSS", "XML", "PHP", "JavaScript"];
 
             foreach ($tech as $item) {
                 echo "<input type='checkbox' id='id_$item' name='tech[]' value='$item'><label for='id_$item'>$item</label>";
@@ -184,4 +106,6 @@ function printForm() {?>
     </div>
     </body>
     </html>
-<?php } ?>
+<?php }
+printServerArray();
+?>
