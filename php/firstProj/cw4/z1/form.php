@@ -9,6 +9,7 @@ switch ($action) {
     case "Java": showOrder("Java"); break;
     case "PHP": showOrder("PHP"); break;
     case "C++": showOrder("C++"); break;
+    case "Statystyki": showStats(); break;
     default: {}
 }
 
@@ -83,6 +84,7 @@ function printForm() {?>
             <input type="submit" name="submit" value="Java">
             <input type="submit" name="submit" value="PHP">
             <input type="submit" name="submit" value="C++">
+            <input type="submit" name="submit" value="Statystyki">
         </form>
         </div>
         <div id="footer">&copy;KC</div>
