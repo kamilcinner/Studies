@@ -2,15 +2,14 @@
 include_once 'utils.php';
 printForm();
 
-if (filter_input(INPUT_GET, 'submit')) {
-    $action = filter_input(INPUT_GET, 'submit');
-    switch ($action) {
-        case "Dodaj": add(); break;
-        case "Pokaz": show(); break;
-        case "Java": showOrder("Java"); break;
-        case "PHP": showOrder("PHP"); break;
-        case "C++": showOrder("C++"); break;
-    }
+$action = filter_input(INPUT_POST, 'submit');
+switch ($action) {
+    case "Dodaj": add(); break;
+    case "Pokaz": show(); break;
+    case "Java": showOrder("Java"); break;
+    case "PHP": showOrder("PHP"); break;
+    case "C++": showOrder("C++"); break;
+    default: {}
 }
 
 function printForm() {?>
@@ -46,11 +45,11 @@ function printForm() {?>
             <table>
             <tr>
                 <td><label for="id_lastname">Nazwisko:</label></td>
-                <td><input type="text" id="id_lastname" name="lastname"></td>
+                <td><input type="text" id="id_lastname" name="lastname" value="Testsurname"></td>
             </tr>
             <tr>
                 <td><label for="id_age">Wiek:</label></td>
-                <td><input type="number" id="id_age" name="age"></td>
+                <td><input type="number" id="id_age" name="age" value="12"></td>
             </tr>
             <tr>
                 <td><label for="id_country">Państwo:</label></td>
@@ -62,7 +61,7 @@ function printForm() {?>
             </tr>
             <tr>
                 <td><label for="id_email">Adres email:</label></td>
-                <td><input type="email" id="id_email" name="email"></td>
+                <td><input type="email" id="id_email" name="email" value="test@email.example"></td>
             </tr>
             </table>
             <h3>Zamawiam tutorial z języka:</h3>
@@ -76,7 +75,7 @@ function printForm() {?>
             <h3>Sposób zapłaty:</h3>
             <input type="radio" id="id_ec" name="payment" value="ec"><label for="id_ec">eurocard</label>
             <input type="radio" id="id_vs" name="payment" value="vs"><label for="id_vs">visa</label>
-            <input type="radio" id="id_pb" name="payment" value="pb"><label for="id_pb">przelew bankowy</label><br>
+            <input type="radio" id="id_pb" name="payment" checked value="pb"><label for="id_pb">przelew bankowy</label><br>
             <input type="submit" name="submit" value="Wyślij">
             <input type="reset" value="Wyczyść">
             <input type="submit" name="submit" value="Dodaj">
@@ -91,5 +90,5 @@ function printForm() {?>
     </body>
     </html>
 <?php }
-printServerArray();
+// printServerArray();
 ?>

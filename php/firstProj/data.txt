@@ -1,7 +1,86 @@
-Nazwisko: 434
-Wiek was empty.
+Nazwisko: Testsurname
+Wiek: 12
 Państwo: pl
-Adres email was empty.
-Technologie was empty.
-Sposób zapłaty was empty.
+Adres email: test@email.example
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie: C C++ Java C# Html CSS XML PHP JavaScript 
+Sposób zapłaty: pb
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie:          
+Sposób zapłaty: pb
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie:          
+Sposób zapłaty: pb
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie: C C++ Java C# Html CSS XML PHP JavaScript 
+Sposób zapłaty: pb
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie: C C++ Java C# Html XML JavaScript 
+Sposób zapłaty: pb
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie: C Html 
+Sposób zapłaty: pb
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie: C Html 
+Sposób zapłaty: pb
+
+Nazwisko: Testsurname
+Wiek: 12
+Państwo: pl
+Adres email: test@email.example
+Technologie: Html 
+Sposób zapłaty: pb
 
