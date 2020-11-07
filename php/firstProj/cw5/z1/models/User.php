@@ -1,21 +1,19 @@
 <?php
 
 class User {
-    const STATUS_USER = 0;
-    const STATUS_ADMIN = 1;
-    protected $username;
-    protected $password;
-    protected $fullName;
-    protected $email;
-    protected $date;
-    protected $status;
+    protected string $username;
+    protected string|null|false $password;
+    protected string $fullName;
+    protected string $email;
+    protected DateTime|string $date;
+    protected int $status;
 
-    function __construct($username, $fullName, $email, $password) {
+    function __construct(string $username, string $fullName, string $email, string $password) {
         $this->username = $username;
         $this->fullName = $fullName;
         $this->email = $email;
         $this->password = password_hash($password, PASSWORD_DEFAULT);
-        $this->status = User::STATUS_USER;
+        $this->status = UserStatus::STATUS_USER;
         $this->date = new DateTime();
         $this->date = $this->date->format('Y-m-d');
     }
@@ -27,100 +25,79 @@ class User {
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getUsername()
-    {
+    public function getUsername() {
         return $this->username;
     }
 
     /**
-     * @param mixed $username
+     * @param string $username
      */
-    public function setUsername($username): void
-    {
+    public function setUsername(string $username): void {
         $this->username = $username;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getPassword()
-    {
+    public function getPassword() {
         return $this->password;
     }
 
     /**
-     * @param mixed $password
+     * @param string $password
      */
-    public function setPassword($password): void
-    {
-        $this->password = $password;
+    public function setPassword(string $password): void {
+        $this->password = password_hash($password, PASSWORD_DEFAULT);
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getFullName()
-    {
+    public function getFullName() {
         return $this->fullName;
     }
 
     /**
-     * @param mixed $fullName
+     * @param string $fullName
      */
-    public function setFullName($fullName): void
-    {
+    public function setFullName(string $fullName): void {
         $this->fullName = $fullName;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getEmail()
-    {
+    public function getEmail() {
         return $this->email;
     }
 
     /**
-     * @param mixed $email
+     * @param string $email
      */
-    public function setEmail($email): void
-    {
+    public function setEmail(string $email): void {
         $this->email = $email;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getDate()
-    {
+    public function getDate() {
         return $this->date;
     }
 
     /**
-     * @param mixed $date
+     * @return int
      */
-    public function setDate($date): void
-    {
-        $this->date = $date;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getStatus()
-    {
+    public function getStatus() {
         return $this->status;
     }
 
     /**
-     * @param mixed $status
+     * @param int $status
      */
-    public function setStatus($status): void
-    {
+    public function setStatus(int $status): void {
         $this->status = $status;
     }
-
-
 }

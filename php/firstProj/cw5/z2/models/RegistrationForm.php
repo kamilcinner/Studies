@@ -8,6 +8,7 @@ class RegistrationForm {
     ];
 
     protected User|null $user;
+    protected UserExtended|null $userExtended;
 
     function __construct() {
     ?>
@@ -26,7 +27,7 @@ class RegistrationForm {
     <?php
     }
 
-    function validateUser() {
+    function validateUser(bool $userExtended) {
         $validationParams = [
             'username' => [
                 'filter' => FILTER_VALIDATE_REGEXP,
@@ -68,11 +69,19 @@ class RegistrationForm {
                 $validatedUser['email'],
                 $validatedUser['password']
             );
+
+            $this->userExtended = new UserExtended(
+                $validatedUser['username'],
+                $validatedUser['fullName'],
+                $validatedUser['email'],
+                $validatedUser['password']
+            );
         } else {
             echo "<p>Invalid data provided for fields: $errors</p>";
             $this->user = null;
+            $this->userExtended = null;
         }
 
-        return $this->user;
+        return $userExtended ? $this->userExtended : $this->user;
     }
 }

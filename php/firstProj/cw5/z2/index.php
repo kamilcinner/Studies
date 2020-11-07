@@ -11,6 +11,5 @@ if (filter_input(INPUT_POST, 'submit', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) {
         $user->show();
     } else {
         echo '<p style="color: red;">Invalid registration data</p>';
-
     }
 }
