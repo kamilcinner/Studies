@@ -1,5 +1,5 @@
 <?php
-include_once 'classes/User.php';
+include_once 'models/User.php';
 
 $user1 = new User(
     'luci',
