@@ -97,13 +97,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcde79d6-e4fc-4878-b88f-bc0537f43a79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cw5/z3/models/UserExtended.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw5/z1/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw5/z1/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw5/z2/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw5/z2/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw5/z2/models/RegistrationForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw5/z2/models/RegistrationForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw5/z3/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw5/z3/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw5/z3/models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cw5/z3/models/UserExtended.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw5/z3/models/UserExtended.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cw5/z3/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/cw5/z3/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +177,7 @@
       <workItem from="1603784122145" duration="4448000" />
       <workItem from="1604334364803" duration="16536000" />
       <workItem from="1604386200242" duration="4450000" />
-      <workItem from="1604768785913" duration="7773000" />
+      <workItem from="1604768785913" duration="8195000" />
     </task>
     <servers />
   </component>
@@ -335,10 +330,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.23.1440.877/-999.-1417.3440.1417@0.23.1440.877" timestamp="1602543289119" />
-    <state x="418" y="-373" key="run.anything.popup" timestamp="1604776142980">
+    <state x="418" y="-373" key="run.anything.popup" timestamp="1604779099679">
       <screen x="-968" y="-1417" width="3440" height="1417" />
     </state>
-    <state x="418" y="-373" key="run.anything.popup/0.23.1440.877/-3528.-1104.2560.1057/-968.-1417.3440.1417@-968.-1417.3440.1417" timestamp="1604776142980" />
+    <state x="418" y="-373" key="run.anything.popup/0.23.1440.877/-3528.-1104.2560.1057/-968.-1417.3440.1417@-968.-1417.3440.1417" timestamp="1604779099679" />
     <state x="417" y="-374" key="run.anything.popup/0.23.1440.877/-968.-1417.3440.1417/-3528.-1104.2560.1057@-968.-1417.3440.1417" timestamp="1604351929016" />
     <state x="580" y="669" key="run.anything.popup/0.23.1440.877/-968.-1417.3440.1417/-3528.-1104.2560.1057@0.23.1440.877" timestamp="1604393112032" />
     <state x="-48" y="-1110" width="1601" height="1093" key="search.everywhere.popup" timestamp="1604340205925">

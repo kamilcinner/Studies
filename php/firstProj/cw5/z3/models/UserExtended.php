@@ -7,9 +7,11 @@ class UserExtended extends User {
 
     static function getAllUsers(string $filePath){
         $users = json_decode(file_get_contents($filePath));
+        echo '<ul>';
         foreach ($users as $user){
-            echo "<p>".$user->username." ".$user->fullName." ".$user->date." </p>";
+            echo "<li>" . $user->username . ",<div style='left: 150px; position: fixed; display: inline-block;'>" . $user->fullName . ",</div><div style='left: 300px; position: fixed; display: inline-block;'>" . $user->date . "</div></li>";
         }
+        echo '</ul>';
     }
 
     function toArray(){
@@ -22,7 +24,7 @@ class UserExtended extends User {
             'date' => $this->date
         ];
     }
-    
+
     function save(string $filePath){
         $users = json_decode(file_get_contents($filePath),true);
         array_push($users, $this->toArray());
