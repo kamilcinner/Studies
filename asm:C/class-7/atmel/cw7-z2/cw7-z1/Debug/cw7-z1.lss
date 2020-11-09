@@ -1,0 +1,438 @@
+
+cw7-z1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000022a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  0000029e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000011  00800060  00800060  0000029e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000029e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002d0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000058  00000000  00000000  0000030c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000007df  00000000  00000000  00000364  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000611  00000000  00000000  00000b43  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000379  00000000  00000000  00001154  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000108  00000000  00000000  000014d0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000333  00000000  00000000  000015d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000324  00000000  00000000  0000190b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000060  00000000  00000000  00001c2f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  10:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 49 00 	jmp	0x92	; 0x92 <__vector_10>
+  2c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_clear_bss>:
+  60:	20 e0       	ldi	r18, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
+
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	a1 37       	cpi	r26, 0x71	; 113
+  6c:	b2 07       	cpc	r27, r18
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 00 01 	call	0x200	; 0x200 <main>
+  74:	0c 94 13 01 	jmp	0x226	; 0x226 <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000007c <clearKeyLocks>:
+	keyLocks[(4 * col) + row] = false;
+}
+
+bool isKeyLocked(uint8_t col, uint8_t row) {
+	return keyLocks[(4 * col) + row];
+}
+  7c:	80 e0       	ldi	r24, 0x00	; 0
+  7e:	90 e0       	ldi	r25, 0x00	; 0
+  80:	fc 01       	movw	r30, r24
+  82:	e0 5a       	subi	r30, 0xA0	; 160
+  84:	ff 4f       	sbci	r31, 0xFF	; 255
+  86:	10 82       	st	Z, r1
+  88:	01 96       	adiw	r24, 0x01	; 1
+  8a:	80 31       	cpi	r24, 0x10	; 16
+  8c:	91 05       	cpc	r25, r1
+  8e:	c1 f7       	brne	.-16     	; 0x80 <clearKeyLocks+0x4>
+  90:	08 95       	ret
+
+00000092 <__vector_10>:
+
+ISR(TIMER0_COMP_vect) {
+  92:	1f 92       	push	r1
+  94:	0f 92       	push	r0
+  96:	0f b6       	in	r0, 0x3f	; 63
+  98:	0f 92       	push	r0
+  9a:	11 24       	eor	r1, r1
+  9c:	bf 92       	push	r11
+  9e:	cf 92       	push	r12
+  a0:	df 92       	push	r13
+  a2:	ef 92       	push	r14
+  a4:	ff 92       	push	r15
+  a6:	0f 93       	push	r16
+  a8:	1f 93       	push	r17
+  aa:	2f 93       	push	r18
+  ac:	3f 93       	push	r19
+  ae:	4f 93       	push	r20
+  b0:	5f 93       	push	r21
+  b2:	6f 93       	push	r22
+  b4:	7f 93       	push	r23
+  b6:	8f 93       	push	r24
+  b8:	9f 93       	push	r25
+  ba:	af 93       	push	r26
+  bc:	bf 93       	push	r27
+  be:	cf 93       	push	r28
+  c0:	df 93       	push	r29
+  c2:	ef 93       	push	r30
+  c4:	ff 93       	push	r31
+	// Stop timer
+	TCCR0 &= 0b11111000;
+  c6:	83 b7       	in	r24, 0x33	; 51
+  c8:	88 7f       	andi	r24, 0xF8	; 248
+  ca:	83 bf       	out	0x33, r24	; 51
+	timerStarted = false;
+  cc:	10 92 70 00 	sts	0x0070, r1	; 0x800070 <timerStarted>
+  d0:	c0 e0       	ldi	r28, 0x00	; 0
+  d2:	d0 e0       	ldi	r29, 0x00	; 0
+  d4:	00 e0       	ldi	r16, 0x00	; 0
+  d6:	10 e0       	ldi	r17, 0x00	; 0
+	
+	uint8_t col = 0;
+	uint8_t row;
+	uint8_t control;
+	while (col < 4) {
+		control = (PINB | 0b11110000) ^ (0b00010000 << col);
+  d8:	68 94       	set
+  da:	cc 24       	eor	r12, r12
+  dc:	c4 f8       	bld	r12, 4
+  de:	d1 2c       	mov	r13, r1
+		asm volatile ("nop");
+		control = PINB;
+		if ((control & 0b00001111) != 0b00001111) {
+			row = 0;
+			while (row < 4) {
+				if ((control & (0b00000001 << row)) != (0b00000001 << row)) {
+  e0:	ee 24       	eor	r14, r14
+  e2:	e3 94       	inc	r14
+  e4:	f1 2c       	mov	r15, r1
+		i++;
+	}
+}
+
+void lockKey(uint8_t col, uint8_t row) {
+	keyLocks[(4 * col) + row] = true;
+  e6:	bb 24       	eor	r11, r11
+  e8:	b3 94       	inc	r11
+	
+	uint8_t col = 0;
+	uint8_t row;
+	uint8_t control;
+	while (col < 4) {
+		control = (PINB | 0b11110000) ^ (0b00010000 << col);
+  ea:	86 b3       	in	r24, 0x16	; 22
+  ec:	28 2f       	mov	r18, r24
+  ee:	20 6f       	ori	r18, 0xF0	; 240
+  f0:	c6 01       	movw	r24, r12
+  f2:	00 2e       	mov	r0, r16
+  f4:	02 c0       	rjmp	.+4      	; 0xfa <__vector_10+0x68>
+  f6:	88 0f       	add	r24, r24
+  f8:	99 1f       	adc	r25, r25
+  fa:	0a 94       	dec	r0
+  fc:	e2 f7       	brpl	.-8      	; 0xf6 <__vector_10+0x64>
+  fe:	82 27       	eor	r24, r18
+		PORTB = control;
+ 100:	88 bb       	out	0x18, r24	; 24
+	...
+		asm volatile ("nop");
+		asm volatile ("nop");
+		asm volatile ("nop");
+		asm volatile ("nop");
+		asm volatile ("nop");
+		control = PINB;
+ 10e:	a6 b3       	in	r26, 0x16	; 22
+		if ((control & 0b00001111) != 0b00001111) {
+ 110:	8a 2f       	mov	r24, r26
+ 112:	8f 70       	andi	r24, 0x0F	; 15
+ 114:	8f 30       	cpi	r24, 0x0F	; 15
+ 116:	59 f1       	breq	.+86     	; 0x16e <__vector_10+0xdc>
+ 118:	80 e0       	ldi	r24, 0x00	; 0
+ 11a:	90 e0       	ldi	r25, 0x00	; 0
+			row = 0;
+			while (row < 4) {
+				if ((control & (0b00000001 << row)) != (0b00000001 << row)) {
+ 11c:	4a 2f       	mov	r20, r26
+ 11e:	50 e0       	ldi	r21, 0x00	; 0
+ 120:	97 01       	movw	r18, r14
+ 122:	08 2e       	mov	r0, r24
+ 124:	02 c0       	rjmp	.+4      	; 0x12a <__vector_10+0x98>
+ 126:	22 0f       	add	r18, r18
+ 128:	33 1f       	adc	r19, r19
+ 12a:	0a 94       	dec	r0
+ 12c:	e2 f7       	brpl	.-8      	; 0x126 <__vector_10+0x94>
+ 12e:	ba 01       	movw	r22, r20
+ 130:	62 23       	and	r22, r18
+ 132:	73 23       	and	r23, r19
+ 134:	26 17       	cp	r18, r22
+ 136:	37 07       	cpc	r19, r23
+ 138:	79 f0       	breq	.+30     	; 0x158 <__vector_10+0xc6>
+ 13a:	9c 01       	movw	r18, r24
+ 13c:	2c 0f       	add	r18, r28
+ 13e:	3d 1f       	adc	r19, r29
+void unlockKey(uint8_t col, uint8_t row) {
+	keyLocks[(4 * col) + row] = false;
+}
+
+bool isKeyLocked(uint8_t col, uint8_t row) {
+	return keyLocks[(4 * col) + row];
+ 140:	f9 01       	movw	r30, r18
+ 142:	e0 5a       	subi	r30, 0xA0	; 160
+ 144:	ff 4f       	sbci	r31, 0xFF	; 255
+ 146:	60 81       	ld	r22, Z
+		control = PINB;
+		if ((control & 0b00001111) != 0b00001111) {
+			row = 0;
+			while (row < 4) {
+				if ((control & (0b00000001 << row)) != (0b00000001 << row)) {
+					if (!isKeyLocked(col, row)) {
+ 148:	61 11       	cpse	r22, r1
+ 14a:	0c c0       	rjmp	.+24     	; 0x164 <__vector_10+0xd2>
+		i++;
+	}
+}
+
+void lockKey(uint8_t col, uint8_t row) {
+	keyLocks[(4 * col) + row] = true;
+ 14c:	f9 01       	movw	r30, r18
+ 14e:	e0 5a       	subi	r30, 0xA0	; 160
+ 150:	ff 4f       	sbci	r31, 0xFF	; 255
+ 152:	b0 82       	st	Z, r11
+			row = 0;
+			while (row < 4) {
+				if ((control & (0b00000001 << row)) != (0b00000001 << row)) {
+					if (!isKeyLocked(col, row)) {
+						lockKey(col, row);
+						PORTA = control;
+ 154:	ab bb       	out	0x1b, r26	; 27
+ 156:	06 c0       	rjmp	.+12     	; 0x164 <__vector_10+0xd2>
+ 158:	fc 01       	movw	r30, r24
+ 15a:	ec 0f       	add	r30, r28
+ 15c:	fd 1f       	adc	r31, r29
+void lockKey(uint8_t col, uint8_t row) {
+	keyLocks[(4 * col) + row] = true;
+}
+
+void unlockKey(uint8_t col, uint8_t row) {
+	keyLocks[(4 * col) + row] = false;
+ 15e:	e0 5a       	subi	r30, 0xA0	; 160
+ 160:	ff 4f       	sbci	r31, 0xFF	; 255
+ 162:	10 82       	st	Z, r1
+ 164:	01 96       	adiw	r24, 0x01	; 1
+		asm volatile ("nop");
+		asm volatile ("nop");
+		control = PINB;
+		if ((control & 0b00001111) != 0b00001111) {
+			row = 0;
+			while (row < 4) {
+ 166:	84 30       	cpi	r24, 0x04	; 4
+ 168:	91 05       	cpc	r25, r1
+ 16a:	d1 f6       	brne	.-76     	; 0x120 <__vector_10+0x8e>
+ 16c:	03 c0       	rjmp	.+6      	; 0x174 <__vector_10+0xe2>
+					unlockKey(col, row);
+				}
+				row++;
+			}
+		} else {
+			clearKeyLocks();
+ 16e:	0e 94 3e 00 	call	0x7c	; 0x7c <clearKeyLocks>
+			PORTA = 0b00000000;
+ 172:	1b ba       	out	0x1b, r1	; 27
+ 174:	0f 5f       	subi	r16, 0xFF	; 255
+ 176:	1f 4f       	sbci	r17, 0xFF	; 255
+ 178:	24 96       	adiw	r28, 0x04	; 4
+	timerStarted = false;
+	
+	uint8_t col = 0;
+	uint8_t row;
+	uint8_t control;
+	while (col < 4) {
+ 17a:	04 30       	cpi	r16, 0x04	; 4
+ 17c:	11 05       	cpc	r17, r1
+ 17e:	09 f0       	breq	.+2      	; 0x182 <__vector_10+0xf0>
+ 180:	b4 cf       	rjmp	.-152    	; 0xea <__vector_10+0x58>
+			clearKeyLocks();
+			PORTA = 0b00000000;
+		}
+		col++;
+	}
+}
+ 182:	ff 91       	pop	r31
+ 184:	ef 91       	pop	r30
+ 186:	df 91       	pop	r29
+ 188:	cf 91       	pop	r28
+ 18a:	bf 91       	pop	r27
+ 18c:	af 91       	pop	r26
+ 18e:	9f 91       	pop	r25
+ 190:	8f 91       	pop	r24
+ 192:	7f 91       	pop	r23
+ 194:	6f 91       	pop	r22
+ 196:	5f 91       	pop	r21
+ 198:	4f 91       	pop	r20
+ 19a:	3f 91       	pop	r19
+ 19c:	2f 91       	pop	r18
+ 19e:	1f 91       	pop	r17
+ 1a0:	0f 91       	pop	r16
+ 1a2:	ff 90       	pop	r15
+ 1a4:	ef 90       	pop	r14
+ 1a6:	df 90       	pop	r13
+ 1a8:	cf 90       	pop	r12
+ 1aa:	bf 90       	pop	r11
+ 1ac:	0f 90       	pop	r0
+ 1ae:	0f be       	out	0x3f, r0	; 63
+ 1b0:	0f 90       	pop	r0
+ 1b2:	1f 90       	pop	r1
+ 1b4:	18 95       	reti
+
+000001b6 <keypadScan>:
+
+void keypadScan() {
+	PORTB |= 0b11110000;
+ 1b6:	88 b3       	in	r24, 0x18	; 24
+ 1b8:	80 6f       	ori	r24, 0xF0	; 240
+ 1ba:	88 bb       	out	0x18, r24	; 24
+	asm volatile ("nop");
+ 1bc:	00 00       	nop
+	PORTB &= 0b00001111;
+ 1be:	88 b3       	in	r24, 0x18	; 24
+ 1c0:	8f 70       	andi	r24, 0x0F	; 15
+ 1c2:	88 bb       	out	0x18, r24	; 24
+	asm volatile ("nop");
+ 1c4:	00 00       	nop
+	if ((PINB & 0b00001111) == 0b00001111) {
+ 1c6:	86 b3       	in	r24, 0x16	; 22
+ 1c8:	8f 70       	andi	r24, 0x0F	; 15
+ 1ca:	8f 30       	cpi	r24, 0x0F	; 15
+ 1cc:	21 f4       	brne	.+8      	; 0x1d6 <keypadScan+0x20>
+		clearKeyLocks();
+ 1ce:	0e 94 3e 00 	call	0x7c	; 0x7c <clearKeyLocks>
+		PORTA = 0b00000000;
+ 1d2:	1b ba       	out	0x1b, r1	; 27
+		return;
+ 1d4:	08 95       	ret
+	}
+	PORTB |= 0b11110000;
+ 1d6:	88 b3       	in	r24, 0x18	; 24
+ 1d8:	80 6f       	ori	r24, 0xF0	; 240
+ 1da:	88 bb       	out	0x18, r24	; 24
+	
+	// Start timer
+	TCCR0 = (TCCR0 & 0b11111100) | 0b00000100;
+ 1dc:	83 b7       	in	r24, 0x33	; 51
+ 1de:	88 7f       	andi	r24, 0xF8	; 248
+ 1e0:	84 60       	ori	r24, 0x04	; 4
+ 1e2:	83 bf       	out	0x33, r24	; 51
+	timerStarted = true;
+ 1e4:	81 e0       	ldi	r24, 0x01	; 1
+ 1e6:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <timerStarted>
+ 1ea:	08 95       	ret
+
+000001ec <Timer0Init>:
+}
+
+void Timer0Init() {
+	OCR0 = 20;
+ 1ec:	84 e1       	ldi	r24, 0x14	; 20
+ 1ee:	8c bf       	out	0x3c, r24	; 60
+	TCCR0 = (TCCR0 & 0b10111111) | 0b00001000;
+ 1f0:	83 b7       	in	r24, 0x33	; 51
+ 1f2:	87 7b       	andi	r24, 0xB7	; 183
+ 1f4:	88 60       	ori	r24, 0x08	; 8
+ 1f6:	83 bf       	out	0x33, r24	; 51
+	TIMSK |= 0b00000010;
+ 1f8:	89 b7       	in	r24, 0x39	; 57
+ 1fa:	82 60       	ori	r24, 0x02	; 2
+ 1fc:	89 bf       	out	0x39, r24	; 57
+ 1fe:	08 95       	ret
+
+00000200 <main>:
+}
+
+int main(void) {
+    DDRB = 0b11110000;
+ 200:	80 ef       	ldi	r24, 0xF0	; 240
+ 202:	87 bb       	out	0x17, r24	; 23
+	PORTB = 0b11110000;
+ 204:	88 bb       	out	0x18, r24	; 24
+	PORTB |= 0b00001111;
+ 206:	88 b3       	in	r24, 0x18	; 24
+ 208:	8f 60       	ori	r24, 0x0F	; 15
+ 20a:	88 bb       	out	0x18, r24	; 24
+	DDRA = 0b11111111;
+ 20c:	8f ef       	ldi	r24, 0xFF	; 255
+ 20e:	8a bb       	out	0x1a, r24	; 26
+	PORTA = 0b00000000;
+ 210:	1b ba       	out	0x1b, r1	; 27
+	
+	Timer0Init();
+ 212:	0e 94 f6 00 	call	0x1ec	; 0x1ec <Timer0Init>
+	sei();
+ 216:	78 94       	sei
+	
+    while (1) {
+		if (!timerStarted) {
+ 218:	80 91 70 00 	lds	r24, 0x0070	; 0x800070 <timerStarted>
+ 21c:	81 11       	cpse	r24, r1
+ 21e:	fc cf       	rjmp	.-8      	; 0x218 <main+0x18>
+			keypadScan();
+ 220:	0e 94 db 00 	call	0x1b6	; 0x1b6 <keypadScan>
+ 224:	f9 cf       	rjmp	.-14     	; 0x218 <main+0x18>
+
+00000226 <_exit>:
+ 226:	f8 94       	cli
+
+00000228 <__stop_program>:
+ 228:	ff cf       	rjmp	.-2      	; 0x228 <__stop_program>

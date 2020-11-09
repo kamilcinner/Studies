@@ -1,0 +1,36 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m32def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\Debug\cw4-z3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>cw4-z3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>cw4-z3.map</FILE>
+  <FILE>cw4-z3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>15</LINE></RESET>
+  <EXT_INT0><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>37</LINE></EXT_INT0>
+  <main><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>57</LINE></main>
+  <odd><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>65</LINE></odd>
+  <even><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>62</LINE></even>
+  <continue><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>67</LINE></continue>
+  <delay250><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>78</LINE></delay250>
+  <WGLOOP0><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>81</LINE></WGLOOP0>
+  <WGLOOP1><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>82</LINE></WGLOOP1>
+  <WGLOOP2><FILE>C:\Users\kamil\Downloads\CW_4\CW#4\Dokumentacja wykonania cw#4\Z3\cw4-z3\cw4-z3\main.asm</FILE><LINE>83</LINE></WGLOOP2>
+ </LABELS>
+</ASSEMBLER_INFO>

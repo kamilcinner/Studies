@@ -1,0 +1,306 @@
+
+cw7-z1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000180  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00000180  00000214  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000006  00800060  00800060  00000214  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000214  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000244  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000028  00000000  00000000  00000280  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000721  00000000  00000000  000002a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000005f9  00000000  00000000  000009c9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000001a4  00000000  00000000  00000fc2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000009c  00000000  00000000  00001168  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000002fc  00000000  00000000  00001204  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000010b  00000000  00000000  00001500  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000018  00000000  00000000  0000160b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  10:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__vector_10>
+  2c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_clear_bss>:
+  60:	20 e0       	ldi	r18, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
+
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	a6 36       	cpi	r26, 0x66	; 102
+  6c:	b2 07       	cpc	r27, r18
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 b3 00 	call	0x166	; 0x166 <main>
+  74:	0c 94 be 00 	jmp	0x17c	; 0x17c <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000007c <lockKey>:
+volatile uint8_t col = 0;
+
+volatile uint8_t keyPressCount = 0;
+
+void lockKey(uint8_t index) {
+	keyLocks[index] = true;
+  7c:	e8 2f       	mov	r30, r24
+  7e:	f0 e0       	ldi	r31, 0x00	; 0
+  80:	ee 59       	subi	r30, 0x9E	; 158
+  82:	ff 4f       	sbci	r31, 0xFF	; 255
+  84:	81 e0       	ldi	r24, 0x01	; 1
+  86:	80 83       	st	Z, r24
+  88:	08 95       	ret
+
+0000008a <unlockKey>:
+}
+
+void unlockKey(uint8_t index) {
+	keyLocks[index] = false;
+  8a:	e8 2f       	mov	r30, r24
+  8c:	f0 e0       	ldi	r31, 0x00	; 0
+  8e:	ee 59       	subi	r30, 0x9E	; 158
+  90:	ff 4f       	sbci	r31, 0xFF	; 255
+  92:	10 82       	st	Z, r1
+  94:	08 95       	ret
+
+00000096 <isKeyLocked>:
+}
+
+bool isKeyLocked(uint8_t index) {
+	return keyLocks[index];
+  96:	e8 2f       	mov	r30, r24
+  98:	f0 e0       	ldi	r31, 0x00	; 0
+  9a:	ee 59       	subi	r30, 0x9E	; 158
+  9c:	ff 4f       	sbci	r31, 0xFF	; 255
+  9e:	80 81       	ld	r24, Z
+}
+  a0:	08 95       	ret
+
+000000a2 <__vector_10>:
+
+ISR(TIMER0_COMP_vect) {
+  a2:	1f 92       	push	r1
+  a4:	0f 92       	push	r0
+  a6:	0f b6       	in	r0, 0x3f	; 63
+  a8:	0f 92       	push	r0
+  aa:	11 24       	eor	r1, r1
+  ac:	2f 93       	push	r18
+  ae:	3f 93       	push	r19
+  b0:	8f 93       	push	r24
+  b2:	9f 93       	push	r25
+  b4:	ef 93       	push	r30
+  b6:	ff 93       	push	r31
+	cli();
+  b8:	f8 94       	cli
+	if (col > 3) {
+  ba:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <col>
+  be:	84 30       	cpi	r24, 0x04	; 4
+  c0:	10 f0       	brcs	.+4      	; 0xc6 <__vector_10+0x24>
+		col = 0;
+  c2:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <col>
+	}
+
+	uint8_t control;
+
+	control = (PIND & 0b00001111) | (0b00010000 << col);
+  c6:	80 b3       	in	r24, 0x10	; 16
+  c8:	30 91 61 00 	lds	r19, 0x0061	; 0x800061 <col>
+  cc:	28 2f       	mov	r18, r24
+  ce:	2f 70       	andi	r18, 0x0F	; 15
+  d0:	80 e1       	ldi	r24, 0x10	; 16
+  d2:	90 e0       	ldi	r25, 0x00	; 0
+  d4:	01 c0       	rjmp	.+2      	; 0xd8 <__vector_10+0x36>
+  d6:	88 0f       	add	r24, r24
+  d8:	3a 95       	dec	r19
+  da:	ea f7       	brpl	.-6      	; 0xd6 <__vector_10+0x34>
+  dc:	82 2b       	or	r24, r18
+	PORTD = control;
+  de:	82 bb       	out	0x12, r24	; 18
+	asm volatile ("nop");
+  e0:	00 00       	nop
+	control = PIND;
+	if ((control & 0b00000001) == 0b00000001) {
+  e2:	80 9b       	sbis	0x10, 0	; 16
+  e4:	1c c0       	rjmp	.+56     	; 0x11e <__vector_10+0x7c>
+		if (!isKeyLocked(col)) {
+  e6:	e0 91 61 00 	lds	r30, 0x0061	; 0x800061 <col>
+void unlockKey(uint8_t index) {
+	keyLocks[index] = false;
+}
+
+bool isKeyLocked(uint8_t index) {
+	return keyLocks[index];
+  ea:	f0 e0       	ldi	r31, 0x00	; 0
+  ec:	ee 59       	subi	r30, 0x9E	; 158
+  ee:	ff 4f       	sbci	r31, 0xFF	; 255
+  f0:	80 81       	ld	r24, Z
+	control = (PIND & 0b00001111) | (0b00010000 << col);
+	PORTD = control;
+	asm volatile ("nop");
+	control = PIND;
+	if ((control & 0b00000001) == 0b00000001) {
+		if (!isKeyLocked(col)) {
+  f2:	81 11       	cpse	r24, r1
+  f4:	1a c0       	rjmp	.+52     	; 0x12a <__vector_10+0x88>
+			lockKey(col);
+  f6:	e0 91 61 00 	lds	r30, 0x0061	; 0x800061 <col>
+volatile uint8_t col = 0;
+
+volatile uint8_t keyPressCount = 0;
+
+void lockKey(uint8_t index) {
+	keyLocks[index] = true;
+  fa:	f0 e0       	ldi	r31, 0x00	; 0
+  fc:	ee 59       	subi	r30, 0x9E	; 158
+  fe:	ff 4f       	sbci	r31, 0xFF	; 255
+ 100:	81 e0       	ldi	r24, 0x01	; 1
+ 102:	80 83       	st	Z, r24
+	asm volatile ("nop");
+	control = PIND;
+	if ((control & 0b00000001) == 0b00000001) {
+		if (!isKeyLocked(col)) {
+			lockKey(col);
+			if (col == LeftButton) {
+ 104:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <col>
+ 108:	81 11       	cpse	r24, r1
+ 10a:	0f c0       	rjmp	.+30     	; 0x12a <__vector_10+0x88>
+				keyPressCount++;
+ 10c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 110:	8f 5f       	subi	r24, 0xFF	; 255
+ 112:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+				PORTA = keyPressCount;
+ 116:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 11a:	8b bb       	out	0x1b, r24	; 27
+ 11c:	06 c0       	rjmp	.+12     	; 0x12a <__vector_10+0x88>
+			}
+		}
+	} else {
+		unlockKey(col);
+ 11e:	e0 91 61 00 	lds	r30, 0x0061	; 0x800061 <col>
+void lockKey(uint8_t index) {
+	keyLocks[index] = true;
+}
+
+void unlockKey(uint8_t index) {
+	keyLocks[index] = false;
+ 122:	f0 e0       	ldi	r31, 0x00	; 0
+ 124:	ee 59       	subi	r30, 0x9E	; 158
+ 126:	ff 4f       	sbci	r31, 0xFF	; 255
+ 128:	10 82       	st	Z, r1
+		}
+	} else {
+		unlockKey(col);
+	}
+
+	col++;
+ 12a:	80 91 61 00 	lds	r24, 0x0061	; 0x800061 <col>
+ 12e:	8f 5f       	subi	r24, 0xFF	; 255
+ 130:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <col>
+}
+ 134:	ff 91       	pop	r31
+ 136:	ef 91       	pop	r30
+ 138:	9f 91       	pop	r25
+ 13a:	8f 91       	pop	r24
+ 13c:	3f 91       	pop	r19
+ 13e:	2f 91       	pop	r18
+ 140:	0f 90       	pop	r0
+ 142:	0f be       	out	0x3f, r0	; 63
+ 144:	0f 90       	pop	r0
+ 146:	1f 90       	pop	r1
+ 148:	18 95       	reti
+
+0000014a <Timer0Init>:
+
+void Timer0Init() {
+	OCR0 = 10;
+ 14a:	8a e0       	ldi	r24, 0x0A	; 10
+ 14c:	8c bf       	out	0x3c, r24	; 60
+	TCCR0 = (TCCR0 & 0b10111111) | 0b00001000;
+ 14e:	83 b7       	in	r24, 0x33	; 51
+ 150:	87 7b       	andi	r24, 0xB7	; 183
+ 152:	88 60       	ori	r24, 0x08	; 8
+ 154:	83 bf       	out	0x33, r24	; 51
+	TIMSK |= 0b00000010;
+ 156:	89 b7       	in	r24, 0x39	; 57
+ 158:	82 60       	ori	r24, 0x02	; 2
+ 15a:	89 bf       	out	0x39, r24	; 57
+	TCCR0 = (TCCR0 & 0b11111101) | 0b00000101;
+ 15c:	83 b7       	in	r24, 0x33	; 51
+ 15e:	88 7f       	andi	r24, 0xF8	; 248
+ 160:	85 60       	ori	r24, 0x05	; 5
+ 162:	83 bf       	out	0x33, r24	; 51
+ 164:	08 95       	ret
+
+00000166 <main>:
+}
+
+int main(void) {
+    DDRD |= 0b11110000;
+ 166:	81 b3       	in	r24, 0x11	; 17
+ 168:	80 6f       	ori	r24, 0xF0	; 240
+ 16a:	81 bb       	out	0x11, r24	; 17
+	DDRD &= 0b11111110;
+ 16c:	88 98       	cbi	0x11, 0	; 17
+	DDRA = 0b11111111;
+ 16e:	8f ef       	ldi	r24, 0xFF	; 255
+ 170:	8a bb       	out	0x1a, r24	; 26
+	PORTA = 0b00000000;
+ 172:	1b ba       	out	0x1b, r1	; 27
+	
+	Timer0Init();
+ 174:	0e 94 a5 00 	call	0x14a	; 0x14a <Timer0Init>
+	sei();
+ 178:	78 94       	sei
+ 17a:	ff cf       	rjmp	.-2      	; 0x17a <main+0x14>
+
+0000017c <_exit>:
+ 17c:	f8 94       	cli
+
+0000017e <__stop_program>:
+ 17e:	ff cf       	rjmp	.-2      	; 0x17e <__stop_program>

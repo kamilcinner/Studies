@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>C:\dev\asm-micro\class-5\cw5-z1\cw5-z1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\dev\asm-micro\class-5\cw5-z1\cw5-z1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m32def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\dev\asm-micro\class-5\cw5-z1\cw5-z1\Debug\cw5-z1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>cw5-z1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>cw5-z1.map</FILE>
+  <FILE>cw5-z1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>C:\dev\asm-micro\class-5\cw5-z1\cw5-z1\main.asm</FILE><LINE>19</LINE></RESET>
+  <EXT_INT0><FILE>C:\dev\asm-micro\class-5\cw5-z1\cw5-z1\main.asm</FILE><LINE>63</LINE></EXT_INT0>
+  <TIMER1_COMPA><FILE>C:\dev\asm-micro\class-5\cw5-z1\cw5-z1\main.asm</FILE><LINE>82</LINE></TIMER1_COMPA>
+  <main><FILE>C:\dev\asm-micro\class-5\cw5-z1\cw5-z1\main.asm</FILE><LINE>99</LINE></main>
+ </LABELS>
+</ASSEMBLER_INFO>
