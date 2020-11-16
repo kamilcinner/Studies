@@ -1,0 +1,4 @@
+MD5(test100kB.txt)= 1af6d6f2f682f76f80e606aeaaee1680
+MD5(test100kB-changed.txt)= 97cb900b03400b0e0128e65b1b3ab88a
+SHA256(test100kB.txt)= 6d1cf22d7cc09b085dfc25ee1a1f3ae0265804c607bc2074ad253bcc82fd81ee
+SHA256(test100kB-changed.txt)= 14dfee117166e3bdcdc7243365c057e517ee8cd095348a83f5eb8edbc4e7bcb4
