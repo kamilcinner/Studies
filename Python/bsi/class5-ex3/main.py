@@ -82,8 +82,8 @@ def compare_hashes(hash_pairs, file_result):
         pair = hash_pairs[key]
         print(pair)
         for i in range(0, len(pair[0])):
-            for j in range(0, 8):
-                bit_pos = pow(2, j)
+            for j in range(0, 4):
+                bit_pos = int(pow(2, j))
                 if (int(pair[0][i], 16) & bit_pos) == (int(pair[1][i], 16) & bit_pos):
                     bit_same += 1
         same[key] = bit_same
