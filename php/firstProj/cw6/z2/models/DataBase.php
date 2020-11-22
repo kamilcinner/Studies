@@ -67,8 +67,7 @@ class DataBase {
 
     public function delete() {
         $query = 'delete from clients';
-        if ($conn = $this->mysqli->query($query)) {
-            $conn->close();
+        if ($this->mysqli->query($query)) {
             return true;
         }
         return false;

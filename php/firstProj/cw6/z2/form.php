@@ -11,6 +11,7 @@ switch ($action) {
     case "PHP": showOrder("PHP"); break;
     case "CPP": showOrder("CPP"); break;
     case "Statystyki": showStats(); break;
+    case "Delete": delete(); break;
     default: {}
 }
 
@@ -91,6 +92,7 @@ function printForm() {?>
             <input type="submit" name="submit" value="PHP">
             <input type="submit" name="submit" value="CPP">
             <input type="submit" name="submit" value="Statystyki">
+            <input type="submit" name="submit" value="Delete">
         </form>
         </div>
         <div id="footer">&copy;KC</div>

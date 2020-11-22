@@ -82,7 +82,7 @@ def compare_hashes(hash_pairs, file_result):
         for i in range(0, len(pair[0])):
             for j in range(0, 8):
                 bit_pos = pow(2, j)
-                if (ord(pair[0][i]) & bit_pos) != (ord(pair[1][i]) & bit_pos):
+                if (int(pair[0][i], 16) & bit_pos) != (int(pair[1][i], 16) & bit_pos):
                     bit_difference += 1
         difference[key] = bit_difference
 

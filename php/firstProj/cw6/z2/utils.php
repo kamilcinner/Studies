@@ -8,6 +8,11 @@ function add() {
     validateData();
 }
 
+function delete() {
+    global $db;
+    $db->delete();
+}
+
 function show() {
     global $db;
     echo $db->select();
