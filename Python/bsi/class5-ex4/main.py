@@ -3,13 +3,13 @@ import random
 
 
 def generate_text(length):
-    chars = [
+    alphabet = [
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
         'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'w', 'z', 'x', 'v'
     ]
     string = ''
     for i in range(0, length):
-        string += random.choice(chars)
+        string += random.choice(alphabet)
     return string
 
 
@@ -67,24 +67,29 @@ def main():
     algorithm = 'md5'
     source_hash = do_hash(source_text, algorithm)
     success_count = 0
+    properties = ['collision', 'irreversibility']
 
-    tries = 1000
+    tries = 30
     max_try_count = 10000
     try_counter = 0
 
-    print(f'original: \'{source_text}\'\n')
+    print(f'original text: \'{source_text}\'')
+    print(f'max tries per cycle: {max_try_count}')
+    print(f'number of cycles: {tries}\n')
     for i in range(1, tries + 1):
-        result = break_hash(source_hash, source_text, algorithm, max_try_count)
+        result = break_hash(source_hash, source_text, algorithm, max_try_count, properties[0])
         if result:
             success_count += 1
-            print(f'{i} - {result["message"]}')
+            print(f'cycle {i} - {result["message"]}')
             try_counter += result['try']
 
     percent_success = success_count * (100 / tries)
-    average_tries = try_counter // success_count
+    average_tries = 0
+    if success_count > 0:
+        average_tries = try_counter // success_count
 
     print(f'\nSuccess rate: {percent_success}%')
-    print(f'Average tries: {average_tries}')
+    print(f'Average tries per successful cycle: {average_tries}')
 
 
 if __name__ == "__main__":

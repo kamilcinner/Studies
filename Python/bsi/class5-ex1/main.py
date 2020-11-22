@@ -81,7 +81,7 @@ def save_time_result_to_file(time, result_file):
         for name in time:
             for alg in time[name]:
                 seconds = time[name][alg]
-                f.write(f'{name}\t{alg} \t1MB average:\t{seconds}s\n')
+                f.write(f'{name}  \t{alg} \t1MB average:\t{seconds}s\n')
 
 
 def recreate_files(*files):
