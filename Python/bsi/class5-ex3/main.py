@@ -42,12 +42,14 @@ def recreate_file(path):
         open(path, 'w').close()
 
 
-def change_bit_on_position_in_file(file, bytePos, bitPos):
+def change_bit_on_position_in_file(file, byte_pos, bit_pos):
     with open(file, 'r+b') as f:
-        f.seek(bytePos)
+        f.seek(byte_pos)
         byte = f.read(1)
-        f.seek(bytePos)
-        byte_toggled = bytes([ord(byte) ^ int((pow(2, bitPos)))])
+        f.seek(byte_pos)
+        byte_toggled = bytes([ord(byte) ^ int((pow(2, bit_pos)))])
+        print(bin(ord(byte))[2:].zfill(8))
+        print(bin(ord(byte) ^ int((pow(2, bit_pos))))[2:].zfill(8))
         f.write(byte_toggled)
 
 
@@ -88,7 +90,7 @@ def compare_hashes(hash_pairs, file_result):
 
     with open(file_result, 'a') as f:
         for key in difference:
-            f.write(f'{key}: {difference[key]}')
+            f.write(f'{key}: {difference[key]}\n')
     print(difference)
 
 

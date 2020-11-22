@@ -3,7 +3,10 @@ import random
 
 
 def generate_text(length):
-    chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', ' ', 'l', 'm', 'k', 'o', 't']
+    chars = [
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+        'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'w', 'z', 'x', 'v'
+    ]
     string = ''
     for i in range(0, length):
         string += random.choice(chars)
@@ -34,18 +37,54 @@ def parse_hash():
     return _hash[:3]
 
 
-def main():
-    source_text = 'a'
-    algorithm = 'md5'
+def break_hash(source_hash, source_text, algorithm, max_try_count, _property='irreversibility'):
     count = 0
-    source_hash = do_hash(source_text, algorithm)
-    while True:
+    text = ''
+    while count < max_try_count:
         count += 1
+
         text = generate_text(len(source_text))
+        if (_property == 'collision' and text == source_text) or \
+                (_property == 'irreversibility' and text != source_text):
+            continue
+
         new_hash = do_hash(text, algorithm)
         if source_hash == new_hash:
             break
-    print(count)
+
+    result = None
+    if count < max_try_count:
+        result = {
+            'message': f'{_property} broken on {count} try by \'{text}\'',
+            'try': count
+        }
+
+    return result
+
+
+def main():
+    source_text = 'ala'
+    algorithm = 'md5'
+    source_hash = do_hash(source_text, algorithm)
+    success_count = 0
+
+    tries = 1000
+    max_try_count = 10000
+    try_counter = 0
+
+    print(f'original: \'{source_text}\'\n')
+    for i in range(1, tries + 1):
+        result = break_hash(source_hash, source_text, algorithm, max_try_count)
+        if result:
+            success_count += 1
+            print(f'{i} - {result["message"]}')
+            try_counter += result['try']
+
+    percent_success = success_count * (100 / tries)
+    average_tries = try_counter // success_count
+
+    print(f'\nSuccess rate: {percent_success}%')
+    print(f'Average tries: {average_tries}')
 
 
 if __name__ == "__main__":
