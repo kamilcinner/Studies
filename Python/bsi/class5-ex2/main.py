@@ -5,52 +5,50 @@ MB = 1000000
 
 
 def create_files(files):
-    for key in files:
-        name = files[key][0]
+    for name in files:
         if not os.path.isfile(name):
             os.system(f'touch {name}')
     fill_files(files)
 
 
 def fill_files(files):
-    for key in files:
-        name = files[key][0]
-        size = files[key][1]
+    for name in files:
+        size = files[name]
 
         if size == os.path.getsize(name):
             continue
 
         with open(name, 'w') as f:
             for i in range(0, size):
-                f.write('a')
+                f.write('x')
 
 
-def do_hash(files, algorithms, result_file_hash, hkeys):
-    for key in files:
-        name = files[key][0]
+def do_hash(files, algorithms, file_result, hkeys):
+    for name in files:
         for alg in algorithms:
             for hkey in hkeys:
-                with open(result_file_hash, 'a') as f:
+                with open(file_result, 'a') as f:
                     f.write(f'key: "{hkey}"\n')
-                cmd = f'openssl dgst -{alg} -hmac "{hkey}" {name} >> {result_file_hash}'
+                cmd = f'openssl dgst -{alg} -hmac "{hkey}" {name} >> {file_result}'
                 print(cmd)
                 os.system(cmd)
 
 
-def recreate_file(path):
-    if not os.path.isfile(path):
-        os.system(f'touch {path}')
-    else:
-        # Clear file
-        open(path, 'w').close()
+def recreate_files(*files):
+    for name in files:
+        if not os.path.isfile(name):
+            os.system(f'touch {name}')
+        else:
+            # Clear file
+            open(name, 'w').close()
 
 
 def main():
     file_result_hash = 'result-hash.txt'
-    recreate_file(file_result_hash)
+    recreate_files(file_result_hash)
 
     files = {
-        'file_test': ['test100kB.txt', 100 * kB]
+        'test100kB.txt': 100 * kB
     }
     algorithms = ['md5', 'sha256', 'sha1']
     keys = [
