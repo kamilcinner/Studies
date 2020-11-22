@@ -76,29 +76,29 @@ def parse_hashes(file_result_hash, algorithms):
 
 
 def compare_hashes(hash_pairs, file_result):
-    difference = {}
+    same = {}
     for key in hash_pairs:
-        bit_difference = 0
+        bit_same = 0
         pair = hash_pairs[key]
         print(pair)
         for i in range(0, len(pair[0])):
             for j in range(0, 8):
                 bit_pos = pow(2, j)
-                if (int(pair[0][i], 16) & bit_pos) != (int(pair[1][i], 16) & bit_pos):
-                    bit_difference += 1
-        difference[key] = bit_difference
+                if (int(pair[0][i], 16) & bit_pos) == (int(pair[1][i], 16) & bit_pos):
+                    bit_same += 1
+        same[key] = bit_same
 
     with open(file_result, 'a') as f:
-        for key in difference:
-            f.write(f'{key}: {difference[key]}\n')
-    print(difference)
+        for key in same:
+            f.write(f'{key}: {same[key]}\n')
+    print(same)
 
 
 def main():
     file_result_hash = 'result_hash.txt'
-    file_result_differences = 'result_differences.txt'
+    file_result_same = 'result_same.txt'
     recreate_file(file_result_hash)
-    recreate_file(file_result_differences)
+    recreate_file(file_result_same)
 
     files = {
         'file_test': ['test100kB.txt', 100 * kB],
@@ -112,7 +112,7 @@ def main():
     do_hash(files, algorithms, file_result_hash)
 
     hashes = parse_hashes(file_result_hash, algorithms)
-    compare_hashes(hashes, file_result_differences)
+    compare_hashes(hashes, file_result_same)
 
 
 if __name__ == "__main__":
