@@ -1,4 +1,5 @@
 <?php
+include_once 'UserStatus.php';
 
 class User {
     protected string $username;

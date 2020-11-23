@@ -1,18 +1,17 @@
 <?php
-
+include_once '../z2/models/User.php';
+include_once '../z2/models/UserStatus.php';
+include_once 'utils.php';
 session_start();
-$_SESSION['username'] = 'kubus';
-$_SESSION['fullName'] = 'Kubus Puchatek';
-$_SESSION['email'] = 'kubus@stumilowylas.pl';
-$_SESSION['status'] = 'ADMIN';
+
+$user = new User('kubus', 'Kubus Puchatek', 'kubus@stumilowylas.pl', 'xyz');
+$user->setStatus(UserStatus::STATUS_ADMIN);
+
+$_SESSION['user'] = serialize($user);
 
 echo 'sID: ' . session_id();
-
-$names = ['username', 'fullName', 'email', 'status'];
-
-foreach ($names as $name) {
-    echo "<br>$name: " . $_SESSION[$name];
-}
-
+printUser($user);
 echo "<br>cookie: ";
 var_dump(session_get_cookie_params());
+
+echo '<br><a href="test2.php">go2</a>';
