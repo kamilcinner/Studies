@@ -34,7 +34,7 @@ def parse_hash():
                 if (not got_pos) and char == ' ':
                     got_pos = True
 
-    return _hash[:3]
+    return _hash[:6]
 
 
 def break_hash(source_hash, source_text, algorithm, max_try_count, _property='irreversibility'):
@@ -42,6 +42,7 @@ def break_hash(source_hash, source_text, algorithm, max_try_count, _property='ir
     text = ''
     while count < max_try_count:
         count += 1
+        # print(f'try: {count}', end='\r')
 
         text = generate_text(len(source_text))
         if (_property == 'collision' and text == source_text) or \
@@ -67,9 +68,9 @@ def main():
     algorithm = 'md5'
     source_hash = do_hash(source_text, algorithm)
     success_count = 0
-    properties = ['collision', 'irreversibility']
+    properties = ['irreversibility', 'collision']
 
-    tries = 30
+    tries = 40
     max_try_count = 10000
     try_counter = 0
 
