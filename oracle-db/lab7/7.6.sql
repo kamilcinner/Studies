@@ -28,6 +28,36 @@ where oh.orderkey is null
 order by 1, 2;
 -- chyba do poprawy
 
+-- poprawione
+SELECT
+ dm.deliverymethodkey,
+ pc.productcategorykey
+FROM deliverymethod dm CROSS JOIN productcategory pc
+LEFT JOIN
+ (orderheader oh
+ INNER JOIN orderdetail od ON od.orderkey = oh.orderkey
+ INNER JOIN product p ON p.productkey = od.productkey
+ INNER JOIN productsubcategory pcs
+ ON pcs.productsubcategorykey = p.productsubcategorykey)
+ON dm.deliverymethodkey = oh.deliverymethodkey
+ AND pcs.productcategorykey = pc.productcategorykey
+WHERE oh.deliverymethodkey IS NULL
+ORDER BY 1,2;
+
+--inne rozwiazanie
+select
+ deliverymethodkey,
+ productcategorykey
+ from deliverymethod dm cross join productcategory pc
+ minus
+ select distinct
+ oh.deliverymethodkey,
+ pc.productcategorykey
+ from orderheader oh inner join orderdetail od
+ on oh.orderkey = od.orderkey
+ inner join product p on p.productkey = od.productkey
+ inner join productsubcategory pc on pc.productsubcategorykey = p.productsubcategorykey
+
 --7.6.3
 select distinct
 c.customerkey,
