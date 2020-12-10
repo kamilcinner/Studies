@@ -1,0 +1,23 @@
+body {
+    background-color: #8080ff;
+    color: #000040;
+}
+
+h1, h2, #footer {
+    background-color: #000040;
+    color: #8080ff;
+    text-align: center;
+}
+
+#menu {
+    background-color: white;
+}
+
+#content {
+    background-color: aqua;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}

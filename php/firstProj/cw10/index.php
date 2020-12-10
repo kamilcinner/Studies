@@ -1,26 +1,28 @@
 <?php
-require_once("klasy/strona.php");
-$strona_akt = new Strona();
-//sprawdź co wybrał użytkownik:
-if (filter_input(INPUT_GET, 'strona')) {
-    $strona = filter_input(INPUT_GET, 'strona');
-    switch ($strona) {
-        case 'galeria':$strona = 'galeria';
-            break;
-        case 'formularz':$strona = 'formularz';
-            break;
-        case 'onas':$strona = 'onas';
-            break;
-        default:$strona = 'glowna';
-    }
-} else {
-    $strona = "glowna";
+
+require_once('src/classes/Site.php');
+$currentSite = new Site();
+
+$site = filter_input(INPUT_GET, 'site');
+switch ($site) {
+    case 'gallery':
+        $site = 'gallery';
+        break;
+    case 'form':
+        $site = 'form';
+        break;
+    case 'about':
+        $site = 'about';
+        break;
+    default:
+        $site = 'home';
 }
-//dołącz wybrany plik z ustawioną zmienną $tytul i $zawartosc
-$plik = "skrypty/" . $strona . ".php";
-if (file_exists($plik)) {
-    require_once($plik);
-    $strona_akt->ustaw_tytul($tytul);
-    $strona_akt->ustaw_zawartosc($zawartosc);
-    $strona_akt->wyswietl();
+
+
+$file = "src/" . $site . ".php";
+if (file_exists($file)) {
+    require_once($file);
+    $currentSite->setTitle($title);
+    $currentSite->setContent($content);
+    $currentSite->show();
 }
