@@ -96,31 +96,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcde79d6-e4fc-4878-b88f-bc0537f43a79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cw10/src/classes/Site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/klasy/Baza.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/klasy/strona.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz10.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz10.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz2.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz2.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz3.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz3.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz4.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz4.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz5.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz5.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz6.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz6.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz7.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz7.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz8.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz8.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/miniaturki/obraz9.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/thumbnails/obraz9.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/skrypty/formularz.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/src/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/skrypty/galeria.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/src/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/skrypty/glowna.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/src/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/skrypty/onas.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/src/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw10/zdjecia/foto.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/cw10/assets/images/photo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw8/z1/models/DataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/cw8/z1/models/DataBase.php" afterDir="false" />
-    </list>
+    <list default="true" id="fcde79d6-e4fc-4878-b88f-bc0537f43a79" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,7 +186,7 @@
       <workItem from="1607183817150" duration="2794000" />
       <workItem from="1607412600818" duration="3366000" />
       <workItem from="1607629415023" duration="592000" />
-      <workItem from="1607630072661" duration="6372000" />
+      <workItem from="1607630072661" duration="6519000" />
     </task>
     <servers />
   </component>
