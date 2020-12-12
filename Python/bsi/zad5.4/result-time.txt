@@ -1,6 +1,0 @@
-16B.txt  	encrypt	rsa1024	Bps:	4705.882352941177
-16B.txt  	decrypt	rsa1024	Bps:	error
-100kB.txt  	encrypt	rsa1024	Bps:	error
-100kB.txt  	decrypt	rsa1024	Bps:	error
-5MB.txt  	encrypt	rsa1024	Bps:	error
-5MB.txt  	decrypt	rsa1024	Bps:	error
