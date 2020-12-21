@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comment;
 
 class CommentsController extends Controller
 {
@@ -13,7 +14,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        return 'Hello Laravel';
+        return view('comments');
     }
 
     /**
