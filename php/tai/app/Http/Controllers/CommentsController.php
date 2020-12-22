@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CommentRequest;
 use App\Models\Comment;
 
 class CommentsController extends Controller
@@ -14,7 +15,8 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        return view('comments');
+        $comments = Comment::orderBy('created_at', 'asc')->get();
+        return view('comments', compact('comments'));
     }
 
     /**
@@ -24,18 +26,29 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        //
+        $comment = new Comment();
+        return view('commentsForm', compact('comment'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\CommentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CommentRequest $request)
     {
-        //
+        $user = auth()->user();
+        if (is_null($user)) {
+            return view('comments');
+        }
+        $comment = new Comment();
+        $comment->user_id = $user->id;
+        $comment->message = $request->message;
+        if ($comment->save()) {
+            return redirect()->route('comments.index');
+        }
+        return 'An error has occurred';
     }
 
     /**

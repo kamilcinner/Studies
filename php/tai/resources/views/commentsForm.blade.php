@@ -23,7 +23,7 @@
                 background-color: white;
                 max-width: 900px;
                 margin: 0 auto;
-            }   
+            }
             .box {
                 display: flex;
                 justify-content: center;
@@ -48,7 +48,7 @@
             <div class="box box-primary ">
              <!-- /.box-header -->
              <!-- form start -->
-             <form role="form"  action="{{ route('store') }}" id="comment-form" 
+             <form role="form"  action="{{ route('comments.store') }}" id="comment-form"
                    method="post" enctype="multipart/form-data" >
                {{ csrf_field() }}
                <div class="box">
@@ -59,7 +59,7 @@
                    </div>
                  </div>
                 </div>
-              <div class="box-footer"><button type="submit" class="btn btn-success">Utwórz</button> 
+              <div class="box-footer"><button type="submit" class="btn btn-success">Utwórz</button>
               </div>
              </form>
             </div>

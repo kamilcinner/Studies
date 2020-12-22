@@ -48,21 +48,21 @@
                     <th>Komentarz</th>
                 </tr>
             </thead>
-{{--            <tbody>--}}
-{{--                    @foreach($comments as $comment)--}}
-{{--                    <tr>--}}
-{{--                        <td>{{$comment->id}}</td>--}}
-{{--                        <td>{{$comment->user->name}}</td>--}}
-{{--                        <td>{{$comment->created_at}}</td>--}}
-{{--                        <td>{{$comment->message}}</td>--}}
-{{--                    </tr>--}}
-{{--                    @endforeach--}}
-{{--             </tbody>--}}
+            <tbody>
+                    @foreach($comments as $comment)
+                    <tr>
+                        <td>{{$comment->id}}</td>
+                        <td>{{$comment->user->name}}</td>
+                        <td>{{$comment->created_at}}</td>
+                        <td>{{$comment->message}}</td>
+                    </tr>
+                    @endforeach
+             </tbody>
         </table>
         <br>
-{{--        <div class="footer-button">--}}
-{{--            <a href="{{ route('store') }}" class="btn btn-secondary">Dodaj</a>--}}
-{{--        </div>--}}
+        <div class="footer-button">
+            <a href="{{ route('comments.create') }}" class="btn btn-secondary">Dodaj</a>
+        </div>
         @endauth
     </div>
 
