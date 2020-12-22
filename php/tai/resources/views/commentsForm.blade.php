@@ -34,6 +34,7 @@
         </style>
     </head>
     <body>
+        @include('layouts.navbar')
         <div class="table-container">
             <div class="title"> <h3>Księga komentarzy</h3> </div>
             @if ($errors->any())

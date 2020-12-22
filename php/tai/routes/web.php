@@ -16,7 +16,7 @@ use App\Http\Controllers\CommentsController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::resource('/comments',CommentsController::class);
 

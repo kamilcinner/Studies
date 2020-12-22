@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5600f467-5141-47a8-b6a5-e1e3c0fa57ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pl/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pl/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pl/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pl/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comments.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/commentsForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/commentsForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,13 +158,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/pl" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/lang/pl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/css" />
+      <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
@@ -188,7 +202,7 @@
       <workItem from="1608020844917" duration="1055000" />
       <workItem from="1608569261135" duration="2523000" />
       <workItem from="1608621454802" duration="2486000" />
-      <workItem from="1608624702235" duration="90000" />
+      <workItem from="1608624702235" duration="1851000" />
     </task>
     <servers />
   </component>
