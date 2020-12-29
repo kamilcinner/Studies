@@ -60,7 +60,7 @@ def main():
     make_dirs(archive_base, archive_data)
 
     # -p to preserve permissions
-    cmd = f'tar -cpf {archive_data}/data.tar.gz {data}'
+    cmd = f'rsync -azp {data} {archive_data}'
     os.system(cmd)
 
     check_fail(archive_data)
