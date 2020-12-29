@@ -26,12 +26,14 @@ def main():
     else:
         mode = ''
 
-    cmd = f'sshpass -p student rsync -az {mode} {data_path} {archive_data_dir}'
+    cmd = f'sshpass -p student rsync -azp {mode} {data_path} {archive_data_dir}'
     os.system(cmd)
 
     if not check_fail(archive_data_dir):
         os.system(f'rm -rf {latest_link}')
         os.system(f'ln -s {archive_data_dir} {latest_link}')
+    else:
+        print('backup FAILED!!!')
 
     print_backups(archive_base_dir)
     get_free_space(archive_base_dir)

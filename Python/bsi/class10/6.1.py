@@ -53,7 +53,7 @@ def print_backups(archive_base):
 def main():
     date = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
     archive_base = '/mnt/archiwum'
-    data = '~/bsi/zad6.1/dane'
+    data = '~/bsi/zad6.1/dane/'
     archive_data = f'{archive_base}/archiwum_{date}'
 
     check_space(archive_base)

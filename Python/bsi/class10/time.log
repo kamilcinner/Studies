@@ -1,0 +1,152 @@
+
+local full
+free space available: 85 MiB
+all backups:
+archiwum_2020_12_29_17_36_06
+free space available: 29 MiB
+free space available: 29 MiB
+removing oldest backups to free up space
+removed: archiwum_2020_12_29_17_36_06
+free space available: 85 MiB
+all backups:
+archiwum_2020_12_29_17_36_13
+free space available: 29 MiB
+free space available: 29 MiB
+removing oldest backups to free up space
+removed: archiwum_2020_12_29_17_36_13
+free space available: 85 MiB
+all backups:
+archiwum_2020_12_29_17_36_14
+free space available: 29 MiB
+free space available: 29 MiB
+removing oldest backups to free up space
+removed: archiwum_2020_12_29_17_36_14
+free space available: 85 MiB
+all backups:
+archiwum_2020_12_29_17_36_42
+free space available: 29 MiB
+free space available: 29 MiB
+removing oldest backups to free up space
+removed: archiwum_2020_12_29_17_36_42
+free space available: 85 MiB
+all backups:
+archiwum_2020_12_29_17_36_48
+free space available: 29 MiB
+
+remote full
+free space available: 921 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+latest
+free space available: 864 MiB
+doing full copy
+data size: 33MiB
+free space available: 864 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+latest
+free space available: 808 MiB
+doing full copy
+data size: 33MiB
+free space available: 808 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+latest
+free space available: 752 MiB
+doing full copy
+data size: 33MiB
+free space available: 752 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+archiwum_2020_12_29_17_37_56
+latest
+free space available: 695 MiB
+doing full copy
+data size: 33MiB
+free space available: 695 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+archiwum_2020_12_29_17_37_56
+archiwum_2020_12_29_17_37_58
+latest
+free space available: 639 MiB
+doing full copy
+data size: 33MiB
+
+remote incremental
+free space available: 639 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+archiwum_2020_12_29_17_37_56
+archiwum_2020_12_29_17_37_58
+archiwum_2020_12_29_17_38_00
+latest
+free space available: 634 MiB
+doing incremental copy
+data size: 33MiB
+free space available: 634 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+archiwum_2020_12_29_17_37_56
+archiwum_2020_12_29_17_37_58
+archiwum_2020_12_29_17_38_00
+archiwum_2020_12_29_17_38_01
+latest
+free space available: 630 MiB
+doing incremental copy
+data size: 33MiB
+free space available: 630 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+archiwum_2020_12_29_17_37_56
+archiwum_2020_12_29_17_37_58
+archiwum_2020_12_29_17_38_00
+archiwum_2020_12_29_17_38_01
+archiwum_2020_12_29_17_38_02
+latest
+free space available: 625 MiB
+doing incremental copy
+data size: 33MiB
+free space available: 625 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+archiwum_2020_12_29_17_37_56
+archiwum_2020_12_29_17_37_58
+archiwum_2020_12_29_17_38_00
+archiwum_2020_12_29_17_38_01
+archiwum_2020_12_29_17_38_02
+archiwum_2020_12_29_17_38_03
+latest
+free space available: 621 MiB
+doing incremental copy
+data size: 33MiB
+free space available: 621 MiB
+all backups:
+archiwum_2020_12_29_17_37_50
+archiwum_2020_12_29_17_37_52
+archiwum_2020_12_29_17_37_54
+archiwum_2020_12_29_17_37_56
+archiwum_2020_12_29_17_37_58
+archiwum_2020_12_29_17_38_00
+archiwum_2020_12_29_17_38_01
+archiwum_2020_12_29_17_38_02
+archiwum_2020_12_29_17_38_03
+latest
+free space available: 621 MiB
+doing incremental copy
+data size: 33MiB

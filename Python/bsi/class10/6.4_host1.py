@@ -12,14 +12,16 @@ def main():
         print('bad mode provided')
         exit()
 
+    print(f'doing {mode} copy')
+
     data_path = '/home/student/bsi/zad6.1/dane'
     
     # Get size of data to backup in MiB
     root_directory = Path(data_path)
-    size = sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file()) // (2**20  )
+    size = sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file()) // (2**20)
     print(f'data size: {size}MiB')
 
-    cmd = f'sshpass -p student ssh {host2_address} python3 /home/kamil/bsi/zad6.4/main_host2.py {size} {mode}'
+    cmd = f'sshpass -p student ssh {host2_address} python3 /home/kamil/bsi/zad6.4/6.4_host2.py {size} {mode}'
     os.system(cmd)
 
 
