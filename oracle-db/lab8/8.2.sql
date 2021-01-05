@@ -54,3 +54,15 @@ group by cube(
 order by 1 nulls last, 2 nulls last, 3 nulls last;
 
 --5
+select
+to_char(oh.orderdate, 'yyyy') as "Year",
+to_char(oh.orderdate, 'mm') as "Month",
+c.countryname as "Country",
+count(oh.orderkey) as "#Orders"
+from orderheader oh
+inner join country c on c.countrykey = oh.countrykey
+group by
+to_char(oh.orderdate, 'yyyy'),
+to_char(oh.orderdate, 'mm'),
+rollup(c.countryname)
+order by 1, 2, 3 nulls first;
