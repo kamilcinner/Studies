@@ -34,7 +34,6 @@ pc.productcategoryName
 order by 1 desc, 2, 5 desc;
 
 --3
-Year, Customer ID, Customer Name, #Orders i Total Value
 select
 to_char(oh.orderdate, 'yyyy') Year,
 c.customerkey as "Customer ID",
