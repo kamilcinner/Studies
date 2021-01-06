@@ -16,7 +16,7 @@ group by
 c.customerkey,
 c.lastname,
 c.firstname
-order by count(oh.orderkey) desc;
+order by 4 desc;
 
 --3
 select
@@ -82,7 +82,7 @@ order by 1, 2 nulls first;
 select
 to_char(oh.orderdate, 'yyyy') as "Year",
 pc.productcategoryname as "Product category",
-count(oh.orderkey) as "#Orders"
+count(distinct oh.orderkey) as "#Orders"
 from orderheader oh
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey
@@ -97,7 +97,7 @@ order by 1, 2;
 select
 pc.productcategoryname as "Product category",
 psc.productSubcategoryName as "Product subcategory",
-count(oh.orderkey) as "#Orders"
+count(distinct oh.orderkey) as "#Orders"
 from orderheader oh
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey

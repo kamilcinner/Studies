@@ -58,7 +58,7 @@ select
 to_char(oh.orderdate, 'yyyy') as "Year",
 st.salesterritoryname as "Region",
 pc.productcategoryname as "Product category",
-count(oh.orderkey) as "#Orders"
+count(distinct oh.orderkey) as "#Orders"
 from orderheader oh
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey
