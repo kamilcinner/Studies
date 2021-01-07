@@ -55,7 +55,9 @@ to_char(oh.orderdate, 'yyyy') Year,
 c.countryname Country,
 count(distinct oh.customerkey) as "#Customers",
 sum(od.transactionprice * od.quantity) as "Total value",
-round(avg(od.transactionprice * od.quantity), 2) as "Avg Customer Value"
+round(
+    sum(od.transactionprice * od.quantity) / count(distinct oh.orderkey), 2
+) as "Avg Customer Value"
 from orderheader oh
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join country c on c.countrykey = oh.countrykey
@@ -90,7 +92,9 @@ och.channelname Channel,
 c.countryname Country,
 count(distinct oh.orderkey) as "#Orders",
 sum(od.transactionprice * od.quantity) as "Total value",
-round(avg(od.transactionprice * od.quantity), 2) as "Avg Order Value"
+round(
+    sum(od.transactionprice * od.quantity) / count(distinct oh.orderkey), 2
+) as "Avg Order Value"
 from orderheader oh
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join country c on c.countrykey = oh.countrykey

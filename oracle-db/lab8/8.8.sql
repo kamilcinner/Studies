@@ -116,7 +116,9 @@ select
 to_char(oh.orderdate, 'yyyy') Year,
 to_char(oh.orderdate, 'Month') Month,
 och.channelname Channel,
-round(avg(od.transactionprice * od.quantity), 2) as "Avg Order Value"
+round(
+    sum(od.transactionprice * od.quantity) / count(distinct oh.orderkey), 2
+) as "Avg Order Value"
 from orderheader oh
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join orderchannel och on och.channelkey = oh.channelkey
@@ -124,7 +126,9 @@ group by
 to_char(oh.orderdate, 'yyyy'),
 to_char(oh.orderdate, 'Month'),
 och.channelname
-having round(avg(od.transactionprice * od.quantity), 2) > 2500
+having round(
+    sum(od.transactionprice * od.quantity) / count(distinct oh.orderkey), 2
+) > 2500
 order by 1, 2, 4;
 
 --9
