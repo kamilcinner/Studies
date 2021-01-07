@@ -39,24 +39,20 @@ where (oh.countrykey, oh.orderdate) =
 
 --3
 select
-customerkey,
-firstname,
-lastname
+customerkey as "Customer ID",
+lastname || ' ' || firstname as "Customer Name"
 from customer
-where customerkey in
-(
-    select
-    oh.customerkey
+where customerkey in (
+    select oh.customerkey
     from orderheader oh
     where to_char(oh.orderdate, 'mm-yyyy') = '12-2019'
 )
-and customerkey not in
-(
-    select
-    oh.customerkey
+and customerkey not in (
+    select oh.customerkey
     from orderheader oh
     where to_char(oh.orderdate, 'mm-yyyy') = '01-2020'
-);
+)
+order by 2;
 
 --4
 select
