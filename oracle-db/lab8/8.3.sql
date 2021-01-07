@@ -36,7 +36,7 @@ count(*) as "#Orders"
 from orderheader oh
 group by
 to_char(oh.orderdate, 'yyyy'),
-rollup(to_char(oh.orderdate, 'mm'))
+to_char(oh.orderdate, 'mm')
 order by 1, 2;
 
 --5
