@@ -185,9 +185,43 @@ having sum(od.transactionprice * od.quantity) = (
     ) t
     where t.year = extract(year from oh.orderdate)
     and t.channel = och.channelname
-);
+)
+order by 1, 2;
 
 --7
+select
+c.countryname Country,
+'Y' || extract(year from oh.orderdate) Year,
+p.productname Product,
+sum(od.quantity) as "#Items"
+from orderheader oh
+inner join orderdetail od on od.orderkey = oh.orderkey
+inner join product p on p.productkey = od.productkey
+inner join country c on c.countrykey = oh.countrykey
+group by
+c.countryname,
+'Y' || extract(year from oh.orderdate),
+p.productname
+having sum(od.quantity) = (
+    select max(t.product_items) from (
+        select
+        sum(tod.quantity) product_items,
+        tc.countryname country,
+        extract(year from toh.orderdate) year
+        from orderheader toh
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        inner join country tc on tc.countrykey = toh.countrykey
+        group by
+        tod.productkey,
+        tc.countryname,
+        extract(year from toh.orderdate)
+    ) t
+    where 'Y' || t.year = 'Y' || extract(year from oh.orderdate)
+    and t.country = c.countryname
+)
+order by 1, 2;
+
+--8
 
 
 --10
