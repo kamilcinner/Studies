@@ -312,6 +312,41 @@ having count(*) = (
         extract(year from orderdate)
     )
     where Year = extract(year from oh.orderdate)
-);
+)
+order by 1;
 
 --11
+select
+extract(year from oh.orderdate) Year,
+c.countryname Country,
+pm.paymentmethodname as "Payment Type",
+count(*) as "#Orders"
+from orderheader oh
+inner join country c on c.countrykey = oh.countrykey
+inner join paymentmethod pm on pm.paymentmethodkey = oh.paymentmethodkey
+group by
+extract(year from oh.orderdate),
+c.countryname,
+pm.paymentmethodname
+having count(*) = (
+    select max(order_num) from (
+        select
+        count(*) order_num,
+        extract(year from toh.orderdate) year,
+        tc.countryname country
+        from orderheader toh
+        inner join country tc on tc.countrykey = toh.countrykey
+        group by
+        toh.paymentmethodkey,
+        extract(year from toh.orderdate),
+        tc.countryname
+    ) t
+    where t.year = extract(year from oh.orderdate)
+    and t.country = c.countryname
+)
+order by 1, 2;
+
+--12
+
+
+--13
