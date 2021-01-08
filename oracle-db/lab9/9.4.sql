@@ -255,7 +255,41 @@ having sum(od.quantity) = (
 order by 1, 2;
 
 --9
-
+select
+'Y' || extract(year from oh.orderdate) Year,
+psc.productsubcategoryname Product,
+c.countryname Country,
+sum(od.quantity) as "#Items"
+from orderheader oh
+inner join country c on c.countrykey = oh.countrykey
+inner join orderdetail od on od.orderkey = oh.orderkey
+inner join product p on p.productkey = od.productkey
+inner join productsubcategory psc on psc.productsubcategorykey = p.productsubcategorykey
+where psc.productcategorykey = '1'
+group by
+'Y' || extract(year from oh.orderdate),
+psc.productsubcategoryname,
+c.countryname
+having sum(od.quantity) = (
+    select max(t.product_items) from (
+        select
+        sum(tod.quantity) product_items,
+        extract(year from toh.orderdate) year,
+        tpsc.productsubcategoryname product
+        from orderheader toh
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        inner join product tp on tp.productkey = tod.productkey
+        inner join productsubcategory tpsc on tpsc.productsubcategorykey = tp.productsubcategorykey
+        where tpsc.productcategorykey = '1'
+        group by
+        toh.countrykey,
+        extract(year from toh.orderdate),
+        tpsc.productsubcategoryname
+    ) t
+    where 'Y' || t.year = 'Y' || extract(year from oh.orderdate)
+    and t.product = psc.productsubcategoryname
+)
+order by 1, 2;
 
 --10
 select
@@ -279,3 +313,5 @@ having count(*) = (
     )
     where Year = extract(year from oh.orderdate)
 );
+
+--11
