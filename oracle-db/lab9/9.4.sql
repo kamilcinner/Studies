@@ -347,6 +347,36 @@ having count(*) = (
 order by 1, 2;
 
 --12
-
+select
+extract(year from oh.orderdate) Year,
+och.channelname Channel,
+p.productname Product,
+count(*) as "#Orders"
+from orderheader oh
+inner join orderchannel och on och.channelkey = oh.channelkey
+inner join orderdetail od on od.orderkey = oh.orderkey
+inner join product p on p.productkey = od.productkey
+group by
+extract(year from oh.orderdate),
+och.channelname,
+p.productname
+having count(*) = (
+    select max(t.order_num) from (
+        select
+        count(*) order_num,
+        extract(year from toh.orderdate) year,
+        toch.channelname channel
+        from orderheader toh
+        inner join orderchannel toch on toch.channelkey = toh.channelkey
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        group by
+        tod.productkey,
+        extract(year from toh.orderdate),
+        toch.channelname
+    ) t
+    where t.year = extract(year from oh.orderdate)
+    and t.channel = och.channelname
+)
+order by 1, 2;
 
 --13
