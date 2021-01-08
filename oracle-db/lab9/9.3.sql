@@ -113,11 +113,11 @@ from orderheader oh
 inner join country c on c.countrykey = oh.countrykey
 inner join (
     select
-    od.orderkey order_key,
+    od.orderkey orderkey,
     sum(od.transactionprice * od.quantity) order_value
     from orderdetail od
     group by od.orderkey
-) t on t.order_key = oh.orderkey
+) t on t.orderkey = oh.orderkey
 group by
 extract(year from oh.orderdate),
 to_char(oh.orderdate, 'Month'),
@@ -128,3 +128,50 @@ to_date(to_char(oh.orderdate, 'Month'), 'Month'),
 4 desc;
 
 --8
+select
+extract(year from oh.orderdate) Year,
+och.channelname Channel,
+max(order_value) as "Max Order Value",
+round(avg(t.order_value), 2) as "Avg Order Value"
+from orderchannel och
+left join (
+    orderheader oh
+    inner join (
+        select
+        od.orderkey orderkey,
+        sum(od.transactionprice * od.quantity) order_value
+        from orderdetail od
+        group by od.orderkey
+    ) t on t.orderkey = oh.orderkey
+) on och.channelkey = oh.channelkey
+group by
+extract(year from oh.orderdate),
+och.channelname
+order by 1, 2;
+
+--9
+select distinct
+c.customerkey as "Customer ID",
+c.lastname as "Last Name",
+c.firstname as "First Name"
+from orderheader oh
+inner join orderdetail od on od.orderkey = oh.orderkey
+inner join customer c on c.customerkey = oh.customerkey
+inner join country co on co.countrykey = oh.countrykey
+where co.countryname = 'Australia'
+group by
+c.customerkey,
+c.lastname,
+c.firstname,
+oh.orderkey
+having sum(od.transactionprice * od.quantity) > (
+    select avg(order_value) from (
+        select sum(od.transactionprice * od.quantity) order_value
+        from orderdetail od
+        inner join orderheader oh on oh.orderkey = od.orderkey
+        inner join country c on c.countrykey = oh.countrykey
+        where c.countryname = 'Australia'
+        group by od.orderkey
+    )
+)
+order by 2;
