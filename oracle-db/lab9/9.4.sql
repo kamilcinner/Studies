@@ -127,6 +127,67 @@ having sum(od.transactionprice * od.quantity) = (
 );
 
 --5
+select
+extract(year from oh.orderdate) Year,
+to_char(oh.orderdate, 'Month') Month,
+sum(od.transactionprice * od.quantity) as "Max Total Value"
+from orderheader oh
+inner join orderdetail od on od.orderkey = oh.orderkey
+where oh.orderstatuskey = '4'
+group by
+extract(year from oh.orderdate),
+to_char(oh.orderdate, 'Month')
+having sum(od.transactionprice * od.quantity) = (
+    select max(t.month_value) from (
+        select
+        sum(tod.transactionprice * tod.quantity) month_value,
+        extract(year from toh.orderdate) year
+        from orderheader toh
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        where toh.orderstatuskey = '4'
+        group by
+        extract(year from toh.orderdate),
+        extract(month from toh.orderdate)
+    ) t
+    where t.year = extract(year from oh.orderdate)
+);
+
+--6
+select
+extract(year from oh.orderdate) Year,
+och.channelname Channel,
+c.customerkey as "Customer ID",
+c.lastname || ' ' || c.firstname as "Customer Name",
+sum(od.transactionprice * od.quantity) as "Max Order Value"
+from orderheader oh
+inner join orderdetail od on od.orderkey = oh.orderkey
+inner join orderchannel och on och.channelkey = oh.channelkey
+inner join customer c on c.customerkey = oh.customerkey
+group by
+extract(year from oh.orderdate),
+och.channelname,
+c.customerkey,
+c.lastname || ' ' || c.firstname,
+oh.orderkey
+having sum(od.transactionprice * od.quantity) = (
+    select max(t.order_value) from (
+        select
+        sum(tod.transactionprice * tod.quantity) order_value,
+        extract(year from toh.orderdate) year,
+        toch.channelname channel
+        from orderheader toh
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        inner join orderchannel toch on toch.channelkey = toh.channelkey
+        group by
+        toh.orderkey,
+        extract(year from toh.orderdate),
+        toch.channelname
+    ) t
+    where t.year = extract(year from oh.orderdate)
+    and t.channel = och.channelname
+);
+
+--7
 
 
 --10
