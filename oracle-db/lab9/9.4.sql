@@ -222,6 +222,39 @@ having sum(od.quantity) = (
 order by 1, 2;
 
 --8
+select
+'Y' || extract(year from oh.orderdate) Year,
+'Q' || to_char(oh.orderdate, 'q') Quarter,
+psc.productsubcategoryname Product,
+sum(od.quantity) as "#Items"
+from orderheader oh
+inner join orderdetail od on od.orderkey = oh.orderkey
+inner join product p on p.productkey = od.productkey
+inner join productsubcategory psc on psc.productsubcategorykey = p.productsubcategorykey
+group by
+'Y' || extract(year from oh.orderdate),
+'Q' || to_char(oh.orderdate, 'q'),
+psc.productsubcategoryname
+having sum(od.quantity) = (
+    select max(t.product_items) from (
+        select
+        sum(tod.quantity) product_items,
+        extract(year from toh.orderdate) year,
+        to_char(toh.orderdate, 'q') quarter
+        from orderheader toh
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        inner join product tp on tp.productkey = tod.productkey
+        group by
+        tp.productsubcategorykey,
+        extract(year from toh.orderdate),
+        to_char(toh.orderdate, 'q')
+    ) t
+    where 'Y' || t.year = 'Y' || extract(year from oh.orderdate)
+    and 'Q' || t.quarter = 'Q' || to_char(oh.orderdate, 'q')
+)
+order by 1, 2;
+
+--9
 
 
 --10
