@@ -93,6 +93,40 @@ having count(distinct oh.customerkey) = (
 );
 
 --4
+select
+extract(year from oh.orderdate) Year,
+c.customerkey as "Customer ID",
+c.lastname || ' ' || c.firstname as "Customer Name",
+sum(od.transactionprice * od.quantity) as "Max Order Value"
+from orderheader oh
+inner join customer c on c.customerkey = oh.customerkey
+inner join orderdetail od on od.orderkey = oh.orderkey
+group by
+extract(year from oh.orderdate),
+c.customerkey,
+c.lastname || ' ' || c.firstname,
+oh.orderkey
+having sum(od.transactionprice * od.quantity) = (
+    select t2.max_order_value from (
+        select
+        max(order_value) max_order_value,
+        extract(year from t1.orderdate) year
+        from (
+            select
+            sum(tod.transactionprice * tod.quantity) order_value,
+            toh.orderdate
+            from orderdetail tod
+            inner join orderheader toh on toh.orderkey = tod.orderkey
+            group by
+            toh.orderkey,
+            toh.orderdate
+        ) t1
+        group by extract(year from t1.orderdate)
+    ) t2
+    where t2.year = extract(year from oh.orderdate)
+);
+
+--5
 
 
 --10
