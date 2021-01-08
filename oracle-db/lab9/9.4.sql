@@ -380,3 +380,26 @@ having count(*) = (
 order by 1, 2;
 
 --13
+select
+extract(year from oh.orderdate) Year,
+to_char(oh.orderdate, 'Month') Month,
+sum(od.transactionprice * od.quantity) as "Monthly Orders Value"
+from orderheader oh
+inner join orderdetail od on od.orderkey = oh.orderkey
+group by
+extract(year from oh.orderdate),
+to_char(oh.orderdate, 'Month')
+having sum(od.transactionprice * od.quantity) > (
+    select avg(t.month_value) from (
+        select
+        sum(tod.transactionprice * tod.quantity) month_value,
+        extract(year from toh.orderdate) year
+        from orderheader toh
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        group by
+        extract(month from toh.orderdate),
+        extract(year from toh.orderdate)
+    ) t
+    where t.year = extract(year from oh.orderdate)
+)
+order by 1, to_date(to_char(oh.orderdate, 'Month'), 'Month');
