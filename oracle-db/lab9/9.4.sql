@@ -57,6 +57,42 @@ having sum(od.quantity) = (
 );
 
 --3
+select
+extract(year from oh.orderdate) Year,
+pc.productcategoryname Category,
+p.productname Product,
+count(distinct oh.customerkey) as "#Customers"
+from orderheader oh
+inner join orderdetail od on od.orderkey = oh.orderkey
+inner join product p on p.productkey = od.productkey
+inner join productsubcategory psc on psc.productsubcategorykey = p.productsubcategorykey
+inner join productcategory pc on pc.productcategorykey = psc.productcategorykey
+group by
+extract(year from oh.orderdate),
+pc.productcategoryname,
+pc.productcategorykey,
+p.productname,
+p.productkey
+having count(distinct oh.customerkey) = (
+    select max(t.customer_num) from (
+        select
+        count(distinct toh.customerkey) customer_num,
+        extract(year from toh.orderdate) year,
+        tpsc.productcategorykey category
+        from orderheader toh
+        inner join orderdetail tod on tod.orderkey = toh.orderkey
+        inner join product tp on tp.productkey = tod.productkey
+        inner join productsubcategory tpsc on tpsc.productsubcategorykey = tp.productsubcategorykey
+        group by
+        tp.productkey,
+        extract(year from toh.orderdate),
+        tpsc.productcategorykey
+    ) t
+    where t.year = extract(year from oh.orderdate)
+    and t.category = pc.productcategorykey
+);
+
+--4
 
 
 --10
