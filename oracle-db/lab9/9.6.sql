@@ -195,4 +195,27 @@ update CustEUOrders eu set (MinOrderValue, MaxOrderValue) = (
 -- check
 select * from CustEUOrders;
 
+-- apply changes
+commit;
+
 --7
+-- update
+update ProductOrders po set AvgTransactionPrice = (
+    select avg(od.transactionprice)
+    from orderheader oh
+    inner join orderdetail od on od.orderkey = oh.orderkey
+    inner join country c on c.countrykey = oh.countrykey
+    where p.productkey = po.productkey
+    and extract(year from oh.orderdate) = po.orderyear
+    and c.countryname = po.countryname
+    group by
+    p.productkey,
+    extract(year from oh.orderdate),
+    c.countryname
+);
+
+--check
+select * from ProductOrders;
+
+-- apply changes
+commit;
