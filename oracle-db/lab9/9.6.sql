@@ -153,7 +153,7 @@ select * from Customer;
 update Customer set status = case
 when (
     customerkey in (
-        select customerkey from orderheader
+        select distinct customerkey from orderheader
     )
 ) then 1
 else 0
