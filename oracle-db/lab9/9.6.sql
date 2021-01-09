@@ -21,7 +21,7 @@ where extract(year from orderdate) = 2020
 having sum(transactionprice * quantity) > 7300
 group by oh.orderkey, oh.deliverycost;
 
--- accept changes
+-- apply changes
 commit;
 
 --2
@@ -41,7 +41,7 @@ to_char(deliverydate, 'day')
 from orderheader
 where to_char(deliverydate, 'day') like 'sunday%';
 
--- accept changes
+-- apply changes
 commit;
 
 --3
@@ -93,7 +93,7 @@ and to_char(oh.orderdate, 'mm-yyyy') = '06-2020'
 and od.discountpctg = 15
 order by 1;
 
--- accept changes
+-- apply changes
 commit;
 
 --4
@@ -138,4 +138,32 @@ where (orderkey, productkey) in (
     )
 );
 
+-- apply changes
+commit;
+
 --5
+-- update 1
+alter table Customer
+add Status number(1);
+
+-- check 1
+select * from Customer;
+
+-- update 2
+update Customer set status = case
+when (
+    customerkey in (
+        select customerkey from orderheader
+    )
+) then 1
+else 0
+end;
+
+-- check 2
+select * from Customer where status = 0;
+select * from Customer where status = 1;
+
+-- apply changes
+commit;
+
+--6
