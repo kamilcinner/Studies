@@ -16,11 +16,11 @@ create table CustEUOrders(
 
 insert into CustEUOrders (
     customerkey, lastname, firstname, orderyear, ordermonth,
-    totalordervalue, numorders
+    totalordervalue, numorders, avgordervalue
 )
 select
 customerkey, lastname, firstname, OrderYear, OrderMonth,
-sum(OrderTotal), count(*)
+sum(OrderTotal), count(*), avg(OrderTotal)
 from (
     select
     c.customerkey,

@@ -167,3 +167,32 @@ select * from Customer where status = 1;
 commit;
 
 --6
+-- update
+update CustEUOrders eu set (MinOrderValue, MaxOrderValue) = (
+    select min(t.OrderTotal), max(t.OrderTotal) from (
+        select
+        c.customerkey,
+        extract(year from oh.orderdate) OrderYear,
+        extract(month from oh.orderdate) OrderMonth,
+        sum(od.transactionprice * od.quantity) OrderTotal
+        from customer c
+        inner join orderheader oh on c.customerkey = oh.customerkey
+        inner join orderdetail od on od.orderkey = oh.orderkey
+        inner join country co on co.countrykey = oh.countrykey
+        inner join salesterritory st on st.salesterritorykey = co.salesterritorykey
+        where st.salesterritoryname = 'Europe'
+        group by
+        c.customerkey,
+        extract(year from oh.orderdate),
+        extract(month from oh.orderdate),
+        oh.orderkey
+    ) t
+    where t.customerkey = eu.customerkey
+    and t.OrderYear = eu.OrderYear
+    and t.OrderMonth = eu.OrderMonth
+);
+
+-- check
+select * from CustEUOrders;
+
+--7
