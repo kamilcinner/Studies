@@ -65,17 +65,36 @@ commit;
 -- copy
 create table CountryBackup as select * from Country;
 
--- delete
+-- delete (it deletes also Portugal with 0 orders because it is not in
+-- orderheader table)
 delete from CountryBackup cb
-where cb.countrykey in (
-    select min() from (
-        select
-        oh.countrykey,
-        count(*) orders_num
-        from orderheader oh
-        group by oh.countrykey
+where cb.countrykey not in (
+    select distinct oh.countrykey
+    from orderheader oh
+    group by
+    oh.countrykey,
+    extract (year from oh.orderdate)
+    having count(*) > (
+        select min(t.order_num) from (
+            select
+            count(*) order_num,
+            extract(year from toh.orderdate) year
+            from orderheader toh
+            group by
+            toh.countrykey,
+            extract(year from toh.orderdate)
+        ) t
+        where t.year = extract(year from oh.orderdate)
     )
-)
+);
+
+-- check
+select * from Country
+minus
+select * from CountryBackup;
+
+-- apply changes
+commit;
 
 --5
 -- copy
