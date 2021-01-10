@@ -55,7 +55,18 @@
                         <td>{{$comment->id}}</td>
                         <td>{{$comment->user->name}}</td>
                         <td>{{$comment->created_at}}</td>
-                        <td>{{$comment->message}}</td>
+                        <td>{{$comment->message}}
+                            @if($comment->user_id == \Auth::user()->id)
+                                <br />
+                                <a href="{{ route('comments.edit', $comment) }}" class="btn btn-success btn-xs"
+                                   title="Edytuj"> Edytuj </a>
+                                <form action="{{ route('comments.destroy', $comment) }}" method="post">
+                                    <input class="btn btn-danger btn-xs" type="submit" value="Usuń" />
+                                    @method('delete')
+                                    @csrf
+                                </form>
+                            @endif
+                        </td>
                     </tr>
                     @endforeach
              </tbody>
