@@ -107,23 +107,19 @@ c.customerkey,
 c.lastname || ' ' || c.firstname,
 oh.orderkey
 having sum(od.transactionprice * od.quantity) = (
-    select t2.max_order_value from (
+    select
+    max(t.order_value) max_order_value
+    from (
         select
-        max(order_value) max_order_value,
-        extract(year from t1.orderdate) year
-        from (
-            select
-            sum(tod.transactionprice * tod.quantity) order_value,
-            toh.orderdate
-            from orderdetail tod
-            inner join orderheader toh on toh.orderkey = tod.orderkey
-            group by
-            toh.orderkey,
-            toh.orderdate
-        ) t1
-        group by extract(year from t1.orderdate)
-    ) t2
-    where t2.year = extract(year from oh.orderdate)
+        sum(tod.transactionprice * tod.quantity) order_value,
+        extract(year from toh.orderdate) year
+        from orderdetail tod
+        inner join orderheader toh on toh.orderkey = tod.orderkey
+        group by
+        toh.orderkey,
+        extract(year from toh.orderdate)
+    ) t
+    where t.year = extract(year from oh.orderdate)
 );
 
 --5
