@@ -54,7 +54,7 @@ inner join country c on c.salesterritorykey = st.salesterritorykey
 inner join orderheader oh on oh.countrykey = c.countrykey
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey
-order by 1, 2, 3;
+order by 1 desc, 2 desc, 3 desc;
 
 --7.2.6
 select distinct
@@ -68,21 +68,16 @@ inner join product p on p.productkey = od.productkey
 inner join productsubcategory psc on psc.productsubcategorykey = p.productsubcategorykey
 inner join productcategory pc on pc.productCategoryKey = psc.productCategoryKey
 where pc.productCategoryName = 'Bikes'
-order by c.customerkey;
+order by 1;
 
 --7.2.7
 select distinct
-to_char(oh.orderdate, 'YYYY') as "Year",
-case
-    when to_char(oh.orderdate, 'mm') <= 3 then 'Q1'
-    when to_char(oh.orderdate, 'mm') <= 6 then 'Q2'
-    when to_char(oh.orderdate, 'mm') <= 9 then 'Q3'
-    else 'Q4'
-end as "Quarter"
+to_char(oh.orderdate, 'YYYY') Year,
+'Q' || to_char(oh.orderdate, 'q') Quarter
 from orderheader oh
 inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey
 inner join productsubcategory psc on psc.productsubcategorykey = p.productsubcategorykey
 inner join productcategory pc on pc.productCategoryKey = psc.productCategoryKey
 where pc.productCategoryName = 'Bikes'
-order by "Year" desc, "Quarter" asc;
+order by 1 desc, 2;
