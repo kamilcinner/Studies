@@ -50,7 +50,7 @@ where pb.productkey in (
     where extract(year from oh.orderdate) = '2020'
     group by
     od.productkey
-    having sum(od.quantity) < 10
+    having count(*) < 10
 );
 
 -- check
