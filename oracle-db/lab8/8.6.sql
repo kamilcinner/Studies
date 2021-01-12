@@ -52,7 +52,7 @@ order by 1;
 
 --5
 select
-to_char(oh.orderdate, 'yyyy') Year,
+extract(year from oh.orderdate) Year,
 c.countryname Country,
 max(od.transactionprice) as "Max Trans Price"
 from orderheader oh
@@ -61,8 +61,9 @@ inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey
 inner join productsubcategory psc on psc.productsubcategorykey = p.productsubcategorykey
 where psc.productcategorykey = '1'
-group by cube (
-    to_char(oh.orderdate, 'yyyy'),
-    c.countryname
+group by grouping sets (
+    (extract(year from oh.orderdate)),
+    (c.countryname),
+    (extract(year from oh.orderdate), c.countryname)
 )
-order by 1 nulls first, 2 nulls first;
+order by 1, 2 nulls first;
