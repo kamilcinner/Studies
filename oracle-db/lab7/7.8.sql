@@ -1,5 +1,5 @@
 --7.8.1
-select distinct
+select
 c.customerkey,
 c.lastname,
 c.firstname
@@ -10,7 +10,7 @@ inner join product p on p.productkey = od.productkey
 where to_char(oh.orderdate, 'YYYY') = '2019'
 and lower(p.productname) like '%mountain%'
 intersect
-select distinct
+select
 c.customerkey,
 c.lastname,
 c.firstname
@@ -23,7 +23,7 @@ and lower(p.productname) like '%road%'
 order by 2;
 
 --7.8.2
-select distinct
+select
 p.productname
 from country c
 inner join orderheader oh on oh.countrykey = c.countrykey
@@ -31,7 +31,7 @@ inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey
 where c.countryname = 'United States'
 intersect
-select distinct
+select
 p.productname
 from country c
 inner join orderheader oh on oh.countrykey = c.countrykey
@@ -41,7 +41,7 @@ where c.countryname = 'Canada'
 order by 1;
 
 --7.8.3
-select distinct
+select
 c.customerkey,
 c.lastname,
 c.firstname
@@ -49,7 +49,7 @@ from customer c
 inner join orderheader oh on oh.customerkey = c.customerkey
 where to_char(oh.orderdate, 'YYYY') = '2018'
 intersect
-select distinct
+select
 c.customerkey,
 c.lastname,
 c.firstname
@@ -59,7 +59,7 @@ where to_char(oh.orderdate, 'YYYY') = '2019'
 order by 2;
 
 --7.8.4
-select distinct
+select
 c.countryname
 from country c
 inner join orderheader oh on oh.countrykey = c.countrykey
@@ -67,7 +67,7 @@ inner join orderdetail od on od.orderkey = oh.orderkey
 inner join product p on p.productkey = od.productkey
 where p.productname = 'Rear Brakes'
 intersect
-select distinct
+select
 c.countryname
 from country c
 inner join orderheader oh on oh.countrykey = c.countrykey
@@ -77,7 +77,7 @@ where p.productname = 'Front Brakes'
 order by 1;
 
 --7.8.5
-select distinct
+select
 pm.paymentmethodname
 from paymentmethod pm
 inner join orderheader oh on oh.paymentmethodkey = pm.paymentmethodkey
@@ -87,7 +87,7 @@ inner join productsubcategory psc on psc.productsubcategorykey = p.productsubcat
 inner join productcategory pc on pc.productcategorykey = psc.productcategorykey
 where pc.productcategoryname = 'Bikes'
 intersect
-select distinct
+select
 pm.paymentmethodname
 from paymentmethod pm
 inner join orderheader oh on oh.paymentmethodkey = pm.paymentmethodkey
