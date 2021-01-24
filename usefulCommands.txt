@@ -16,3 +16,8 @@ sudo tar cvf first-snapshot.tar /timeshift/snapshots
 sudo apt-get install python3-distutils
 
 stylomastoideum - rylcowo-sutkowy
+
+The best option is to export and import the VM in OVA (Open Virtual Appliance) format, but there is no GUI option to export in Fusion. It took me a while to understand that Fusion comes with OVF Tool included, as a command line, and located in the default path “/Applications/VMware Fusion.app/Contents/Library/VMware OVF Tool”
+./ovftool --acceptAllEulas /Users/marco/Documents/Virtual\ Machines.localized/Windows\ 8.1\ x64.vmwarevm/Windows\ 8.1\ x64.vmx /Users/marco/Desktop/Win81.ova
+
+/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool/ovftool --acceptAllEulas /Volumes/Disk1/VMWare\ VMs/UbuntuLTScopy8.vmwarevm/UbuntuLTScopy8.vmx /Volumes/Disk1/UbuntuLTScopy8.ova
