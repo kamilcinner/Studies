@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab01.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab02.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab03.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab04.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab05.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/main.cpp
+iostream
+-
+lab01.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab01.h
+lab02.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab02.h
+lab03.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab03.h
+lab04.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab04.h
+lab05.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab05.h
+
