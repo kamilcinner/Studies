@@ -6,6 +6,7 @@ using namespace std;
 #include "lab03.h"
 #include "lab04.h"
 #include "lab05.h"
+#include "lab06.h"
 
 int main() {
   /*
@@ -37,7 +38,10 @@ int main() {
   // --- Lab05
   // lab05_cwiczenie_3_1();
   // lab05_cwiczenie_3_2();
-  lab05_cwiczenie_3_3();
+  // lab05_cwiczenie_3_3();
+
+  // --- Lab06
+  lab06_cwiczenie_4_1();
 
   return 0;
 }

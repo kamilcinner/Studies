@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/Semafor.cpp
+Semafor.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/Semafor.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/Semafor.h
+mutex
+-
+condition_variable
+-
+
 /Users/kamilcinner/dev/github/Studies/C++/PRiR/lab01.h
 
 /Users/kamilcinner/dev/github/Studies/C++/PRiR/lab02.h
@@ -15,6 +25,24 @@
 /Users/kamilcinner/dev/github/Studies/C++/PRiR/lab04.h
 
 /Users/kamilcinner/dev/github/Studies/C++/PRiR/lab05.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab06.cpp
+lab06.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab06.h
+thread
+-
+mutex
+-
+chrono
+-
+random
+-
+iostream
+-
+Semafor.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/Semafor.h
+
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab06.h
 
 /Users/kamilcinner/dev/github/Studies/C++/PRiR/main.cpp
 iostream
@@ -29,4 +57,6 @@ lab04.h
 /Users/kamilcinner/dev/github/Studies/C++/PRiR/lab04.h
 lab05.h
 /Users/kamilcinner/dev/github/Studies/C++/PRiR/lab05.h
+lab06.h
+/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab06.h
 

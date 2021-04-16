@@ -142,6 +142,33 @@ PRiR/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/build
 .PHONY : PRiR/fast
 
+Semafor.o: Semafor.cpp.o
+
+.PHONY : Semafor.o
+
+# target to build an object file
+Semafor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/Semafor.cpp.o
+.PHONY : Semafor.cpp.o
+
+Semafor.i: Semafor.cpp.i
+
+.PHONY : Semafor.i
+
+# target to preprocess a source file
+Semafor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/Semafor.cpp.i
+.PHONY : Semafor.cpp.i
+
+Semafor.s: Semafor.cpp.s
+
+.PHONY : Semafor.s
+
+# target to generate assembly for a file
+Semafor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/Semafor.cpp.s
+.PHONY : Semafor.cpp.s
+
 kolory.o: kolory.cpp.o
 
 .PHONY : kolory.o
@@ -304,6 +331,33 @@ lab05.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/lab05.cpp.s
 .PHONY : lab05.cpp.s
 
+lab06.o: lab06.cpp.o
+
+.PHONY : lab06.o
+
+# target to build an object file
+lab06.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/lab06.cpp.o
+.PHONY : lab06.cpp.o
+
+lab06.i: lab06.cpp.i
+
+.PHONY : lab06.i
+
+# target to preprocess a source file
+lab06.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/lab06.cpp.i
+.PHONY : lab06.cpp.i
+
+lab06.s: lab06.cpp.s
+
+.PHONY : lab06.s
+
+# target to generate assembly for a file
+lab06.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRiR.dir/build.make CMakeFiles/PRiR.dir/lab06.cpp.s
+.PHONY : lab06.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -340,6 +394,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PRiR"
+	@echo "... Semafor.o"
+	@echo "... Semafor.i"
+	@echo "... Semafor.s"
 	@echo "... kolory.o"
 	@echo "... kolory.i"
 	@echo "... kolory.s"
@@ -358,6 +415,9 @@ help:
 	@echo "... lab05.o"
 	@echo "... lab05.i"
 	@echo "... lab05.s"
+	@echo "... lab06.o"
+	@echo "... lab06.i"
+	@echo "... lab06.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

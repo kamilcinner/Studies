@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/kamilcinner/dev/github/Studies/C++/PRiR/Semafor.cpp">
+			<Option target="PRiR"/>
+		</Unit>
+		<Unit filename="/Users/kamilcinner/dev/github/Studies/C++/PRiR/Semafor.h">
+			<Option target="PRiR"/>
+		</Unit>
 		<Unit filename="/Users/kamilcinner/dev/github/Studies/C++/PRiR/kolory.cpp">
 			<Option target="PRiR"/>
 		</Unit>
@@ -114,6 +120,12 @@
 			<Option target="PRiR"/>
 		</Unit>
 		<Unit filename="/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab05.h">
+			<Option target="PRiR"/>
+		</Unit>
+		<Unit filename="/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab06.cpp">
+			<Option target="PRiR"/>
+		</Unit>
+		<Unit filename="/Users/kamilcinner/dev/github/Studies/C++/PRiR/lab06.h">
 			<Option target="PRiR"/>
 		</Unit>
 		<Unit filename="/Users/kamilcinner/dev/github/Studies/C++/PRiR/main.cpp">
