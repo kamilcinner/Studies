@@ -3,6 +3,7 @@
 #include <chrono>
 #include <mutex>
 
+#include <condition_variable>
 #include <random>
 #include "kolory.h"
 

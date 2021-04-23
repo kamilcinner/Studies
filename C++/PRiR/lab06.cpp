@@ -33,6 +33,7 @@ class Platform {
 private:
     string name;
     bool empty;
+    Semaphore semaphore = Semaphore(1);
 
 public:
     Platform(string _name):
@@ -40,6 +41,7 @@ public:
     }
 
     void arrival(Train& t) {
+        semaphore.wait();
         if (empty) {
             string info = "Pociag " + t.name() + " wjezdza na peron " + name + "\n";
             cout << info;
@@ -54,6 +56,7 @@ public:
         string info = "Pociag " + t.name() + " opuszcza peron " + name + "\n";
         cout << info;
         empty = true;
+        semaphore.signals();
     }
 
     bool isEmpty() {
